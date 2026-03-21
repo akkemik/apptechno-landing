@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AppTechno — Free Online Tools</title>
+  <meta name="description" content="AppTechno offers free, privacy-friendly online tools. All processing is local — no uploads, no servers, no data stored." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://apptechno.net/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AppTechno — Free Online Tools" />
+  <meta property="og:description" content="Free privacy-friendly online tools. File consolidation, PDF merging and more." />
+  <meta property="og:url" content="https://apptechno.net/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5264106260111581" crossorigin="anonymous"></script>
+
+  <style>
+    /* ── Reset & Variables ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0b0d1a;
+      --bg2:       #11142b;
+      --card:      rgba(255,255,255,0.05);
+      --card-hover:rgba(255,255,255,0.09);
+      --border:    rgba(255,255,255,0.10);
+      --text:      #e8eaf6;
+      --muted:     #8b8fa8;
+      --blue:      #4f8ef7;
+      --purple:    #9b59f5;
+      --grad:      linear-gradient(135deg, #4f8ef7 0%, #9b59f5 100%);
+      --grad-soft: linear-gradient(135deg, rgba(79,142,247,.15) 0%, rgba(155,89,245,.15) 100%);
+      --radius:    18px;
+      --sidebar-w: 160px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
+
+    /* ── Header ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px;
+      height: 64px;
+      background: rgba(11,13,26,.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.3rem; font-weight: 700;
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .logo svg { flex-shrink: 0; }
+
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: .95rem; transition: color .2s; }
+    nav a:hover { color: var(--text); }
+
+    .lang-wrap { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--text); border-radius: 10px; padding: 6px 12px;
+      cursor: pointer; font-size: .9rem; transition: background .2s;
+    }
+    .lang-btn:hover { background: var(--card-hover); }
+    .lang-dropdown {
+      display: none; position: absolute; right: 0; top: calc(100% + 8px);
+      background: #1a1d3a; border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; min-width: 140px; z-index: 200;
+      box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    }
+    .lang-dropdown.open { display: block; }
+    .lang-dropdown button {
+      display: block; width: 100%; text-align: left;
+      padding: 10px 16px; background: none; border: none;
+      color: var(--text); cursor: pointer; font-size: .9rem;
+      transition: background .15s;
+    }
+    .lang-dropdown button:hover { background: var(--card-hover); }
+    .lang-dropdown button.active { color: var(--blue); }
+
+    /* ── Layout shell ── */
+    .shell {
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr var(--sidebar-w);
+      gap: 0;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ── Sidebar Ads ── */
+    .sidebar {
+      padding: 32px 8px;
+      display: flex; flex-direction: column; align-items: center; gap: 24px;
+    }
+    .ad-box {
+      width: 150px;
+      background: var(--card);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: .78rem; text-align: center;
+      overflow: hidden;
+    }
+    .ad-box.tall { height: 600px; }
+    .ad-box.square { height: 250px; }
+    .ad-box ins { display: block; }
+
+    /* ── Main ── */
+    main { padding: 0 24px; }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 80px 24px 60px;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--grad-soft);
+      border: 1px solid rgba(155,89,245,.3);
+      border-radius: 100px; padding: 6px 16px;
+      font-size: .85rem; color: var(--purple); margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .hero h1 span {
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--muted); max-width: 560px; margin: 0 auto 36px;
+    }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--grad); color: #fff;
+      padding: 14px 32px; border-radius: 100px;
+      text-decoration: none; font-weight: 600; font-size: 1rem;
+      box-shadow: 0 4px 24px rgba(155,89,245,.4);
+      transition: opacity .2s, transform .2s;
+    }
+    .hero-cta:hover { opacity: .9; transform: translateY(-2px); }
+
+    /* ── Orb decorations ── */
+    .hero-orbs { position: relative; pointer-events: none; }
+    .orb {
+      position: absolute; border-radius: 50%; filter: blur(80px); opacity: .25;
+    }
+    .orb1 { width: 400px; height: 400px; background: #4f8ef7; top: -200px; left: -100px; }
+    .orb2 { width: 350px; height: 350px; background: #9b59f5; top: -150px; right: -80px; }
+
+    /* ── Section titles ── */
+    .section-title {
+      text-align: center; margin-bottom: 40px;
+    }
+    .section-title h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 10px;
+    }
+    .section-title p { color: var(--muted); font-size: 1rem; }
+
+    /* ── App Cards ── */
+    .apps-section { padding: 40px 0 60px; }
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column; gap: 14px;
+      position: relative; overflow: hidden;
+    }
+    .app-card::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: var(--grad-soft);
+      opacity: 0; transition: opacity .2s;
+    }
+    .app-card:hover { background: var(--card-hover); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(79,142,247,.15); }
+    .app-card:hover::before { opacity: 1; }
+
+    .app-card.coming-soon { opacity: .55; cursor: default; }
+    .app-card.coming-soon:hover { transform: none; box-shadow: none; }
+
+    .app-icon {
+      width: 52px; height: 52px; border-radius: 14px;
+      background: var(--grad);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+    }
+    .app-tag {
+      display: inline-block;
+      background: rgba(155,89,245,.2); color: var(--purple);
+      border-radius: 100px; padding: 3px 12px; font-size: .78rem; font-weight: 600;
+    }
+    .app-tag.soon { background: rgba(139,143,168,.15); color: var(--muted); }
+
+    .app-card h3 { font-size: 1.1rem; font-weight: 700; position: relative; }
+    .app-card p { color: var(--muted); font-size: .92rem; line-height: 1.55; position: relative; }
+
+    .app-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--blue); font-weight: 600; font-size: .9rem;
+      text-decoration: none; margin-top: auto; position: relative;
+      transition: gap .2s;
+    }
+    .app-link:hover { gap: 10px; }
+
+    /* ── Mid Ad Banner ── */
+    .mid-ad {
+      margin: 20px 0 40px;
+      background: var(--card);
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      min-height: 90px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: .82rem; overflow: hidden;
+    }
+
+    /* ── Features ── */
+    .features-section { padding: 20px 0 60px; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+    }
+    .feature-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .feature-card h4 { font-size: 1rem; margin-bottom: 8px; }
+    .feature-card p { color: var(--muted); font-size: .88rem; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 32px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    footer a { color: var(--blue); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+
+    /* ── Mobile bottom sticky ad ── */
+    .mobile-bottom-ad {
+      display: none;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+      background: #11142b;
+      border-top: 1px solid var(--border);
+      min-height: 60px;
+      align-items: center; justify-content: center;
+    }
+
+    /* ── Popup Ad ── */
+    .popup-overlay {
+      display: none;
+      position: fixed; inset: 0; z-index: 300;
+      background: rgba(0,0,0,.6);
+      backdrop-filter: blur(4px);
+      align-items: center; justify-content: center;
+    }
+    .popup-overlay.show { display: flex; }
+    .popup-ad {
+      position: relative;
+      background: #1a1d3a;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 480px; width: 90%;
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+      text-align: center;
+    }
+    .popup-close {
+      position: absolute; top: 12px; left: 12px;
+      background: rgba(255,255,255,.1); border: none; border-radius: 8px;
+      color: var(--text); width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 1rem; transition: background .2s;
+    }
+    .popup-close:hover { background: rgba(255,255,255,.2); }
+    .popup-ad-inner {
+      min-height: 200px;
+      background: var(--card);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-size: .85rem;
+      overflow: hidden;
+    }
+    .popup-label {
+      font-size: .75rem; color: var(--muted); margin-top: 10px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1100px) {
+      .shell { grid-template-columns: 120px 1fr 120px; }
+      .ad-box { width: 110px; }
+    }
+    @media (max-width: 860px) {
+      .shell { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .mobile-bottom-ad { display: flex; }
+      body { padding-bottom: 70px; }
+      header { padding: 0 16px; }
+      nav { gap: 14px; }
+    }
+    @media (max-width: 540px) {
+      nav a { display: none; }
+      .hero { padding: 48px 12px 40px; }
+      main { padding: 0 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ POPUP AD (shows after 3s) ══ -->
+<div class="popup-overlay" id="popupOverlay">
+  <div class="popup-ad">
+    <button class="popup-close" id="popupClose" aria-label="Close">✕</button>
+    <div class="popup-ad-inner">
+      <!-- AdSense Popup Unit — replace data-ad-slot with your slot ID -->
+      <ins class="adsbygoogle"
+           style="display:block;width:100%;min-height:200px"
+           data-ad-client="ca-pub-5264106260111581"
+           data-ad-slot="POPUP_SLOT_ID"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+    <p class="popup-label" data-i18n="adLabel">Advertisement</p>
+  </div>
+</div>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <a class="logo" href="#">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <defs>
+        <linearGradient id="lg" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#4f8ef7"/>
+          <stop offset="100%" stop-color="#9b59f5"/>
+        </linearGradient>
+      </defs>
+      <rect width="28" height="28" rx="8" fill="url(#lg)"/>
+      <text x="5" y="20" font-size="16" fill="white" font-family="Arial" font-weight="bold">A</text>
+    </svg>
+    AppTechno
+  </a>
+
+  <nav>
+    <a href="#tools" data-i18n="navTools">Tools</a>
+    <a href="#features" data-i18n="navFeatures">Features</a>
+    <a href="https://fileconsolidator.apptechno.net" target="_blank" data-i18n="navLaunch">Launch App</a>
+  </nav>
+
+  <div class="lang-wrap">
+    <button class="lang-btn" id="langBtn">
+      🌐 <span id="langLabel">EN</span> ▾
+    </button>
+    <div class="lang-dropdown" id="langDropdown"></div>
+  </div>
+</header>
+
+<!-- ══ MAIN LAYOUT SHELL ══ -->
+<div class="shell">
+
+  <!-- Left Sidebar Ad -->
+  <aside class="sidebar" aria-label="Advertisement">
+    <div class="ad-box tall">
+      <ins class="adsbygoogle"
+           style="display:block;width:150px;height:600px"
+           data-ad-client="ca-pub-5264106260111581"
+           data-ad-slot="LEFT_SIDEBAR_SLOT"
+           data-ad-format="fixed"></ins>
+    </div>
+  </aside>
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero hero-orbs">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="hero-badge">✦ <span data-i18n="heroBadge">Free · Private · Local</span></div>
+      <h1 data-i18n="heroTitle">Powerful Tools,<br><span data-i18n="heroTitleAccent">Zero Compromise</span></h1>
+      <p data-i18n="heroSub">Free online tools that work entirely in your browser. No uploads, no accounts, no data stored — ever.</p>
+      <a class="hero-cta" href="#tools" data-i18n="heroCta">Explore Tools ↓</a>
+    </section>
+
+    <!-- App Cards -->
+    <section class="apps-section" id="tools">
+      <div class="section-title">
+        <h2 data-i18n="toolsTitle">Our Tools</h2>
+        <p data-i18n="toolsSub">Everything runs locally in your browser — your files never leave your device.</p>
+      </div>
+
+      <div class="apps-grid">
+
+        <!-- File Consolidator -->
+        <div class="app-card">
+          <div class="app-icon">📊</div>
+          <span class="app-tag" data-i18n="tagAvailable">Available</span>
+          <h3 data-i18n="app1Title">File Consolidator</h3>
+          <p data-i18n="app1Desc">Merge multiple CSV, Excel files into one spreadsheet. Combine PDF files and images into a single PDF. All processing is 100% local.</p>
+          <a class="app-link" href="https://fileconsolidator.apptechno.net" target="_blank" data-i18n="appLaunch">Launch App →</a>
+        </div>
+
+        <!-- Coming Soon 1 -->
+        <div class="app-card coming-soon">
+          <div class="app-icon">🔐</div>
+          <span class="app-tag soon" data-i18n="tagSoon">Coming Soon</span>
+          <h3 data-i18n="app2Title">Password Generator</h3>
+          <p data-i18n="app2Desc">Generate strong, secure passwords with custom rules. Fully offline — nothing ever sent to a server.</p>
+          <span class="app-link" style="color:var(--muted);cursor:default" data-i18n="appSoon">Coming Soon</span>
+        </div>
+
+        <!-- Coming Soon 2 -->
+        <div class="app-card coming-soon">
+          <div class="app-icon">🖼️</div>
+          <span class="app-tag soon" data-i18n="tagSoon">Coming Soon</span>
+          <h3 data-i18n="app3Title">Image Converter</h3>
+          <p data-i18n="app3Desc">Convert images between JPG, PNG, WebP, and more. Resize, compress, batch process — all in your browser.</p>
+          <span class="app-link" style="color:var(--muted);cursor:default" data-i18n="appSoon">Coming Soon</span>
+        </div>
+
+        <!-- Coming Soon 3 -->
+        <div class="app-card coming-soon">
+          <div class="app-icon">📝</div>
+          <span class="app-tag soon" data-i18n="tagSoon">Coming Soon</span>
+          <h3 data-i18n="app4Title">Text Tools</h3>
+          <p data-i18n="app4Desc">Word count, character count, case converter, duplicate line remover and more text utilities in one place.</p>
+          <span class="app-link" style="color:var(--muted);cursor:default" data-i18n="appSoon">Coming Soon</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mid Ad Banner -->
+    <div class="mid-ad" aria-label="Advertisement">
+      <ins class="adsbygoogle"
+           style="display:block;width:100%;min-height:90px"
+           data-ad-client="ca-pub-5264106260111581"
+           data-ad-slot="MID_BANNER_SLOT"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- Features -->
+    <section class="features-section" id="features">
+      <div class="section-title">
+        <h2 data-i18n="featuresTitle">Why AppTechno?</h2>
+        <p data-i18n="featuresSub">Built with privacy and simplicity as the top priorities.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h4 data-i18n="feat1Title">100% Private</h4>
+          <p data-i18n="feat1Desc">All processing happens in your browser. Your files never leave your device.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h4 data-i18n="feat2Title">Lightning Fast</h4>
+          <p data-i18n="feat2Desc">No server round-trips. Processing starts instantly, right on your machine.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💸</div>
+          <h4 data-i18n="feat3Title">Always Free</h4>
+          <p data-i18n="feat3Desc">No subscriptions, no sign-ups, no hidden fees. Free forever.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h4 data-i18n="feat4Title">Works Everywhere</h4>
+          <p data-i18n="feat4Desc">Fully responsive design — use it on desktop, tablet, or mobile.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Right Sidebar Ad -->
+  <aside class="sidebar" aria-label="Advertisement">
+    <div class="ad-box tall">
+      <ins class="adsbygoogle"
+           style="display:block;width:150px;height:600px"
+           data-ad-client="ca-pub-5264106260111581"
+           data-ad-slot="RIGHT_SIDEBAR_SLOT"
+           data-ad-format="fixed"></ins>
+    </div>
+    <div class="ad-box square">
+      <ins class="adsbygoogle"
+           style="display:block;width:150px;height:250px"
+           data-ad-client="ca-pub-5264106260111581"
+           data-ad-slot="RIGHT_SQUARE_SLOT"
+           data-ad-format="fixed"></ins>
+    </div>
+  </aside>
+
+</div><!-- /shell -->
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-links">
+    <a href="https://fileconsolidator.apptechno.net/privacy-policy.html" data-i18n="footerPrivacy">Privacy Policy</a>
+    <a href="https://fileconsolidator.apptechno.net/cookie-policy.html" data-i18n="footerCookie">Cookie Policy</a>
+    <a href="https://fileconsolidator.apptechno.net/terms-of-use.html" data-i18n="footerTerms">Terms of Use</a>
+    <a href="mailto:info@akkemik.net" data-i18n="footerContact">Contact</a>
+  </div>
+  <p>© 2026 AppTechno · Murat Akkemik · Sweden</p>
+</footer>
+
+<!-- ══ MOBILE BOTTOM STICKY AD ══ -->
+<div class="mobile-bottom-ad" aria-label="Advertisement">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;max-height:60px"
+       data-ad-client="ca-pub-5264106260111581"
+       data-ad-slot="MOBILE_BOTTOM_SLOT"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+</div>
+
+<script>
+/* ══ i18n ══ */
+const i18n = {
+  en: {
+    navTools:'Tools', navFeatures:'Features', navLaunch:'Launch App',
+    heroBadge:'Free · Private · Local',
+    heroTitle:'Powerful Tools,', heroTitleAccent:'Zero Compromise',
+    heroSub:'Free online tools that work entirely in your browser. No uploads, no accounts, no data stored — ever.',
+    heroCta:'Explore Tools ↓',
+    toolsTitle:'Our Tools', toolsSub:'Everything runs locally in your browser — your files never leave your device.',
+    tagAvailable:'Available', tagSoon:'Coming Soon',
+    app1Title:'File Consolidator', app1Desc:'Merge multiple CSV, Excel files into one spreadsheet. Combine PDF files and images into a single PDF. All processing is 100% local.',
+    app2Title:'Password Generator', app2Desc:'Generate strong, secure passwords with custom rules. Fully offline — nothing ever sent to a server.',
+    app3Title:'Image Converter', app3Desc:'Convert images between JPG, PNG, WebP, and more. Resize, compress, batch process — all in your browser.',
+    app4Title:'Text Tools', app4Desc:'Word count, character count, case converter, duplicate line remover and more text utilities in one place.',
+    appLaunch:'Launch App →', appSoon:'Coming Soon',
+    featuresTitle:'Why AppTechno?', featuresSub:'Built with privacy and simplicity as the top priorities.',
+    feat1Title:'100% Private', feat1Desc:'All processing happens in your browser. Your files never leave your device.',
+    feat2Title:'Lightning Fast', feat2Desc:'No server round-trips. Processing starts instantly, right on your machine.',
+    feat3Title:'Always Free', feat3Desc:'No subscriptions, no sign-ups, no hidden fees. Free forever.',
+    feat4Title:'Works Everywhere', feat4Desc:'Fully responsive design — use it on desktop, tablet, or mobile.',
+    footerPrivacy:'Privacy Policy', footerCookie:'Cookie Policy', footerTerms:'Terms of Use', footerContact:'Contact',
+    adLabel:'Advertisement',
+  },
+  tr: {
+    navTools:'Araçlar', navFeatures:'Özellikler', navLaunch:'Uygulamayı Aç',
+    heroBadge:'Ücretsiz · Gizli · Yerel',
+    heroTitle:'Güçlü Araçlar,', heroTitleAccent:'Sıfır Ödün',
+    heroSub:'Tamamen tarayıcınızda çalışan ücretsiz araçlar. Yükleme yok, hesap yok, veri saklanmaz — asla.',
+    heroCta:'Araçları Keşfet ↓',
+    toolsTitle:'Araçlarımız', toolsSub:'Her şey tarayıcınızda çalışır — dosyalarınız hiçbir zaman cihazınızı terk etmez.',
+    tagAvailable:'Mevcut', tagSoon:'Yakında',
+    app1Title:'Dosya Birleştirici', app1Desc:'Birden fazla CSV, Excel dosyasını tek bir tabloya birleştirin. PDF ve görselleri tek PDF\'e birleştirin. Tüm işlem %100 yereldir.',
+    app2Title:'Şifre Üretici', app2Desc:'Özel kurallarla güçlü, güvenli şifreler oluşturun. Tamamen çevrimdışı — hiçbir şey sunucuya gönderilmez.',
+    app3Title:'Görsel Dönüştürücü', app3Desc:'Görselleri JPG, PNG, WebP ve daha fazlası arasında dönüştürün. Yeniden boyutlandırın, sıkıştırın — tarayıcınızda.',
+    app4Title:'Metin Araçları', app4Desc:'Kelime sayımı, karakter sayımı, büyük/küçük harf dönüştürücü, yinelenen satır kaldırıcı ve daha fazlası.',
+    appLaunch:'Uygulamayı Aç →', appSoon:'Yakında',
+    featuresTitle:'Neden AppTechno?', featuresSub:'Gizlilik ve sadelik öncelikli olarak tasarlandı.',
+    feat1Title:'%100 Gizli', feat1Desc:'Tüm işlemler tarayıcınızda gerçekleşir. Dosyalarınız asla cihazınızı terk etmez.',
+    feat2Title:'Yıldırım Hızında', feat2Desc:'Sunucu gecikmesi yok. İşlem anında başlar, doğrudan makinenizde.',
+    feat3Title:'Her Zaman Ücretsiz', feat3Desc:'Abonelik yok, kayıt yok, gizli ücret yok. Sonsuza dek ücretsiz.',
+    feat4Title:'Her Yerde Çalışır', feat4Desc:'Tam duyarlı tasarım — masaüstü, tablet veya mobilde kullanın.',
+    footerPrivacy:'Gizlilik Politikası', footerCookie:'Çerez Politikası', footerTerms:'Kullanım Koşulları', footerContact:'İletişim',
+    adLabel:'Reklam',
+  },
+  de: {
+    navTools:'Tools', navFeatures:'Funktionen', navLaunch:'App starten',
+    heroBadge:'Kostenlos · Privat · Lokal',
+    heroTitle:'Leistungsstarke Tools,', heroTitleAccent:'Null Kompromisse',
+    heroSub:'Kostenlose Online-Tools, die vollständig in Ihrem Browser laufen. Keine Uploads, keine Konten, keine gespeicherten Daten.',
+    heroCta:'Tools entdecken ↓',
+    toolsTitle:'Unsere Tools', toolsSub:'Alles läuft lokal in Ihrem Browser — Ihre Dateien verlassen nie Ihr Gerät.',
+    tagAvailable:'Verfügbar', tagSoon:'Demnächst',
+    app1Title:'Datei-Konsolidierer', app1Desc:'Mehrere CSV- und Excel-Dateien zu einer Tabelle zusammenführen. PDFs und Bilder kombinieren.',
+    app2Title:'Passwort-Generator', app2Desc:'Starke, sichere Passwörter mit benutzerdefinierten Regeln generieren. Vollständig offline.',
+    app3Title:'Bildkonverter', app3Desc:'Bilder zwischen JPG, PNG, WebP und mehr konvertieren. Direkt im Browser.',
+    app4Title:'Text-Tools', app4Desc:'Wortzählung, Zeichenzählung, Groß-/Kleinschreibung und weitere Text-Dienstprogramme.',
+    appLaunch:'App starten →', appSoon:'Demnächst',
+    featuresTitle:'Warum AppTechno?', featuresSub:'Mit Datenschutz und Einfachheit als oberste Prioritäten entwickelt.',
+    feat1Title:'100 % Privat', feat1Desc:'Alle Verarbeitung erfolgt in Ihrem Browser. Ihre Dateien verlassen nie Ihr Gerät.',
+    feat2Title:'Blitzschnell', feat2Desc:'Keine Server-Roundtrips. Verarbeitung beginnt sofort auf Ihrem Gerät.',
+    feat3Title:'Immer kostenlos', feat3Desc:'Keine Abonnements, keine Anmeldungen, keine versteckten Gebühren.',
+    feat4Title:'Überall nutzbar', feat4Desc:'Vollständig responsives Design — auf Desktop, Tablet oder Mobilgerät.',
+    footerPrivacy:'Datenschutz', footerCookie:'Cookie-Richtlinie', footerTerms:'Nutzungsbedingungen', footerContact:'Kontakt',
+    adLabel:'Werbung',
+  },
+  sv: {
+    navTools:'Verktyg', navFeatures:'Funktioner', navLaunch:'Starta app',
+    heroBadge:'Gratis · Privat · Lokalt',
+    heroTitle:'Kraftfulla verktyg,', heroTitleAccent:'Noll kompromisser',
+    heroSub:'Gratis onlineverktyg som körs helt i din webbläsare. Inga uppladdningar, inga konton, ingen data lagras.',
+    heroCta:'Utforska verktyg ↓',
+    toolsTitle:'Våra verktyg', toolsSub:'Allt körs lokalt i din webbläsare — dina filer lämnar aldrig din enhet.',
+    tagAvailable:'Tillgänglig', tagSoon:'Kommer snart',
+    app1Title:'Filkonsoliderare', app1Desc:'Slå ihop flera CSV- och Excel-filer till ett kalkylblad. Kombinera PDF-filer och bilder.',
+    app2Title:'Lösenordsgenerator', app2Desc:'Generera starka, säkra lösenord med anpassade regler. Helt offline.',
+    app3Title:'Bildkonverterare', app3Desc:'Konvertera bilder mellan JPG, PNG, WebP och mer. Direkt i webbläsaren.',
+    app4Title:'Textverktyg', app4Desc:'Ordräkning, teckenräkning, skiftlägeskonverterare och fler textverktyg.',
+    appLaunch:'Starta app →', appSoon:'Kommer snart',
+    featuresTitle:'Varför AppTechno?', featuresSub:'Byggd med integritet och enkelhet som högsta prioritet.',
+    feat1Title:'100 % Privat', feat1Desc:'All bearbetning sker i din webbläsare. Dina filer lämnar aldrig din enhet.',
+    feat2Title:'Blixtsnabb', feat2Desc:'Inga serveromvägar. Bearbetning startar omedelbart på din maskin.',
+    feat3Title:'Alltid gratis', feat3Desc:'Inga prenumerationer, inga registreringar, inga dolda avgifter.',
+    feat4Title:'Fungerar överallt', feat4Desc:'Fullt responsiv design — använd på dator, surfplatta eller mobil.',
+    footerPrivacy:'Integritetspolicy', footerCookie:'Cookiepolicy', footerTerms:'Användarvillkor', footerContact:'Kontakt',
+    adLabel:'Annons',
+  },
+  es: {
+    navTools:'Herramientas', navFeatures:'Características', navLaunch:'Abrir app',
+    heroBadge:'Gratis · Privado · Local',
+    heroTitle:'Herramientas potentes,', heroTitleAccent:'Sin compromisos',
+    heroSub:'Herramientas gratuitas que funcionan completamente en tu navegador. Sin subidas, sin cuentas, sin datos almacenados.',
+    heroCta:'Explorar herramientas ↓',
+    toolsTitle:'Nuestras herramientas', toolsSub:'Todo se ejecuta localmente en tu navegador — tus archivos nunca salen de tu dispositivo.',
+    tagAvailable:'Disponible', tagSoon:'Próximamente',
+    app1Title:'Consolidador de archivos', app1Desc:'Combina varios archivos CSV y Excel en una hoja de cálculo. Combina PDFs e imágenes.',
+    app2Title:'Generador de contraseñas', app2Desc:'Genera contraseñas fuertes y seguras con reglas personalizadas. Completamente offline.',
+    app3Title:'Conversor de imágenes', app3Desc:'Convierte imágenes entre JPG, PNG, WebP y más. Directamente en tu navegador.',
+    app4Title:'Herramientas de texto', app4Desc:'Conteo de palabras, caracteres, conversor de mayúsculas y más utilidades de texto.',
+    appLaunch:'Abrir app →', appSoon:'Próximamente',
+    featuresTitle:'¿Por qué AppTechno?', featuresSub:'Construido con privacidad y simplicidad como prioridades principales.',
+    feat1Title:'100 % Privado', feat1Desc:'Todo el procesamiento ocurre en tu navegador. Tus archivos nunca salen de tu dispositivo.',
+    feat2Title:'Ultra rápido', feat2Desc:'Sin viajes al servidor. El procesamiento comienza al instante en tu máquina.',
+    feat3Title:'Siempre gratis', feat3Desc:'Sin suscripciones, sin registros, sin tarifas ocultas. Gratis para siempre.',
+    feat4Title:'Funciona en todas partes', feat4Desc:'Diseño completamente responsivo — úsalo en escritorio, tablet o móvil.',
+    footerPrivacy:'Política de privacidad', footerCookie:'Política de cookies', footerTerms:'Términos de uso', footerContact:'Contacto',
+    adLabel:'Publicidad',
+  },
+  fr: {
+    navTools:'Outils', navFeatures:'Fonctionnalités', navLaunch:'Lancer l\'app',
+    heroBadge:'Gratuit · Privé · Local',
+    heroTitle:'Des outils puissants,', heroTitleAccent:'Zéro compromis',
+    heroSub:'Des outils en ligne gratuits qui fonctionnent entièrement dans votre navigateur. Pas de téléchargement, pas de compte, aucune donnée stockée.',
+    heroCta:'Explorer les outils ↓',
+    toolsTitle:'Nos outils', toolsSub:'Tout fonctionne localement dans votre navigateur — vos fichiers ne quittent jamais votre appareil.',
+    tagAvailable:'Disponible', tagSoon:'Bientôt disponible',
+    app1Title:'Consolidateur de fichiers', app1Desc:'Fusionnez plusieurs fichiers CSV et Excel en une seule feuille. Combinez des PDF et des images.',
+    app2Title:'Générateur de mots de passe', app2Desc:'Générez des mots de passe forts avec des règles personnalisées. Entièrement hors ligne.',
+    app3Title:'Convertisseur d\'images', app3Desc:'Convertissez des images entre JPG, PNG, WebP et plus. Directement dans le navigateur.',
+    app4Title:'Outils texte', app4Desc:'Comptage de mots, de caractères, convertisseur de casse et plus d\'utilitaires texte.',
+    appLaunch:'Lancer l\'app →', appSoon:'Bientôt',
+    featuresTitle:'Pourquoi AppTechno ?', featuresSub:'Conçu avec la confidentialité et la simplicité comme priorités.',
+    feat1Title:'100 % Privé', feat1Desc:'Tout le traitement se fait dans votre navigateur. Vos fichiers ne quittent jamais votre appareil.',
+    feat2Title:'Ultra rapide', feat2Desc:'Pas de trajets vers le serveur. Le traitement commence instantanément sur votre machine.',
+    feat3Title:'Toujours gratuit', feat3Desc:'Pas d\'abonnements, pas d\'inscriptions, pas de frais cachés. Gratuit pour toujours.',
+    feat4Title:'Fonctionne partout', feat4Desc:'Design entièrement responsive — utilisez-le sur ordinateur, tablette ou mobile.',
+    footerPrivacy:'Politique de confidentialité', footerCookie:'Politique des cookies', footerTerms:'Conditions d\'utilisation', footerContact:'Contact',
+    adLabel:'Publicité',
+  },
+  ru: {
+    navTools:'Инструменты', navFeatures:'Функции', navLaunch:'Открыть приложение',
+    heroBadge:'Бесплатно · Конфиденциально · Локально',
+    heroTitle:'Мощные инструменты,', heroTitleAccent:'Без компромиссов',
+    heroSub:'Бесплатные онлайн-инструменты, работающие прямо в вашем браузере. Без загрузок, без аккаунтов, без хранения данных.',
+    heroCta:'Исследовать инструменты ↓',
+    toolsTitle:'Наши инструменты', toolsSub:'Всё работает локально в вашем браузере — ваши файлы никогда не покидают ваше устройство.',
+    tagAvailable:'Доступно', tagSoon:'Скоро',
+    app1Title:'Объединитель файлов', app1Desc:'Объедините несколько файлов CSV и Excel в одну таблицу. Объедините PDF и изображения.',
+    app2Title:'Генератор паролей', app2Desc:'Генерируйте надёжные пароли с пользовательскими правилами. Полностью офлайн.',
+    app3Title:'Конвертер изображений', app3Desc:'Конвертируйте изображения между JPG, PNG, WebP и другими. Прямо в браузере.',
+    app4Title:'Текстовые инструменты', app4Desc:'Подсчёт слов, символов, конвертер регистра и другие текстовые утилиты.',
+    appLaunch:'Открыть приложение →', appSoon:'Скоро',
+    featuresTitle:'Почему AppTechno?', featuresSub:'Создано с конфиденциальностью и простотой в качестве главных приоритетов.',
+    feat1Title:'100% Конфиденциально', feat1Desc:'Вся обработка происходит в вашем браузере. Ваши файлы никогда не покидают устройство.',
+    feat2Title:'Молниеносно', feat2Desc:'Без обращений к серверу. Обработка начинается мгновенно на вашем устройстве.',
+    feat3Title:'Всегда бесплатно', feat3Desc:'Без подписок, регистрации и скрытых платежей. Бесплатно навсегда.',
+    feat4Title:'Работает везде', feat4Desc:'Полностью адаптивный дизайн — используйте на ПК, планшете или мобильном.',
+    footerPrivacy:'Политика конфиденциальности', footerCookie:'Политика cookies', footerTerms:'Условия использования', footerContact:'Контакт',
+    adLabel:'Реклама',
+  },
+  nl: {
+    navTools:'Tools', navFeatures:'Functies', navLaunch:'App starten',
+    heroBadge:'Gratis · Privé · Lokaal',
+    heroTitle:'Krachtige tools,', heroTitleAccent:'Zonder compromis',
+    heroSub:'Gratis online tools die volledig in uw browser werken. Geen uploads, geen accounts, geen opgeslagen gegevens.',
+    heroCta:'Verken tools ↓',
+    toolsTitle:'Onze tools', toolsSub:'Alles werkt lokaal in uw browser — uw bestanden verlaten nooit uw apparaat.',
+    tagAvailable:'Beschikbaar', tagSoon:'Binnenkort',
+    app1Title:'Bestandsconsolidator', app1Desc:'Meerdere CSV- en Excel-bestanden samenvoegen tot één spreadsheet. PDF\'s en afbeeldingen combineren.',
+    app2Title:'Wachtwoordgenerator', app2Desc:'Genereer sterke, veilige wachtwoorden met aangepaste regels. Volledig offline.',
+    app3Title:'Afbeeldingsconverter', app3Desc:'Converteer afbeeldingen tussen JPG, PNG, WebP en meer. Direct in uw browser.',
+    app4Title:'Teksttools', app4Desc:'Woordtelling, tekentelling, hoofdletter-convertor en meer teksthulpmiddelen.',
+    appLaunch:'App starten →', appSoon:'Binnenkort',
+    featuresTitle:'Waarom AppTechno?', featuresSub:'Gebouwd met privacy en eenvoud als hoogste prioriteiten.',
+    feat1Title:'100% Privé', feat1Desc:'Alle verwerking vindt plaats in uw browser. Uw bestanden verlaten nooit uw apparaat.',
+    feat2Title:'Bliksemnel', feat2Desc:'Geen serverrondreizen. Verwerking begint direct op uw machine.',
+    feat3Title:'Altijd gratis', feat3Desc:'Geen abonnementen, geen aanmeldingen, geen verborgen kosten.',
+    feat4Title:'Werkt overal', feat4Desc:'Volledig responsief ontwerp — gebruik het op desktop, tablet of mobiel.',
+    footerPrivacy:'Privacybeleid', footerCookie:'Cookiebeleid', footerTerms:'Gebruiksvoorwaarden', footerContact:'Contact',
+    adLabel:'Advertentie',
+  },
+  it: {
+    navTools:'Strumenti', navFeatures:'Funzionalità', navLaunch:'Apri app',
+    heroBadge:'Gratuito · Privato · Locale',
+    heroTitle:'Strumenti potenti,', heroTitleAccent:'Zero compromessi',
+    heroSub:'Strumenti online gratuiti che funzionano interamente nel tuo browser. Nessun caricamento, nessun account, nessun dato memorizzato.',
+    heroCta:'Esplora gli strumenti ↓',
+    toolsTitle:'I nostri strumenti', toolsSub:'Tutto funziona localmente nel tuo browser — i tuoi file non lasciano mai il tuo dispositivo.',
+    tagAvailable:'Disponibile', tagSoon:'Prossimamente',
+    app1Title:'Consolidatore di file', app1Desc:'Unisci più file CSV ed Excel in un unico foglio di calcolo. Combina PDF e immagini.',
+    app2Title:'Generatore di password', app2Desc:'Genera password forti e sicure con regole personalizzate. Completamente offline.',
+    app3Title:'Convertitore di immagini', app3Desc:'Converti immagini tra JPG, PNG, WebP e altri. Direttamente nel browser.',
+    app4Title:'Strumenti di testo', app4Desc:'Conteggio parole, caratteri, convertitore di maiuscole e altri strumenti di testo.',
+    appLaunch:'Apri app →', appSoon:'Prossimamente',
+    featuresTitle:'Perché AppTechno?', featuresSub:'Costruito con la privacy e la semplicità come priorità principali.',
+    feat1Title:'100% Privato', feat1Desc:'Tutta l\'elaborazione avviene nel tuo browser. I tuoi file non lasciano mai il tuo dispositivo.',
+    feat2Title:'Velocissimo', feat2Desc:'Nessun viaggio al server. L\'elaborazione inizia immediatamente sulla tua macchina.',
+    feat3Title:'Sempre gratuito', feat3Desc:'Nessun abbonamento, nessuna registrazione, nessuna tariffa nascosta.',
+    feat4Title:'Funziona ovunque', feat4Desc:'Design completamente responsive — usalo su desktop, tablet o mobile.',
+    footerPrivacy:'Privacy Policy', footerCookie:'Cookie Policy', footerTerms:'Termini di utilizzo', footerContact:'Contatto',
+    adLabel:'Pubblicità',
+  },
+  zh: {
+    navTools:'工具', navFeatures:'功能', navLaunch:'启动应用',
+    heroBadge:'免费 · 私密 · 本地',
+    heroTitle:'强大的工具，', heroTitleAccent:'零妥协',
+    heroSub:'完全在浏览器中运行的免费在线工具。无上传、无账号、无数据存储。',
+    heroCta:'探索工具 ↓',
+    toolsTitle:'我们的工具', toolsSub:'一切都在您的浏览器中本地运行——您的文件永远不会离开您的设备。',
+    tagAvailable:'可用', tagSoon:'即将推出',
+    app1Title:'文件整合器', app1Desc:'将多个CSV和Excel文件合并为一个电子表格。将PDF和图像合并为单个PDF。',
+    app2Title:'密码生成器', app2Desc:'使用自定义规则生成强大、安全的密码。完全离线运行。',
+    app3Title:'图像转换器', app3Desc:'在JPG、PNG、WebP等格式之间转换图像。直接在浏览器中完成。',
+    app4Title:'文本工具', app4Desc:'字数统计、字符统计、大小写转换和更多文本实用工具。',
+    appLaunch:'启动应用 →', appSoon:'即将推出',
+    featuresTitle:'为什么选择AppTechno？', featuresSub:'以隐私和简洁为最高优先级构建。',
+    feat1Title:'100%私密', feat1Desc:'所有处理都在您的浏览器中进行。您的文件永远不会离开您的设备。',
+    feat2Title:'闪电般快速', feat2Desc:'无需服务器往返。处理立即在您的设备上开始。',
+    feat3Title:'永远免费', feat3Desc:'无订阅、无注册、无隐藏费用。永久免费。',
+    feat4Title:'随处可用', feat4Desc:'完全响应式设计——在桌面、平板或移动设备上使用。',
+    footerPrivacy:'隐私政策', footerCookie:'Cookie政策', footerTerms:'使用条款', footerContact:'联系我们',
+    adLabel:'广告',
+  },
+};
+
+const langNames = { en:'English', tr:'Türkçe', de:'Deutsch', sv:'Svenska', es:'Español', fr:'Français', ru:'Русский', nl:'Nederlands', it:'Italiano', zh:'中文' };
+let currentLang = localStorage.getItem('at_lang') || 'en';
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('at_lang', lang);
+  document.documentElement.lang = lang;
+  const t = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  document.getElementById('langLabel').textContent = lang.toUpperCase();
+  document.querySelectorAll('#langDropdown button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+// Build language dropdown
+const dd = document.getElementById('langDropdown');
+Object.entries(langNames).forEach(([code, name]) => {
+  const btn = document.createElement('button');
+  btn.dataset.lang = code;
+  btn.textContent = name;
+  btn.onclick = () => { applyLang(code); dd.classList.remove('open'); };
+  dd.appendChild(btn);
+});
+
+document.getElementById('langBtn').addEventListener('click', e => {
+  e.stopPropagation();
+  dd.classList.toggle('open');
+});
+document.addEventListener('click', () => dd.classList.remove('open'));
+
+applyLang(currentLang);
+
+/* ══ Popup Ad ══ */
+const overlay = document.getElementById('popupOverlay');
+const popupClose = document.getElementById('popupClose');
+
+setTimeout(() => {
+  overlay.classList.add('show');
+  // Init AdSense in popup
+  try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
+}, 3000);
+
+popupClose.addEventListener('click', () => overlay.classList.remove('show'));
+overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('show'); });
+
+/* ══ Init AdSense units ══ */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('ins.adsbygoogle:not([data-adsbygoogle-status])').forEach(() => {
+    try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
+  });
+});
+</script>
+</body>
+</html>

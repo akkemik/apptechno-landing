@@ -308,8 +308,10 @@
       background: rgba(255,255,255,.1); border: none; border-radius: 8px;
       color: var(--text); width: 28px; height: 28px;
       display: flex; align-items: center; justify-content: center;
-      cursor: pointer; font-size: 1rem; transition: background .2s;
+      cursor: pointer; font-size: 1rem; transition: background .2s, opacity .3s;
+      opacity: 0; pointer-events: none;
     }
+    .popup-close.visible { opacity: 1; pointer-events: auto; }
     .popup-close:hover { background: rgba(255,255,255,.2); }
     .popup-ad-inner {
       min-height: 200px;
@@ -810,6 +812,8 @@ setTimeout(() => {
   overlay.classList.add('show');
   // Init AdSense in popup
   try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e){}
+  // Show close button after 3.1s delay
+  setTimeout(() => popupClose.classList.add('visible'), 3100);
 }, 3000);
 
 popupClose.addEventListener('click', () => overlay.classList.remove('show'));

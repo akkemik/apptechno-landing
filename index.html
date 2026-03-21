@@ -216,6 +216,20 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 1.6rem;
     }
+
+    /* ── File type trio icons ── */
+    .app-icons-trio {
+      display: flex; gap: 8px; align-items: flex-end;
+    }
+    .file-icon {
+      display: flex; flex-direction: column; align-items: center;
+      width: 38px;
+    }
+    .file-icon svg { display: block; }
+    .file-icon-label {
+      font-size: .6rem; font-weight: 700; letter-spacing: .04em;
+      margin-top: 3px; color: var(--muted);
+    }
     .app-tag {
       display: inline-block;
       background: rgba(155,89,245,.2); color: var(--purple);
@@ -433,7 +447,39 @@
 
         <!-- File Consolidator -->
         <div class="app-card">
-          <div class="app-icon">📊</div>
+          <div class="app-icons-trio">
+            <!-- CSV icon -->
+            <div class="file-icon">
+              <svg width="34" height="42" viewBox="0 0 34 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="34" height="42" rx="5" fill="#1e7e3e"/>
+                <path d="M21 0 L34 13 L21 13 Z" fill="#145c2c"/>
+                <rect x="21" y="0" width="13" height="13" rx="0" fill="#145c2c"/>
+                <text x="17" y="32" font-size="9" font-weight="800" fill="white" text-anchor="middle" font-family="Arial">CSV</text>
+              </svg>
+              <span class="file-icon-label">CSV</span>
+            </div>
+            <!-- XLS icon -->
+            <div class="file-icon">
+              <svg width="38" height="46" viewBox="0 0 38 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="38" height="46" rx="5" fill="#1e5fa8"/>
+                <path d="M23 0 L38 15 L23 15 Z" fill="#144380"/>
+                <rect x="23" y="0" width="15" height="15" rx="0" fill="#144380"/>
+                <text x="19" y="35" font-size="9" font-weight="800" fill="white" text-anchor="middle" font-family="Arial">XLS</text>
+              </svg>
+              <span class="file-icon-label">XLS</span>
+            </div>
+            <!-- PDF/JPG icon -->
+            <div class="file-icon">
+              <svg width="34" height="42" viewBox="0 0 34 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="34" height="42" rx="5" fill="#c0392b"/>
+                <path d="M21 0 L34 13 L21 13 Z" fill="#8e1c13"/>
+                <rect x="21" y="0" width="13" height="13" rx="0" fill="#8e1c13"/>
+                <text x="17" y="30" font-size="7.5" font-weight="800" fill="white" text-anchor="middle" font-family="Arial">PDF</text>
+                <text x="17" y="39" font-size="5.5" font-weight="600" fill="rgba(255,255,255,.75)" text-anchor="middle" font-family="Arial">JPG</text>
+              </svg>
+              <span class="file-icon-label">PDF/JPG</span>
+            </div>
+          </div>
           <span class="app-tag" data-i18n="tagAvailable">Available</span>
           <h3 data-i18n="app1Title">File Consolidator</h3>
           <p data-i18n="app1Desc">Merge multiple CSV, Excel files into one spreadsheet. Combine PDF files and images into a single PDF. All processing is 100% local.</p>

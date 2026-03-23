@@ -1,0 +1,42 @@
+# AppTechno
+
+> AppTechno is a software company that builds free, privacy-friendly online tools and apps. All apps run entirely in the user's browser — no uploads, no accounts required, no data stored on servers.
+
+## What AppTechno Offers
+
+### Available Apps
+
+**BudgetWise** — https://budgetwise.apptechno.net
+Free personal budget tracker. Track income, manage expenses, scan receipts with OCR (JPG, JPEG, PDF), plan monthly budgets, compare budget vs actual, and forecast year-end finances. Available in 6 languages. Free plan + premium ($12.99/year). Works as a PWA on Android and iOS.
+
+**File Consolidator** — https://fileconsolidator.apptechno.net
+Merge multiple CSV and Excel files into one spreadsheet. Combine PDF files and images (JPG, JPEG) into a single PDF. All processing is 100% local in the browser.
+
+### Coming Soon
+
+- **CV Preparation**: Build professional CVs with smart templates, export to PDF. No account required.
+- **Text Tools**: Word count, character count, case converter, duplicate line remover.
+
+## Company Values
+
+- 100% Private: All processing in the browser — files never leave the device
+- Always Free: No subscriptions, no sign-ups for core tools
+- Works Everywhere: Fully responsive — desktop, tablet, mobile
+- Secure: No third-party data sharing, no server-side storage
+
+## Technology
+
+- Static site hosted on Cloudflare Pages
+- Apps built with Next.js, React, Supabase
+- Supports 10 languages: English, Turkish, German, Swedish, Spanish, French, Russian, Dutch, Italian, Chinese
+
+## Key URLs
+
+- Homepage: https://apptechno.net
+- BudgetWise: https://budgetwise.apptechno.net
+- File Consolidator: https://fileconsolidator.apptechno.net
+- Sitemap: https://apptechno.net/sitemap.xml
+
+## Contact
+
+https://apptechno.net (footer contact link)

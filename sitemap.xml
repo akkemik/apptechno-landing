@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://apptechno.net/</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://apptechno.net/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://apptechno.net/?lang=tr" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://apptechno.net/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://apptechno.net/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://apptechno.net/?lang=es" />
+    <xhtml:link rel="alternate" hreflang="sv" href="https://apptechno.net/?lang=sv" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://apptechno.net/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://apptechno.net/" />
+  </url>
+
+</urlset>

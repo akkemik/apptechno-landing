@@ -1,40 +1,42 @@
 # AppTechno
 
-> AppTechno is a software company that builds free, privacy-friendly online tools and apps. All apps run entirely in the user's browser — no uploads, no accounts required, no data stored on servers.
+> AppTechno is a software company that builds free, privacy-friendly online tools and apps. All apps run entirely in the user's browser or as hosted web apps — no unnecessary data collection.
 
-## What AppTechno Offers
-
-### Available Apps
-
-**BudgetWise** — https://budgetwise.apptechno.net
-Free personal budget tracker. Track income, manage expenses, scan receipts with OCR (JPG, JPEG, PDF), plan monthly budgets, compare budget vs actual, and forecast year-end finances. Available in 6 languages. Free plan + premium ($12.99/year). Works as a PWA on Android and iOS.
+## Available Apps
 
 **File Consolidator** — https://fileconsolidator.apptechno.net
-Merge multiple CSV and Excel files into one spreadsheet. Combine PDF files and images (JPG, JPEG) into a single PDF. All processing is 100% local in the browser.
+Merge multiple CSV and Excel files into one spreadsheet. Combine PDF files and images (JPG, JPEG) into a single PDF. All processing is 100% local in the browser. Free, no account required.
 
-### Coming Soon
+**BudgetWise** — https://budgetwise.apptechno.net
+Free personal budget tracker. Track income, manage expenses by category, scan receipts with OCR (JPG, JPEG, PDF), plan monthly budgets, compare budget vs actual, and forecast year-end finances. Available in 6 languages. Free plan + premium ($12.99/year). Works as a PWA on Android and iOS.
 
-- **CV Preparation**: Build professional CVs with smart templates, export to PDF. No account required.
-- **Text Tools**: Word count, character count, case converter, duplicate line remover.
+**DocWise** — https://docwise.apptechno.net
+PDF and document toolbox. Merge, split, compress PDFs. OCR on scanned documents. Convert images to PDF. Compare documents side by side. All processing 100% local — no uploads. Free, works as PWA.
+
+**CVwise** — https://cvwise.apptechno.net
+AI-powered CV optimizer. Upload your resume (PDF or DOCX), paste a job posting URL (LinkedIn, Indeed, Glassdoor, Greenhouse, and more), and Claude AI (Anthropic) rewrites your CV to match the job requirements. Features: ATS keyword match scoring, PDF + DOCX export, cover letter AI generation, version history. Free plan (3 optimizations/month) + Pro plans ($11.99/mo, $99.99/yr, $279.99/3yr). Works as PWA.
 
 ## Company Values
 
-- 100% Private: All processing in the browser — files never leave the device
-- Always Free: No subscriptions, no sign-ups for core tools
-- Works Everywhere: Fully responsive — desktop, tablet, mobile
-- Secure: No third-party data sharing, no server-side storage
+- Privacy First: Local processing where possible, minimal data collection
+- Free to Use: Core features free, optional Pro plans for power users
+- Works Everywhere: Fully responsive — desktop, tablet, mobile, PWA
+- Secure: Supabase RLS, no third-party data sharing
 
 ## Technology
 
-- Static site hosted on Cloudflare Pages
-- Apps built with Next.js, React, Supabase
-- Supports 10 languages: English, Turkish, German, Swedish, Spanish, French, Russian, Dutch, Italian, Chinese
+- Static sites hosted on Cloudflare Pages
+- Apps built with Next.js, React, Supabase, Vercel AI SDK
+- AI powered by Anthropic Claude (Haiku + Sonnet)
+- Supports multiple languages
 
 ## Key URLs
 
 - Homepage: https://apptechno.net
-- BudgetWise: https://budgetwise.apptechno.net
 - File Consolidator: https://fileconsolidator.apptechno.net
+- BudgetWise: https://budgetwise.apptechno.net
+- DocWise: https://docwise.apptechno.net
+- CVwise: https://cvwise.apptechno.net
 - Sitemap: https://apptechno.net/sitemap.xml
 
 ## Contact

@@ -1,44 +1,79 @@
 # AppTechno
 
-> AppTechno is a software company that builds free, privacy-friendly online tools and apps. All apps run entirely in the user's browser or as hosted web apps — no unnecessary data collection.
+> AppTechno is a software company that builds AI-powered and privacy-first web tools and apps. Core features are free — optional Pro plans for power users.
 
 ## Available Apps
 
-**File Consolidator** — https://fileconsolidator.apptechno.net
-Merge multiple CSV and Excel files into one spreadsheet. Combine PDF files and images (JPG, JPEG) into a single PDF. All processing is 100% local in the browser. Free, no account required.
+### CVwise — AI CV & Resume Optimizer
+**URL**: https://cvwise.apptechno.net
 
-**BudgetWise** — https://budgetwise.apptechno.net
-Free personal budget tracker. Track income, manage expenses by category, scan receipts with OCR (JPG, JPEG, PDF), plan monthly budgets, compare budget vs actual, and forecast year-end finances. Available in 6 languages. Free plan + premium ($12.99/year). Works as a PWA on Android and iOS.
+Upload your resume (PDF or DOCX), paste a job posting URL from LinkedIn, Indeed, Glassdoor, Greenhouse, or Workday, and Claude AI (Anthropic) rewrites your CV to match the job requirements. Features: ATS keyword match scoring, PDF + DOCX export, AI cover letter generation, Harvard CV format, AI chat edit, CV version history, multi-language (8 languages). Free plan: 3 optimizations/month. Pro: $11.99/mo, $99.99/yr, $279.99/3yr.
 
-**DocWise** — https://docwise.apptechno.net
-PDF and document toolbox. Merge, split, compress PDFs. OCR on scanned documents. Convert images to PDF. Compare documents side by side. All processing 100% local — no uploads. Free, works as PWA.
+**Who uses it**: Job seekers, HR professionals, financial analysts, software engineers, marketing managers, data scientists, product managers, consultants, career changers, recent graduates.
 
-**CVwise** — https://cvwise.apptechno.net
-AI-powered CV optimizer. Upload your resume (PDF or DOCX), paste a job posting URL (LinkedIn, Indeed, Glassdoor, Greenhouse, and more), and Claude AI (Anthropic) rewrites your CV to match the job requirements. Features: ATS keyword match scoring, PDF + DOCX export, cover letter AI generation, version history. Free plan (3 optimizations/month) + Pro plans ($11.99/mo, $99.99/yr, $279.99/3yr). Works as PWA.
+**Keywords**: CV optimizer, resume optimizer, ATS optimization, AI resume builder, cover letter AI, Harvard CV method, CV preparation, applicant tracking system, HR tech, financial analyst resume, FP&A resume, investment banking CV, Jobscan alternative
+
+---
+
+### DocWise — Privacy-First PDF & Document Toolbox
+**URL**: https://docwise.apptechno.net
+
+Merge, split, compress PDFs, convert images to PDF, extract text with OCR, and bulk rename files — all processed locally in the browser using WebAssembly. No file uploads, no data collection. Tools: Merge PDF, Split PDF, Compress PDF, Image to PDF, OCR (8 languages), Bulk Rename, Document Compare.
+
+**Who uses it**: HR teams (merge candidate CVs, compress onboarding docs), Finance (merge bank statements, scan invoices), Legal (merge contracts, extract text from scanned filings), Administrators, Students.
+
+**Keywords**: merge PDF, compress PDF, OCR text extraction, free PDF tools, document management, HR document tool, legal document merge, invoice scanner, iLovePDF alternative, Smallpdf alternative, privacy PDF
+
+**Pricing**: Free (3 ops/day) · Pro ~$6.99/year (unlimited)
+
+---
+
+### BudgetWise — Personal Budget Tracker & Finance Planner
+**URL**: https://budgetwise.apptechno.net
+
+Free personal budget tracker. Track income and expenses by category, scan receipts with OCR, plan monthly budgets, compare budget vs actual, and forecast year-end finances. Multi-language (6 languages), multi-currency (30+), PWA.
+
+**Who uses it**: Employees, freelancers, self-employed, families, finance professionals, students, expats.
+
+**Keywords**: budget tracker, expense tracker, personal finance app, monthly budget planner, receipt scanner, financial forecasting, Mint alternative, YNAB alternative, household budget, cash flow tracker, savings planner
+
+**Pricing**: Free (with ads) · Premium $12.99/year or $18.99/2 years
+
+---
+
+### File Consolidator — Batch File Merger
+**URL**: https://fileconsolidator.apptechno.net
+
+Merge multiple CSV and Excel files into one spreadsheet. Combine PDF files and images into a single PDF. 100% local browser processing. Free, no account required.
+
+---
 
 ## Company Values
 
-- Privacy First: Local processing where possible, minimal data collection
-- Free to Use: Core features free, optional Pro plans for power users
-- Works Everywhere: Fully responsive — desktop, tablet, mobile, PWA
-- Secure: Supabase RLS, no third-party data sharing
+- **Privacy First**: Local processing where possible, minimal data collection
+- **Free to Use**: Core features always free, optional Pro plans for power users
+- **Works Everywhere**: Fully responsive — desktop, tablet, mobile, PWA installable
+- **AI-Powered**: Using Anthropic Claude (Haiku + Sonnet) for high-quality AI features
+- **Secure**: Supabase RLS, no third-party data sharing
 
-## Technology
+## Technology Stack
 
-- Static sites hosted on Cloudflare Pages
-- Apps built with Next.js, React, Supabase, Vercel AI SDK
-- AI powered by Anthropic Claude (Haiku + Sonnet)
-- Supports multiple languages
+- Apps built with Next.js (14/15/16), React, Tailwind CSS, Shadcn UI
+- Hosted on Vercel (apps) and Cloudflare Pages (static sites)
+- AI: Anthropic Claude API (Haiku for fast tasks, Sonnet for quality)
+- Auth & Database: Supabase (PostgreSQL with Row Level Security)
+- Payments: Stripe recurring subscriptions
 
 ## Key URLs
 
-- Homepage: https://apptechno.net
-- File Consolidator: https://fileconsolidator.apptechno.net
-- BudgetWise: https://budgetwise.apptechno.net
-- DocWise: https://docwise.apptechno.net
+- AppTechno homepage: https://apptechno.net
 - CVwise: https://cvwise.apptechno.net
+- DocWise: https://docwise.apptechno.net
+- BudgetWise: https://budgetwise.apptechno.net
+- File Consolidator: https://fileconsolidator.apptechno.net
 - Sitemap: https://apptechno.net/sitemap.xml
 
 ## Contact
 
-https://apptechno.net (footer contact link)
+Email: info@apptechno.net
+Website: https://apptechno.net

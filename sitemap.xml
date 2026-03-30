@@ -4,8 +4,8 @@
 
   <url>
     <loc>https://apptechno.net/</loc>
-    <lastmod>2026-03-25</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://apptechno.net/" />
     <xhtml:link rel="alternate" hreflang="tr" href="https://apptechno.net/?lang=tr" />
@@ -15,6 +15,27 @@
     <xhtml:link rel="alternate" hreflang="sv" href="https://apptechno.net/?lang=sv" />
     <xhtml:link rel="alternate" hreflang="ar" href="https://apptechno.net/?lang=ar" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://apptechno.net/" />
+  </url>
+
+  <url>
+    <loc>https://cvwise.apptechno.net/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://docwise.apptechno.net/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://budgetwise.apptechno.net/</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>

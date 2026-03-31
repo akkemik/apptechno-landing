@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About AppTechno — Privacy-First Free Online Apps</title>
+  <meta name="description" content="Learn about AppTechno — a suite of free, privacy-friendly online tools built by a 30-year industry veteran who wanted essential utilities always at hand, with no uploads and no tracking." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://apptechno.net/about.html" />
+  <meta name="author" content="AppTechno" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About AppTechno — Privacy-First Free Online Apps" />
+  <meta property="og:description" content="The story behind AppTechno: 30 years of professional experience, tools built for personal use, now shared with the world." />
+  <meta property="og:url" content="https://apptechno.net/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://apptechno.net/images/budgetwise-icon.png" />
+  <meta property="og:site_name" content="AppTechno" />
+
+  <!-- Google AdSense (Auto Ads) -->
+  <meta name="google-adsense-account" content="ca-pub-5264106260111581" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5264106260111581"
+       crossorigin="anonymous"></script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About AppTechno",
+    "url": "https://apptechno.net/about.html",
+    "description": "AppTechno builds free, privacy-friendly online apps that run entirely in your browser. No uploads, no accounts, no data stored.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AppTechno",
+      "url": "https://apptechno.net"
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are AppTechno apps really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The core features of all AppTechno apps are free, with no credit card required. Some apps offer optional Pro plans for power users who need higher usage limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my files safe when I use AppTechno tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. All file processing happens entirely inside your browser. Your documents, spreadsheets, images, and PDFs never leave your device and are never uploaded to any server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No account is needed to use the browser-based tools (File Consolidator, DocWise). BudgetWise and CVwise offer optional accounts to save your data and access it across devices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do AppTechno apps work on mobile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All apps are fully responsive and work on smartphones and tablets. BudgetWise and CVwise can also be installed as Progressive Web Apps (PWA) on your home screen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Pro plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BudgetWise Pro and CVwise Pro unlock higher usage limits, remove ads, and add advanced features. Both start at under €13/year with a free trial — no credit card required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does AppTechno store or sell my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. AppTechno does not sell, share, or monetize your personal data. Analytics are limited to anonymous usage counts. Your files, documents, and financial data are never transmitted to our servers."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #0b0d1a;
+      --bg2:       #11142b;
+      --card:      rgba(255,255,255,0.05);
+      --card-hover:rgba(255,255,255,0.09);
+      --border:    rgba(255,255,255,0.10);
+      --text:      #e8eaf6;
+      --muted:     #8b8fa8;
+      --blue:      #4f8ef7;
+      --purple:    #9b59f5;
+      --grad:      linear-gradient(135deg, #4f8ef7 0%, #9b59f5 100%);
+      --grad-soft: linear-gradient(135deg, rgba(79,142,247,.15) 0%, rgba(155,89,245,.15) 100%);
+      --radius:    18px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; min-height: 100vh; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px; height: 64px;
+      background: rgba(11,13,26,.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.3rem; font-weight: 700;
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: .95rem; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--text); }
+    .lang-wrap { position: relative; }
+    .lang-btn {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--text); border-radius: 10px; padding: 6px 12px;
+      cursor: pointer; font-size: .9rem; transition: background .2s;
+    }
+    .lang-btn:hover { background: var(--card-hover); }
+    .lang-dropdown {
+      display: none; position: absolute; right: 0; top: calc(100% + 8px);
+      background: #1a1d3a; border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; min-width: 140px; z-index: 200;
+      box-shadow: 0 8px 32px rgba(0,0,0,.4);
+    }
+    .lang-dropdown.open { display: block; }
+    .lang-dropdown button {
+      display: block; width: 100%; text-align: left;
+      padding: 10px 16px; background: none; border: none;
+      color: var(--text); cursor: pointer; font-size: .9rem; transition: background .15s;
+    }
+    .lang-dropdown button:hover { background: var(--card-hover); }
+    .lang-dropdown button.active { color: var(--blue); }
+
+    /* Page */
+    .page { max-width: 860px; margin: 0 auto; padding: 60px 24px 80px; }
+
+    /* Hero */
+    .about-hero {
+      text-align: center; padding: 60px 0 48px;
+      border-bottom: 1px solid var(--border); margin-bottom: 60px;
+    }
+    .about-hero .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--grad-soft); border: 1px solid rgba(155,89,245,.3);
+      border-radius: 100px; padding: 6px 16px;
+      font-size: .85rem; color: var(--purple); margin-bottom: 24px;
+    }
+    .about-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.2; margin-bottom: 20px;
+    }
+    .about-hero h1 span { background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .about-hero p { font-size: 1.1rem; color: var(--muted); max-width: 620px; margin: 0 auto; }
+
+    /* Story */
+    .story { margin-bottom: 60px; }
+    .story p { color: var(--muted); margin-bottom: 18px; font-size: 1rem; }
+    .story p strong { color: var(--text); }
+
+    /* Section title */
+    .section-head { margin-bottom: 32px; }
+    .section-head h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; }
+    .section-head p { color: var(--muted); }
+
+    /* App detail cards */
+    .app-details { display: flex; flex-direction: column; gap: 24px; margin-bottom: 60px; }
+    .app-detail-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 28px 28px; display: flex; gap: 24px; align-items: flex-start;
+    }
+    .app-detail-card img { width: 64px; height: 64px; border-radius: 14px; object-fit: cover; flex-shrink: 0; }
+    .app-detail-card .app-emoji { font-size: 2.2rem; flex-shrink: 0; line-height: 1; }
+    .app-detail-body h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; }
+    .app-detail-body .tag { font-size: .75rem; color: var(--blue); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 10px; display: block; }
+    .app-detail-body p { color: var(--muted); font-size: .97rem; margin-bottom: 12px; }
+    .app-detail-body .use-cases { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .app-detail-body .use-case {
+      background: var(--grad-soft); border: 1px solid rgba(79,142,247,.2);
+      border-radius: 100px; padding: 4px 12px; font-size: .8rem; color: var(--blue);
+    }
+    .app-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--grad); color: #fff;
+      padding: 8px 20px; border-radius: 100px;
+      text-decoration: none; font-weight: 600; font-size: .88rem;
+      transition: opacity .2s;
+    }
+    .app-link:hover { opacity: .85; }
+    @media (max-width: 600px) {
+      .app-detail-card { flex-direction: column; }
+    }
+
+    /* Ad slot */
+    .ad-slot { text-align: center; margin: 40px 0; }
+    .ad-slot-label { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 60px; }
+    .faq-item {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%; text-align: left; background: none; border: none;
+      color: var(--text); padding: 20px 24px; cursor: pointer; font-size: 1rem; font-weight: 600;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      transition: background .15s;
+    }
+    .faq-q:hover { background: var(--card-hover); }
+    .faq-q .arrow { font-size: .8rem; color: var(--purple); transition: transform .2s; flex-shrink: 0; }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 24px 20px; color: var(--muted); font-size: .97rem; border-top: 1px solid var(--border); padding-top: 16px; }
+    .faq-a.open { display: block; }
+
+    /* CTA */
+    .cta-bar {
+      background: var(--grad-soft); border: 1px solid rgba(155,89,245,.2);
+      border-radius: var(--radius); padding: 40px; text-align: center; margin-bottom: 60px;
+    }
+    .cta-bar h3 { font-size: 1.4rem; font-weight: 700; margin-bottom: 10px; }
+    .cta-bar p { color: var(--muted); margin-bottom: 24px; }
+    .cta-bar a {
+      display: inline-block;
+      background: var(--grad); color: #fff;
+      padding: 12px 32px; border-radius: 100px;
+      text-decoration: none; font-weight: 600; font-size: 1rem;
+      transition: opacity .2s;
+    }
+    .cta-bar a:hover { opacity: .85; }
+
+    /* Footer */
+    footer {
+      text-align: center; padding: 32px 24px;
+      border-top: 1px solid var(--border); color: var(--muted); font-size: .88rem;
+    }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 14px; }
+    .footer-links a { color: var(--muted); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--text); }
+
+    @media (max-width: 480px) {
+      header { padding: 0 16px; }
+      .page { padding: 40px 16px 60px; }
+      .app-detail-card { padding: 20px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a class="logo" href="/">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <defs>
+        <linearGradient id="lg" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#4f8ef7"/>
+          <stop offset="100%" stop-color="#9b59f5"/>
+        </linearGradient>
+      </defs>
+      <rect width="28" height="28" rx="8" fill="url(#lg)"/>
+      <text x="5" y="20" font-size="16" fill="white" font-family="Arial" font-weight="bold">A</text>
+    </svg>
+    AppTechno
+  </a>
+  <nav>
+    <a href="/" data-i18n="navHome">Home</a>
+    <a href="/#apps" data-i18n="navTools">Apps</a>
+    <a href="/about.html" class="active" data-i18n="navAbout">About</a>
+  </nav>
+  <div class="lang-wrap">
+    <button class="lang-btn" id="langBtn">🌐 <span id="langLabel">EN</span> ▾</button>
+    <div class="lang-dropdown" id="langDropdown"></div>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="about-hero">
+    <div class="badge">✦ <span data-i18n="heroBadge">Our Story</span></div>
+    <h1 data-i18n="heroTitle">Built from <span data-i18n="heroTitleAccent">30 Years of Experience</span></h1>
+    <p data-i18n="heroSub">AppTechno is a suite of free, privacy-first apps born from decades of professional work — tools I needed, built the way I always wanted them.</p>
+  </div>
+
+  <!-- STORY -->
+  <section class="story">
+    <p data-i18n="story1"></p>
+    <p data-i18n="story2"></p>
+    <p data-i18n="story3"></p>
+  </section>
+
+
+  <!-- APPS -->
+  <section>
+    <div class="section-head">
+      <h2 data-i18n="appsTitle">The Apps</h2>
+      <p data-i18n="appsSub">Each tool solves a specific problem — the way professionals actually need it solved.</p>
+    </div>
+
+    <div class="app-details">
+
+      <!-- CVwise -->
+      <div class="app-detail-card">
+        <img src="images/cvwise-icon.png" alt="CVwise AI CV Optimizer">
+        <div class="app-detail-body">
+          <span class="tag">AI · Career</span>
+          <h3>CVwise — AI CV Optimizer</h3>
+          <p data-i18n="cvwiseDetail">Uploading your resume and pasting a job URL sounds simple — but the difference it makes is enormous. CVwise uses Claude AI to rewrite your CV sections to match the exact language, skills, and keywords of the job posting, dramatically improving your ATS score and the chances of a human actually reading your application. Whether you are a recent graduate or a seasoned professional, the tool adapts its output to your level and the role. Free plan includes three optimizations per month — more than enough to test whether this works for you.</p>
+          <div class="use-cases">
+            <span class="use-case" data-i18n="cvUse1">Job seekers</span>
+            <span class="use-case" data-i18n="cvUse2">ATS optimization</span>
+            <span class="use-case" data-i18n="cvUse3">Career changers</span>
+            <span class="use-case" data-i18n="cvUse4">Cover letters</span>
+          </div>
+          <a class="app-link" href="https://cvwise.apptechno.net" target="_blank" rel="noopener" data-i18n="launchBtn">Launch CVwise →</a>
+        </div>
+      </div>
+
+      <!-- BudgetWise -->
+      <div class="app-detail-card">
+        <img src="images/budgetwise-icon.png" alt="BudgetWise Budget Tracker">
+        <div class="app-detail-body">
+          <span class="tag">Finance · Personal</span>
+          <h3>BudgetWise — Personal Budget Tracker</h3>
+          <p data-i18n="budgetDetail">Managing money sounds like it should be simple, yet most tools either require connecting your bank account or are too complicated to use daily. BudgetWise keeps things honest: you log your income, record your expenses, scan receipts with the OCR camera, and watch a clear monthly picture emerge. The year-end forecast tells you where you will stand in December based on your current habits. No bank connection, no subscriptions required to start — your financial data stays on your device unless you choose to sync it to your own account.</p>
+          <div class="use-cases">
+            <span class="use-case" data-i18n="budgetUse1">Monthly budgeting</span>
+            <span class="use-case" data-i18n="budgetUse2">Expense tracking</span>
+            <span class="use-case" data-i18n="budgetUse3">OCR receipt scan</span>
+            <span class="use-case" data-i18n="budgetUse4">Year-end forecast</span>
+          </div>
+          <a class="app-link" href="https://budgetwise.apptechno.net" target="_blank" rel="noopener" data-i18n="launchBudget">Launch BudgetWise →</a>
+        </div>
+      </div>
+
+      <!-- DocWise -->
+      <div class="app-detail-card">
+        <img src="images/docwise-icon.png" alt="DocWise Document Tools">
+        <div class="app-detail-body">
+          <span class="tag">Documents · PDF</span>
+          <h3>DocWise — Document Toolbox</h3>
+          <p data-i18n="docwiseDetail">Throughout a professional career, you encounter the same document problems repeatedly: a PDF that needs splitting before sending, a scanned invoice that must be made searchable, two versions of a contract that need to be compared side by side. DocWise handles all of it — merge, split, compress, OCR, image-to-PDF conversion, and document comparison — entirely inside your browser. No file is ever uploaded to a server. For anyone who handles sensitive documents, that privacy guarantee matters more than any cloud feature.</p>
+          <div class="use-cases">
+            <span class="use-case" data-i18n="docUse1">Merge PDFs</span>
+            <span class="use-case" data-i18n="docUse2">OCR scanning</span>
+            <span class="use-case" data-i18n="docUse3">Compress files</span>
+            <span class="use-case" data-i18n="docUse4">Compare documents</span>
+          </div>
+          <a class="app-link" href="https://docwise.apptechno.net" target="_blank" rel="noopener" data-i18n="launchDoc">Launch DocWise →</a>
+        </div>
+      </div>
+
+      <!-- File Consolidator -->
+      <div class="app-detail-card">
+        <div class="app-emoji">📊</div>
+        <div class="app-detail-body">
+          <span class="tag">Data · Files</span>
+          <h3>File Consolidator</h3>
+          <p data-i18n="fileDetail">Anyone who has worked with data knows the drill: twelve department reports in separate Excel files, all with the same column structure, that need to become one file before the meeting. File Consolidator does exactly that — drag in your CSV or Excel files, click merge, and download the combined result. It also merges PDFs and images into single documents. The entire operation runs locally in your browser. No file leaves your machine. No login. No size limits imposed by a server.</p>
+          <div class="use-cases">
+            <span class="use-case" data-i18n="fileUse1">Merge CSV/Excel</span>
+            <span class="use-case" data-i18n="fileUse2">Combine PDFs</span>
+            <span class="use-case" data-i18n="fileUse3">Data analysts</span>
+            <span class="use-case" data-i18n="fileUse4">100% local</span>
+          </div>
+          <a class="app-link" href="https://fileconsolidator.apptechno.net" target="_blank" rel="noopener" data-i18n="launchFile">Launch File Consolidator →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section>
+    <div class="section-head">
+      <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
+      <p data-i18n="faqSub">Everything you need to know about AppTechno and its apps.</p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-i18n="faq1q">Are AppTechno apps really free?</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq1a">Yes. The core features of all AppTechno apps are free, with no credit card required. Some apps offer optional Pro plans for power users who need higher usage limits or ad-free experience.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-i18n="faq2q">Are my files safe when I use AppTechno tools?</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq2a">Absolutely. All file processing happens entirely inside your browser. Your documents, spreadsheets, images, and PDFs never leave your device and are never uploaded to any server.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-i18n="faq3q">Do I need to create an account?</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq3a">No account is needed to use the browser-based tools (File Consolidator, DocWise). BudgetWise and CVwise offer optional accounts to save your progress and access it across devices.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-i18n="faq4q">Do the apps work on mobile?</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq4a">Yes. All apps are fully responsive and work on smartphones and tablets. BudgetWise and CVwise can also be installed as Progressive Web Apps (PWA) directly on your home screen.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-i18n="faq5q">What is a Pro plan?</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq5a">BudgetWise Pro and CVwise Pro unlock higher usage limits, remove ads, and add advanced features. Both are available for under €13/year with a free trial included — no credit card required to start.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span data-i18n="faq6q">Does AppTechno store or sell my data?</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="faq-a"><p data-i18n="faq6a">No. AppTechno does not sell, share, or monetize your personal data. Analytics are limited to anonymous usage counts. Your files, documents, and financial records are never transmitted to our servers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-bar">
+    <h3 data-i18n="ctaTitle">Ready to try it yourself?</h3>
+    <p data-i18n="ctaSub">All apps are free to use — no account, no credit card, no catch.</p>
+    <a href="/" data-i18n="ctaBtn">Explore All Apps →</a>
+  </div>
+
+</div><!-- /page -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
+    <a href="/cookie-policy.html" data-i18n="footerCookie">Cookie Policy</a>
+    <a href="/terms.html" data-i18n="footerTerms">Terms of Use</a>
+    <a href="/about.html" data-i18n="navAbout">About</a>
+    <a href="mailto:info@apptechno.net" data-i18n="footerContact">Contact</a>
+  </div>
+  <p>© 2026 AppTechno · Sweden</p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  btn.classList.toggle('open');
+  answer.classList.toggle('open');
+}
+
+const i18n = {
+  en: {
+    navHome:'Home', navTools:'Apps', navAbout:'About',
+    heroBadge:'Our Story',
+    heroTitle:'Built from', heroTitleAccent:'30 Years of Experience',
+    heroSub:'AppTechno is a suite of free, privacy-first apps born from decades of professional work — tools I needed, built the way I always wanted them.',
+    story1:'After 30 years working across industries — from operations and finance to technology and administration — I kept running into the same situation: I needed a simple tool, right now, and everything available was either too complex, required a paid subscription, or asked me to upload sensitive files to someone else\'s server.',
+    story2:'So I started building my own. Not with grand ambitions at first — just practical tools I could reach for in the middle of a workday. A file merger when I had twelve department reports to consolidate. A budget tracker that didn\'t want my bank credentials. A CV optimizer when a colleague asked for help applying for a new role. Each tool was built to solve a real problem, in the simplest way possible, with absolute respect for the user\'s privacy.',
+    story3:'AppTechno is the result of sharing that personal toolkit with a wider audience. The philosophy behind every app is unchanged: your data stays on your device, the tool does its job without fuss, and there is always a free version that is genuinely useful. I built these tools because I needed them. I\'m sharing them because others will too.',
+    appsTitle:'The Apps',
+    appsSub:'Each tool solves a specific problem — the way professionals actually need it solved.',
+    cvwiseDetail:'Uploading your resume and pasting a job URL sounds simple — but the difference it makes is enormous. CVwise uses Claude AI to rewrite your CV sections to match the exact language, skills, and keywords of the job posting, dramatically improving your ATS score and the chances of a human actually reading your application. Whether you are a recent graduate or a seasoned professional, the tool adapts its output to your level and the role. Free plan includes three optimizations per month.',
+    cvUse1:'Job seekers', cvUse2:'ATS optimization', cvUse3:'Career changers', cvUse4:'Cover letters',
+    launchBtn:'Launch CVwise →',
+    budgetDetail:'Managing money sounds like it should be simple, yet most tools either require connecting your bank account or are too complicated to use daily. BudgetWise keeps things honest: you log your income, record your expenses, scan receipts with the OCR camera, and watch a clear monthly picture emerge. The year-end forecast tells you where you will stand in December based on your current habits. No bank connection, no subscriptions required to start.',
+    budgetUse1:'Monthly budgeting', budgetUse2:'Expense tracking', budgetUse3:'OCR receipt scan', budgetUse4:'Year-end forecast',
+    launchBudget:'Launch BudgetWise →',
+    docwiseDetail:'Throughout a professional career, you encounter the same document problems repeatedly: a PDF that needs splitting before sending, a scanned invoice that must be made searchable, two contract versions that need to be compared side by side. DocWise handles all of it — merge, split, compress, OCR, image-to-PDF conversion, and document comparison — entirely inside your browser. No file is ever uploaded to a server.',
+    docUse1:'Merge PDFs', docUse2:'OCR scanning', docUse3:'Compress files', docUse4:'Compare documents',
+    launchDoc:'Launch DocWise →',
+    fileDetail:'Anyone who has worked with data knows the drill: twelve department reports in separate Excel files that need to become one before the meeting. File Consolidator does exactly that — drag in your CSV or Excel files, click merge, and download the combined result. It also merges PDFs and images into single documents. The entire operation runs locally in your browser. No file leaves your machine.',
+    fileUse1:'Merge CSV/Excel', fileUse2:'Combine PDFs', fileUse3:'Data analysts', fileUse4:'100% local',
+    launchFile:'Launch File Consolidator →',
+    faqTitle:'Frequently Asked Questions', faqSub:'Everything you need to know about AppTechno and its apps.',
+    faq1q:'Are AppTechno apps really free?',
+    faq1a:'Yes. The core features of all AppTechno apps are free, with no credit card required. Some apps offer optional Pro plans for power users who need higher usage limits or an ad-free experience.',
+    faq2q:'Are my files safe when I use AppTechno tools?',
+    faq2a:'Absolutely. All file processing happens entirely inside your browser. Your documents, spreadsheets, images, and PDFs never leave your device and are never uploaded to any server.',
+    faq3q:'Do I need to create an account?',
+    faq3a:'No account is needed to use the browser-based tools (File Consolidator, DocWise). BudgetWise and CVwise offer optional accounts to save your progress and access it across devices.',
+    faq4q:'Do the apps work on mobile?',
+    faq4a:'Yes. All apps are fully responsive and work on smartphones and tablets. BudgetWise and CVwise can also be installed as Progressive Web Apps (PWA) directly on your home screen.',
+    faq5q:'What is a Pro plan?',
+    faq5a:'BudgetWise Pro and CVwise Pro unlock higher usage limits, remove ads, and add advanced features. Both are available for under €13/year with a free trial included — no credit card required.',
+    faq6q:'Does AppTechno store or sell my data?',
+    faq6a:'No. AppTechno does not sell, share, or monetize your personal data. Analytics are limited to anonymous usage counts. Your files, documents, and financial records are never transmitted to our servers.',
+    ctaTitle:'Ready to try it yourself?', ctaSub:'All apps are free to use — no account, no credit card, no catch.', ctaBtn:'Explore All Apps →',
+    footerPrivacy:'Privacy Policy', footerCookie:'Cookie Policy', footerTerms:'Terms of Use', footerContact:'Contact',
+    adLabel:'Advertisement',
+  },
+  tr: {
+    navHome:'Ana Sayfa', navTools:'Uygulamalar', navAbout:'Hakkımızda',
+    heroBadge:'Hikayemiz',
+    heroTitle:'30 Yıllık', heroTitleAccent:'Deneyimden Doğdu',
+    heroSub:'AppTechno, on yıllara yayılan profesyonel deneyimden doğan ücretsiz, gizlilik öncelikli uygulamalar topluluğudur — ihtiyaç duyduğum araçlar, her zaman istediğim şekilde.',
+    story1:'30 yılı aşkın süre farklı sektörlerde çalışırken — operasyon, finans, teknoloji ve yönetimden — hep aynı durumla karşılaştım: Tam da iş ortasında basit bir araca ihtiyacım oluyordu ve elimdeki seçenekler ya çok karmaşık, ya ücretli abonelik gerektiriyor, ya da hassas dosyalarımı başkasının sunucusuna yüklememi istiyordu.',
+    story2:'Bu yüzden kendi araçlarımı yazmaya başladım. Başlarda büyük hedefler yoktu — sadece bir iş günü ortasında uzanabileceğim pratik araçlar. On iki departman raporunu birleştirmek için bir dosya birleştirici. Banka bilgilerimi istemeden bütçemi takip eden bir uygulama. Bir meslektaşım iş başvurusunda yardım istediğinde devreye giren bir CV optimize edici. Her araç, gerçek bir sorunu en basit şekilde ve kullanıcının gizliliğine tam saygıyla çözmek için tasarlandı.',
+    story3:'AppTechno, bu kişisel araç setini daha geniş bir kitleyle paylaşmanın sonucudur. Her uygulamanın ardındaki felsefe değişmedi: Verileriniz cihazınızda kalır, araç işini görmeden yapmaz ve her zaman gerçekten işe yarayan ücretsiz bir sürüm vardır. Bu araçları kendim ihtiyaç duyduğum için yaptım; paylaşıyorum çünkü başkaları da ihtiyaç duyacak.',
+    appsTitle:'Uygulamalar', appsSub:'Her araç belirli bir sorunu çözer — profesyonellerin gerçekten ihtiyaç duyduğu şekilde.',
+    cvwiseDetail:'CV\'nizi yükleyip iş ilanı URL\'sini yapıştırmak basit görünür — ancak yarattığı fark çok büyüktür. CVwise, Claude yapay zekasını kullanarak CV bölümlerinizi iş ilanının tam dilini, becerilerini ve anahtar kelimelerini eşleştirecek şekilde yeniden yazar; ATS puanınızı ve başvurunuzun okunma olasılığını önemli ölçüde artırır. İster yeni mezun ister deneyimli bir profesyonel olun, araç çıktısını seviyenize ve role göre uyarlar. Ücretsiz plan ayda üç optimizasyon içerir.',
+    cvUse1:'İş arayanlar', cvUse2:'ATS optimizasyonu', cvUse3:'Kariyer değişikliği', cvUse4:'Ön yazı',
+    launchBtn:'CVwise\'ı Aç →',
+    budgetDetail:'Para yönetimi basit olmalı gibi görünür; ancak çoğu araç banka hesabı bağlantısı ister veya günlük kullanım için fazla karmaşıktır. BudgetWise işleri dürüst tutar: gelirlerinizi girersiniz, giderlerinizi kaydedersiniz, OCR kamerasıyla fişleri tararsınız ve net aylık tablo ortaya çıkar. Yıl sonu tahmini, mevcut alışkanlıklarınıza göre Aralık\'ta nerede olacağınızı söyler. Banka bağlantısı yok, başlamak için abonelik gerekmez.',
+    budgetUse1:'Aylık bütçe', budgetUse2:'Gider takibi', budgetUse3:'OCR fiş tarama', budgetUse4:'Yıl sonu tahmini',
+    launchBudget:'BudgetWise\'ı Aç →',
+    docwiseDetail:'Profesyonel bir kariyerde aynı belge sorunlarıyla tekrar tekrar karşılaşırsınız: göndermeden önce bölünmesi gereken bir PDF, aranabilir hale getirilmesi gereken taranmış bir fatura, yan yana karşılaştırılması gereken iki sözleşme versiyonu. DocWise hepsini tarayıcınızda halleder — birleştirme, bölme, sıkıştırma, OCR, görsel-PDF dönüştürme ve belge karşılaştırma. Hiçbir dosya sunucuya yüklenmez.',
+    docUse1:'PDF birleştirme', docUse2:'OCR tarama', docUse3:'Dosya sıkıştırma', docUse4:'Belge karşılaştırma',
+    launchDoc:'DocWise\'ı Aç →',
+    fileDetail:'Veriyle çalışan herkes bu durumu bilir: on iki departman raporu ayrı Excel dosyalarında, toplantıdan önce tek dosya olması gerekiyor. File Consolidator tam olarak bunu yapar — CSV veya Excel dosyalarınızı sürükleyin, birleştirin ve sonucu indirin. Aynı zamanda PDF\'leri ve görselleri tek belgede birleştirir. Tüm işlem tarayıcınızda yerel olarak gerçekleşir.',
+    fileUse1:'CSV/Excel birleştirme', fileUse2:'PDF birleştirme', fileUse3:'Veri analistleri', fileUse4:'%100 yerel',
+    launchFile:'File Consolidator\'ı Aç →',
+    faqTitle:'Sık Sorulan Sorular', faqSub:'AppTechno ve uygulamaları hakkında bilmeniz gereken her şey.',
+    faq1q:'AppTechno uygulamaları gerçekten ücretsiz mi?', faq1a:'Evet. Tüm AppTechno uygulamalarının temel özellikleri kredi kartı gerektirmeden ücretsizdir. Bazı uygulamalar, daha yüksek kullanım limitleri veya reklamsız deneyim isteyen kullanıcılar için isteğe bağlı Pro planlar sunar.',
+    faq2q:'Dosyalarım güvende mi?', faq2a:'Kesinlikle. Tüm dosya işlemleri tamamen tarayıcınızda gerçekleşir. Belgeleriniz, tablolarınız, görselleriniz ve PDF\'leriniz hiçbir zaman cihazınızı terk etmez ve hiçbir sunucuya yüklenmez.',
+    faq3q:'Hesap oluşturmam gerekiyor mu?', faq3a:'Tarayıcı tabanlı araçları (File Consolidator, DocWise) kullanmak için hesap gerekmez. BudgetWise ve CVwise, ilerlemenizi kaydetmek ve cihazlar arasında erişmek için isteğe bağlı hesaplar sunar.',
+    faq4q:'Uygulamalar mobilde çalışıyor mu?', faq4a:'Evet. Tüm uygulamalar tamamen duyarlı tasarıma sahip ve akıllı telefonlarda ve tabletlerde çalışır. BudgetWise ve CVwise ayrıca Aşamalı Web Uygulaması (PWA) olarak ana ekranınıza yüklenebilir.',
+    faq5q:'Pro plan nedir?', faq5a:'BudgetWise Pro ve CVwise Pro daha yüksek kullanım limitleri açar, reklamları kaldırır ve gelişmiş özellikler ekler. Her ikisi de yılda 13 €\'nun altında ve ücretsiz deneme dahil — başlamak için kredi kartı gerekmez.',
+    faq6q:'AppTechno verilerimi saklıyor veya satıyor mu?', faq6a:'Hayır. AppTechno kişisel verilerinizi satmaz, paylaşmaz veya para kazanma amacıyla kullanmaz. Analitikler yalnızca anonim kullanım sayılarıyla sınırlıdır. Dosyalarınız, belgeleriniz ve finansal kayıtlarınız hiçbir zaman sunucularımıza iletilmez.',
+    ctaTitle:'Kendiniz denemek ister misiniz?', ctaSub:'Tüm uygulamalar ücretsiz kullanılabilir — hesap, kredi kartı veya gizli koşul yok.', ctaBtn:'Tüm Uygulamaları Keşfet →',
+    footerPrivacy:'Gizlilik Politikası', footerCookie:'Çerez Politikası', footerTerms:'Kullanım Koşulları', footerContact:'İletişim',
+    adLabel:'Reklam',
+  },
+  de: {
+    navHome:'Startseite', navTools:'Apps', navAbout:'Über uns',
+    heroBadge:'Unsere Geschichte',
+    heroTitle:'Aus 30 Jahren', heroTitleAccent:'Erfahrung geboren',
+    heroSub:'AppTechno ist eine Suite kostenloser, datenschutzorientierter Apps, entstanden aus jahrzehntelanger Berufserfahrung — Werkzeuge, die ich brauchte, so gebaut, wie ich sie immer wollte.',
+    story1:'Nach über 30 Jahren Arbeit in verschiedenen Branchen — von Betrieb und Finanzen bis Technologie und Verwaltung — stieß ich immer wieder auf dieselbe Situation: Ich brauchte ein einfaches Tool, sofort, und alles Verfügbare war entweder zu komplex, kostenpflichtig oder verlangte das Hochladen sensibler Dateien auf fremde Server.',
+    story2:'Also begann ich, meine eigenen Tools zu entwickeln. Zunächst ohne große Ambitionen — nur praktische Werkzeuge, die ich mitten im Arbeitstag griffbereit haben wollte. Jedes Tool wurde entwickelt, um ein echtes Problem auf die einfachste Weise zu lösen — mit absoluter Achtung der Privatsphäre des Nutzers.',
+    story3:'AppTechno ist das Ergebnis, diesen persönlichen Werkzeugkasten mit einem breiteren Publikum zu teilen. Die Philosophie hinter jeder App ist unverändert: Ihre Daten bleiben auf Ihrem Gerät, das Tool erledigt seine Arbeit unkompliziert, und es gibt immer eine kostenlose Version, die wirklich nützlich ist.',
+    appsTitle:'Die Apps', appsSub:'Jedes Tool löst ein spezifisches Problem — so wie Profis es wirklich brauchen.',
+    cvwiseDetail:'CVwise nutzt Claude AI, um Ihre CV-Abschnitte so umzuschreiben, dass sie genau der Sprache, den Fähigkeiten und Schlüsselwörtern der Stellenausschreibung entsprechen — und verbessert so Ihren ATS-Score erheblich. Der kostenlose Plan enthält drei Optimierungen pro Monat.',
+    cvUse1:'Jobsuchende', cvUse2:'ATS-Optimierung', cvUse3:'Karrierewechsel', cvUse4:'Anschreiben',
+    launchBtn:'CVwise starten →',
+    budgetDetail:'BudgetWise hält es ehrlich: Einkommen erfassen, Ausgaben aufzeichnen, Belege mit der OCR-Kamera scannen, und ein klares monatliches Bild entsteht. Die Jahresendeprognose sagt Ihnen, wo Sie im Dezember stehen werden. Keine Bankverbindung, kein Abonnement nötig.',
+    budgetUse1:'Monatsbudget', budgetUse2:'Ausgabenverfolgung', budgetUse3:'OCR-Belegscan', budgetUse4:'Jahresprognose',
+    launchBudget:'BudgetWise starten →',
+    docwiseDetail:'DocWise erledigt alles in Ihrem Browser — Zusammenführen, Aufteilen, Komprimieren, OCR, Bild-zu-PDF und Dokumentenvergleich. Keine Datei wird jemals auf einen Server hochgeladen.',
+    docUse1:'PDFs zusammenführen', docUse2:'OCR-Scan', docUse3:'Komprimieren', docUse4:'Dokumente vergleichen',
+    launchDoc:'DocWise starten →',
+    fileDetail:'File Consolidator führt Ihre CSV- oder Excel-Dateien zusammen und lädt das kombinierte Ergebnis herunter. Auch PDFs und Bilder werden in einzelne Dokumente zusammengeführt. Alles läuft lokal in Ihrem Browser.',
+    fileUse1:'CSV/Excel zusammenführen', fileUse2:'PDFs kombinieren', fileUse3:'Datenanalysten', fileUse4:'100% lokal',
+    launchFile:'File Consolidator starten →',
+    faqTitle:'Häufig gestellte Fragen', faqSub:'Alles, was Sie über AppTechno wissen müssen.',
+    faq1q:'Sind AppTechno-Apps wirklich kostenlos?', faq1a:'Ja. Die Kernfunktionen aller AppTechno-Apps sind kostenlos, ohne Kreditkarte. Einige Apps bieten optionale Pro-Pläne für Nutzer mit höheren Anforderungen.',
+    faq2q:'Sind meine Dateien sicher?', faq2a:'Absolut. Alle Dateiverarbeitungen finden vollständig in Ihrem Browser statt. Ihre Dokumente, Tabellen, Bilder und PDFs verlassen niemals Ihr Gerät.',
+    faq3q:'Muss ich ein Konto erstellen?', faq3a:'Für File Consolidator und DocWise ist kein Konto erforderlich. BudgetWise und CVwise bieten optionale Konten zum Speichern Ihres Fortschritts.',
+    faq4q:'Funktionieren die Apps auf dem Handy?', faq4a:'Ja. Alle Apps sind vollständig responsiv. BudgetWise und CVwise können auch als PWA auf dem Startbildschirm installiert werden.',
+    faq5q:'Was ist ein Pro-Plan?', faq5a:'BudgetWise Pro und CVwise Pro schalten höhere Nutzungslimits frei, entfernen Werbung und fügen erweiterte Funktionen hinzu. Beide sind für unter 13 €/Jahr erhältlich.',
+    faq6q:'Speichert oder verkauft AppTechno meine Daten?', faq6a:'Nein. AppTechno verkauft, teilt oder monetarisiert Ihre persönlichen Daten nicht. Ihre Dateien und Finanzdaten werden niemals an unsere Server übertragen.',
+    ctaTitle:'Bereit, es selbst auszuprobieren?', ctaSub:'Alle Apps sind kostenlos nutzbar — kein Konto, keine Kreditkarte.', ctaBtn:'Alle Apps entdecken →',
+    footerPrivacy:'Datenschutz', footerCookie:'Cookie-Richtlinie', footerTerms:'Nutzungsbedingungen', footerContact:'Kontakt',
+    adLabel:'Werbung',
+  },
+  sv: {
+    navHome:'Hem', navTools:'Appar', navAbout:'Om oss',
+    heroBadge:'Vår historia',
+    heroTitle:'Byggt på', heroTitleAccent:'30 års erfarenhet',
+    heroSub:'AppTechno är en svit av gratis, integritetsförst appar skapade ur decennier av yrkesarbete — verktyg jag behövde, byggda precis som jag alltid velat ha dem.',
+    story1:'Efter 30 år i olika branscher stötte jag gång på gång på samma situation: jag behövde ett enkelt verktyg omedelbart, och allt tillgängligt var antingen för komplext, kräver abonnemang eller vill att jag laddar upp känsliga filer till en okänd server.',
+    story2:'Så jag började bygga egna verktyg. Inga stora ambitioner till en början — bara praktiska hjälpmedel som alltid var inom räckhåll. Varje verktyg byggdes för att lösa ett verkligt problem på enklast möjliga sätt, med absolut respekt för användarens integritet.',
+    story3:'AppTechno är resultatet av att dela denna personliga verktygslåda med en bredare publik. Filosofin bakom varje app är oförändrad: dina data stannar på din enhet, verktyget gör sitt jobb utan krångel, och det finns alltid en gratisversion som faktiskt är användbar.',
+    appsTitle:'Apparna', appsSub:'Varje verktyg löser ett specifikt problem — på det sätt proffs faktiskt behöver.',
+    cvwiseDetail:'CVwise använder Claude AI för att skriva om dina CV-avsnitt för att matcha exakt språket, kompetenserna och nyckelorden i jobbannonsen — vilket avsevärt förbättrar ditt ATS-poäng. Gratisplanen inkluderar tre optimeringar per månad.',
+    cvUse1:'Jobbsökare', cvUse2:'ATS-optimering', cvUse3:'Karriärbyten', cvUse4:'Personliga brev',
+    launchBtn:'Starta CVwise →',
+    budgetDetail:'BudgetWise håller det enkelt: logga inkomster, registrera utgifter, skanna kvitton med OCR-kameran, och en tydlig månatlig bild framträder. Ingen bankuppkoppling behövs, inget abonnemang krävs för att börja.',
+    budgetUse1:'Månadsbudget', budgetUse2:'Utgiftsspårning', budgetUse3:'OCR-kvittoscan', budgetUse4:'Årsprognos',
+    launchBudget:'Starta BudgetWise →',
+    docwiseDetail:'DocWise hanterar allt i din webbläsare — sammanfoga, dela, komprimera, OCR, bild-till-PDF och dokumentjämförelse. Ingen fil laddas någonsin upp till en server.',
+    docUse1:'Sammanfoga PDF', docUse2:'OCR-skanning', docUse3:'Komprimera filer', docUse4:'Jämför dokument',
+    launchDoc:'Starta DocWise →',
+    fileDetail:'File Consolidator sammanfogar dina CSV- eller Excel-filer och laddar ner det kombinerade resultatet. Allt körs lokalt i din webbläsare.',
+    fileUse1:'Slå ihop CSV/Excel', fileUse2:'Kombinera PDF', fileUse3:'Dataanalytiker', fileUse4:'100% lokalt',
+    launchFile:'Starta File Consolidator →',
+    faqTitle:'Vanliga frågor', faqSub:'Allt du behöver veta om AppTechno och dess appar.',
+    faq1q:'Är AppTechnos appar verkligen gratis?', faq1a:'Ja. Kärnfunktionerna i alla appar är gratis utan kreditkort. Vissa appar erbjuder valfria Pro-planer för användare med högre behov.',
+    faq2q:'Är mina filer säkra?', faq2a:'Absolut. All filbehandling sker i din webbläsare. Dina filer lämnar aldrig din enhet.',
+    faq3q:'Behöver jag skapa ett konto?', faq3a:'Inget konto behövs för File Consolidator och DocWise. BudgetWise och CVwise erbjuder valfria konton för att spara framsteg.',
+    faq4q:'Fungerar apparna på mobilen?', faq4a:'Ja. Alla appar är fullt responsiva. BudgetWise och CVwise kan installeras som PWA på din startskärm.',
+    faq5q:'Vad är en Pro-plan?', faq5a:'BudgetWise Pro och CVwise Pro låser upp högre användningsgränser, tar bort annonser och lägger till avancerade funktioner. Båda kostar under 13 €/år.',
+    faq6q:'Lagrar eller säljer AppTechno mina data?', faq6a:'Nej. AppTechno säljer, delar eller tjänar inte pengar på dina personuppgifter. Dina filer och finansiella uppgifter överförs aldrig till våra servrar.',
+    ctaTitle:'Redo att prova själv?', ctaSub:'Alla appar är gratis — inget konto, inget kreditkort.', ctaBtn:'Utforska alla appar →',
+    footerPrivacy:'Integritetspolicy', footerCookie:'Cookiepolicy', footerTerms:'Användarvillkor', footerContact:'Kontakt',
+    adLabel:'Annons',
+  },
+  es: {
+    navHome:'Inicio', navTools:'Apps', navAbout:'Sobre nosotros',
+    heroBadge:'Nuestra historia',
+    heroTitle:'Nacido de', heroTitleAccent:'30 años de experiencia',
+    heroSub:'AppTechno es una suite de apps gratuitas y orientadas a la privacidad, nacida de décadas de trabajo profesional — herramientas que necesitaba, construidas como siempre las quise.',
+    story1:'Tras 30 años trabajando en diferentes sectores, me encontré repetidamente con la misma situación: necesitaba una herramienta sencilla de inmediato, y todo lo disponible era demasiado complejo, requería suscripción o pedía subir archivos sensibles al servidor de otro.',
+    story2:'Así que empecé a construir las mías propias. Sin grandes ambiciones al principio — solo herramientas prácticas que tener a mano en mitad de un día de trabajo. Cada herramienta fue creada para resolver un problema real de la manera más simple, con absoluto respeto por la privacidad del usuario.',
+    story3:'AppTechno es el resultado de compartir esa caja de herramientas personal con un público más amplio. La filosofía detrás de cada app no ha cambiado: tus datos permanecen en tu dispositivo, la herramienta hace su trabajo sin complicaciones, y siempre hay una versión gratuita genuinamente útil.',
+    appsTitle:'Las Apps', appsSub:'Cada herramienta resuelve un problema específico — de la manera que los profesionales realmente lo necesitan.',
+    cvwiseDetail:'CVwise utiliza Claude AI para reescribir las secciones de tu CV para que coincidan exactamente con el lenguaje, habilidades y palabras clave de la oferta de trabajo — mejorando drásticamente tu puntuación ATS. El plan gratuito incluye tres optimizaciones al mes.',
+    cvUse1:'Buscadores de empleo', cvUse2:'Optimización ATS', cvUse3:'Cambio de carrera', cvUse4:'Cartas de presentación',
+    launchBtn:'Abrir CVwise →',
+    budgetDetail:'BudgetWise mantiene las cosas honestas: registra ingresos, apunta gastos, escanea recibos con la cámara OCR, y emerge una imagen mensual clara. Sin conexión bancaria, sin suscripción para empezar.',
+    budgetUse1:'Presupuesto mensual', budgetUse2:'Control de gastos', budgetUse3:'Scan OCR de recibos', budgetUse4:'Previsión anual',
+    launchBudget:'Abrir BudgetWise →',
+    docwiseDetail:'DocWise maneja todo en tu navegador — fusionar, dividir, comprimir, OCR, imagen a PDF y comparación de documentos. Ningún archivo se sube nunca a un servidor.',
+    docUse1:'Fusionar PDFs', docUse2:'Escaneo OCR', docUse3:'Comprimir archivos', docUse4:'Comparar documentos',
+    launchDoc:'Abrir DocWise →',
+    fileDetail:'File Consolidator fusiona tus archivos CSV o Excel y descarga el resultado combinado. Todo se ejecuta localmente en tu navegador.',
+    fileUse1:'Fusionar CSV/Excel', fileUse2:'Combinar PDFs', fileUse3:'Analistas de datos', fileUse4:'100% local',
+    launchFile:'Abrir File Consolidator →',
+    faqTitle:'Preguntas frecuentes', faqSub:'Todo lo que necesitas saber sobre AppTechno y sus apps.',
+    faq1q:'¿Son realmente gratuitas las apps de AppTechno?', faq1a:'Sí. Las funciones básicas de todas las apps son gratuitas, sin tarjeta de crédito. Algunas ofrecen planes Pro opcionales para usuarios con mayores necesidades.',
+    faq2q:'¿Están seguros mis archivos?', faq2a:'Absolutamente. Todo el procesamiento ocurre en tu navegador. Tus archivos nunca salen de tu dispositivo.',
+    faq3q:'¿Necesito crear una cuenta?', faq3a:'No se necesita cuenta para File Consolidator y DocWise. BudgetWise y CVwise ofrecen cuentas opcionales para guardar el progreso.',
+    faq4q:'¿Funcionan las apps en móvil?', faq4a:'Sí. Todas las apps son completamente responsivas. BudgetWise y CVwise también se pueden instalar como PWA en tu pantalla de inicio.',
+    faq5q:'¿Qué es un plan Pro?', faq5a:'BudgetWise Pro y CVwise Pro desbloquean límites de uso más altos, eliminan anuncios y añaden funciones avanzadas. Ambos cuestan menos de 13 €/año.',
+    faq6q:'¿AppTechno almacena o vende mis datos?', faq6a:'No. AppTechno no vende, comparte ni monetiza tus datos personales. Tus archivos y registros financieros nunca se transmiten a nuestros servidores.',
+    ctaTitle:'¿Listo para probarlo?', ctaSub:'Todas las apps son gratuitas — sin cuenta, sin tarjeta de crédito.', ctaBtn:'Explorar todas las apps →',
+    footerPrivacy:'Política de privacidad', footerCookie:'Política de cookies', footerTerms:'Términos de uso', footerContact:'Contacto',
+    adLabel:'Publicidad',
+  },
+  fr: {
+    navHome:'Accueil', navTools:'Apps', navAbout:'À propos',
+    heroBadge:'Notre histoire',
+    heroTitle:'Né de', heroTitleAccent:'30 ans d\'expérience',
+    heroSub:'AppTechno est une suite d\'applications gratuites axées sur la confidentialité, nées de décennies d\'expérience professionnelle — des outils dont j\'avais besoin, construits exactement comme je les voulais.',
+    story1:'Après 30 ans dans différents secteurs, je me retrouvais constamment dans la même situation : j\'avais besoin d\'un outil simple immédiatement, et tout ce qui existait était trop complexe, nécessitait un abonnement ou demandait de télécharger des fichiers sensibles sur un serveur externe.',
+    story2:'J\'ai donc commencé à construire mes propres outils. Sans grandes ambitions au départ — juste des utilitaires pratiques toujours à portée de main. Chaque outil a été conçu pour résoudre un vrai problème de la manière la plus simple possible, dans un respect absolu de la vie privée de l\'utilisateur.',
+    story3:'AppTechno est le résultat du partage de cette boîte à outils personnelle avec un public plus large. La philosophie derrière chaque application est inchangée : vos données restent sur votre appareil, l\'outil fait son travail sans complication, et il y a toujours une version gratuite vraiment utile.',
+    appsTitle:'Les Apps', appsSub:'Chaque outil résout un problème spécifique — de la façon dont les professionnels en ont vraiment besoin.',
+    cvwiseDetail:'CVwise utilise Claude AI pour réécrire vos sections de CV afin de correspondre exactement au langage, aux compétences et aux mots-clés de l\'offre d\'emploi — améliorant considérablement votre score ATS. Le plan gratuit comprend trois optimisations par mois.',
+    cvUse1:'Chercheurs d\'emploi', cvUse2:'Optimisation ATS', cvUse3:'Reconversion', cvUse4:'Lettres de motivation',
+    launchBtn:'Lancer CVwise →',
+    budgetDetail:'BudgetWise garde les choses simples : enregistrez vos revenus, notez vos dépenses, scannez les reçus avec la caméra OCR, et une image mensuelle claire émerge. Pas de connexion bancaire, pas d\'abonnement requis pour commencer.',
+    budgetUse1:'Budget mensuel', budgetUse2:'Suivi des dépenses', budgetUse3:'Scan OCR reçus', budgetUse4:'Prévision annuelle',
+    launchBudget:'Lancer BudgetWise →',
+    docwiseDetail:'DocWise gère tout dans votre navigateur — fusionner, diviser, compresser, OCR, image en PDF et comparaison de documents. Aucun fichier n\'est jamais téléchargé sur un serveur.',
+    docUse1:'Fusionner des PDFs', docUse2:'Scan OCR', docUse3:'Compresser', docUse4:'Comparer des documents',
+    launchDoc:'Lancer DocWise →',
+    fileDetail:'File Consolidator fusionne vos fichiers CSV ou Excel et télécharge le résultat combiné. Tout s\'exécute localement dans votre navigateur.',
+    fileUse1:'Fusionner CSV/Excel', fileUse2:'Combiner PDFs', fileUse3:'Analystes de données', fileUse4:'100% local',
+    launchFile:'Lancer File Consolidator →',
+    faqTitle:'Questions fréquentes', faqSub:'Tout ce que vous devez savoir sur AppTechno.',
+    faq1q:'Les apps AppTechno sont-elles vraiment gratuites ?', faq1a:'Oui. Les fonctionnalités principales de toutes les apps sont gratuites, sans carte de crédit. Certaines proposent des plans Pro optionnels.',
+    faq2q:'Mes fichiers sont-ils en sécurité ?', faq2a:'Absolument. Tout le traitement s\'effectue dans votre navigateur. Vos fichiers ne quittent jamais votre appareil.',
+    faq3q:'Dois-je créer un compte ?', faq3a:'Aucun compte n\'est nécessaire pour File Consolidator et DocWise. BudgetWise et CVwise proposent des comptes optionnels.',
+    faq4q:'Les apps fonctionnent-elles sur mobile ?', faq4a:'Oui. Toutes les apps sont entièrement responsives. BudgetWise et CVwise peuvent aussi être installées en PWA.',
+    faq5q:'Qu\'est-ce qu\'un plan Pro ?', faq5a:'BudgetWise Pro et CVwise Pro débloquent des limites d\'utilisation plus élevées, suppriment les publicités et ajoutent des fonctionnalités avancées. Moins de 13 €/an.',
+    faq6q:'AppTechno stocke-t-il ou vend-il mes données ?', faq6a:'Non. AppTechno ne vend pas, ne partage pas et ne monétise pas vos données personnelles. Vos fichiers et données financières ne sont jamais transmis à nos serveurs.',
+    ctaTitle:'Prêt à l\'essayer ?', ctaSub:'Toutes les apps sont gratuites — pas de compte, pas de carte de crédit.', ctaBtn:'Découvrir toutes les apps →',
+    footerPrivacy:'Politique de confidentialité', footerCookie:'Politique des cookies', footerTerms:'Conditions d\'utilisation', footerContact:'Contact',
+    adLabel:'Publicité',
+  },
+  ru: {
+    navHome:'Главная', navTools:'Приложения', navAbout:'О нас',
+    heroBadge:'Наша история',
+    heroTitle:'Рождённый из', heroTitleAccent:'30 лет опыта',
+    heroSub:'AppTechno — набор бесплатных приложений с упором на конфиденциальность, созданных за десятилетия профессиональной работы — инструменты, которые мне были нужны, построенные именно так, как я всегда хотел.',
+    story1:'За 30 лет работы в разных отраслях я раз за разом сталкивался с одной ситуацией: мне был нужен простой инструмент прямо сейчас, а всё доступное было либо слишком сложным, требовало платной подписки, либо просило загрузить конфиденциальные файлы на чужой сервер.',
+    story2:'Поэтому я начал создавать собственные инструменты. Без больших амбиций поначалу — просто практичные утилиты, всегда под рукой. Каждый инструмент создавался для решения реальной проблемы самым простым способом, с абсолютным уважением к конфиденциальности пользователя.',
+    story3:'AppTechno — это результат того, что я поделился своим личным набором инструментов с более широкой аудиторией. Философия за каждым приложением неизменна: ваши данные остаются на вашем устройстве, инструмент делает своё дело без лишних сложностей, и всегда есть бесплатная версия, которая действительно полезна.',
+    appsTitle:'Приложения', appsSub:'Каждый инструмент решает конкретную задачу — именно так, как это нужно профессионалам.',
+    cvwiseDetail:'CVwise использует Claude AI для переработки разделов вашего резюме в соответствии с точным языком, навыками и ключевыми словами вакансии — значительно улучшая ваш ATS-балл. Бесплатный план включает три оптимизации в месяц.',
+    cvUse1:'Соискатели', cvUse2:'ATS-оптимизация', cvUse3:'Смена карьеры', cvUse4:'Сопроводительные письма',
+    launchBtn:'Открыть CVwise →',
+    budgetDetail:'BudgetWise ведёт честный учёт: фиксируйте доходы, записывайте расходы, сканируйте чеки OCR-камерой, и ясная ежемесячная картина складывается сама. Без подключения к банку, без подписки для начала работы.',
+    budgetUse1:'Ежемесячный бюджет', budgetUse2:'Учёт расходов', budgetUse3:'OCR-скан чеков', budgetUse4:'Годовой прогноз',
+    launchBudget:'Открыть BudgetWise →',
+    docwiseDetail:'DocWise обрабатывает всё в вашем браузере — объединение, разделение, сжатие, OCR, конвертация изображений в PDF и сравнение документов. Ни один файл никогда не загружается на сервер.',
+    docUse1:'Объединить PDF', docUse2:'OCR-сканирование', docUse3:'Сжатие файлов', docUse4:'Сравнение документов',
+    launchDoc:'Открыть DocWise →',
+    fileDetail:'File Consolidator объединяет ваши CSV- или Excel-файлы и скачивает результат. Всё работает локально в вашем браузере.',
+    fileUse1:'Объединить CSV/Excel', fileUse2:'Объединить PDF', fileUse3:'Аналитики данных', fileUse4:'100% локально',
+    launchFile:'Открыть File Consolidator →',
+    faqTitle:'Часто задаваемые вопросы', faqSub:'Всё, что вам нужно знать о AppTechno.',
+    faq1q:'Приложения AppTechno действительно бесплатны?', faq1a:'Да. Основные функции всех приложений бесплатны без кредитной карты. Некоторые предлагают необязательные Pro-планы для пользователей с более высокими потребностями.',
+    faq2q:'Мои файлы в безопасности?', faq2a:'Абсолютно. Вся обработка происходит в вашем браузере. Ваши файлы никогда не покидают ваше устройство.',
+    faq3q:'Нужно ли создавать аккаунт?', faq3a:'Аккаунт не нужен для File Consolidator и DocWise. BudgetWise и CVwise предлагают необязательные аккаунты для сохранения прогресса.',
+    faq4q:'Приложения работают на мобильных устройствах?', faq4a:'Да. Все приложения полностью адаптивны. BudgetWise и CVwise также можно установить как PWA на главный экран.',
+    faq5q:'Что такое Pro-план?', faq5a:'BudgetWise Pro и CVwise Pro открывают более высокие лимиты использования, убирают рекламу и добавляют расширенные функции. Оба стоят менее 13 €/год.',
+    faq6q:'AppTechno хранит или продаёт мои данные?', faq6a:'Нет. AppTechno не продаёт, не передаёт и не монетизирует ваши персональные данные. Ваши файлы и финансовые записи никогда не передаются на наши серверы.',
+    ctaTitle:'Готовы попробовать?', ctaSub:'Все приложения бесплатны — без аккаунта, без кредитной карты.', ctaBtn:'Посмотреть все приложения →',
+    footerPrivacy:'Политика конфиденциальности', footerCookie:'Политика cookies', footerTerms:'Условия использования', footerContact:'Контакт',
+    adLabel:'Реклама',
+  },
+  nl: {
+    navHome:'Home', navTools:'Apps', navAbout:'Over ons',
+    heroBadge:'Ons verhaal',
+    heroTitle:'Gebouwd op', heroTitleAccent:'30 jaar ervaring',
+    heroSub:'AppTechno is een suite van gratis, privacygerichte apps voortgekomen uit decennia professioneel werk — tools die ik nodig had, gebouwd zoals ik ze altijd wilde.',
+    story1:'Na 30 jaar werken in verschillende sectoren botste ik telkens op dezelfde situatie: ik had direct een eenvoudige tool nodig, en alles wat beschikbaar was, was te complex, vereiste een abonnement of vroeg om gevoelige bestanden te uploaden naar een externe server.',
+    story2:'Dus begon ik mijn eigen tools te bouwen. Zonder grote ambities in het begin — gewoon praktische hulpmiddelen die altijd binnen handbereik waren. Elk tool werd gebouwd om een echt probleem op de eenvoudigst mogelijke manier op te lossen, met absoluut respect voor de privacy van de gebruiker.',
+    story3:'AppTechno is het resultaat van het delen van die persoonlijke toolkit met een breder publiek. De filosofie achter elke app is onveranderd: uw gegevens blijven op uw apparaat, de tool doet zijn werk zonder gedoe, en er is altijd een gratis versie die echt nuttig is.',
+    appsTitle:'De Apps', appsSub:'Elk tool lost een specifiek probleem op — zoals professionals het echt nodig hebben.',
+    cvwiseDetail:'CVwise gebruikt Claude AI om uw CV-secties te herschrijven om precies overeen te komen met de taal, vaardigheden en trefwoorden van de vacature — waardoor uw ATS-score aanzienlijk verbetert. Het gratis plan bevat drie optimalisaties per maand.',
+    cvUse1:'Werkzoekenden', cvUse2:'ATS-optimalisatie', cvUse3:'Carrièrewissel', cvUse4:'Motivatiebrieven',
+    launchBtn:'CVwise starten →',
+    budgetDetail:'BudgetWise houdt het eerlijk: log inkomsten, registreer uitgaven, scan bonnen met de OCR-camera en een helder maandelijks beeld ontstaat. Geen bankverbinding, geen abonnement nodig om te beginnen.',
+    budgetUse1:'Maandbudget', budgetUse2:'Uitgaventracking', budgetUse3:'OCR kassabonscan', budgetUse4:'Jaarprognose',
+    launchBudget:'BudgetWise starten →',
+    docwiseDetail:'DocWise regelt alles in uw browser — samenvoegen, splitsen, comprimeren, OCR, afbeelding naar PDF en documentvergelijking. Geen bestand wordt ooit geüpload naar een server.',
+    docUse1:'PDFs samenvoegen', docUse2:'OCR-scan', docUse3:'Bestanden comprimeren', docUse4:'Documenten vergelijken',
+    launchDoc:'DocWise starten →',
+    fileDetail:'File Consolidator voegt uw CSV- of Excel-bestanden samen en downloadt het gecombineerde resultaat. Alles werkt lokaal in uw browser.',
+    fileUse1:'CSV/Excel samenvoegen', fileUse2:'PDFs combineren', fileUse3:'Data-analisten', fileUse4:'100% lokaal',
+    launchFile:'File Consolidator starten →',
+    faqTitle:'Veelgestelde vragen', faqSub:'Alles wat u moet weten over AppTechno.',
+    faq1q:'Zijn AppTechno-apps echt gratis?', faq1a:'Ja. De kernfuncties van alle apps zijn gratis zonder creditcard. Sommige apps bieden optionele Pro-plannen voor gebruikers met hogere eisen.',
+    faq2q:'Zijn mijn bestanden veilig?', faq2a:'Absoluut. Alle bestandsverwerking vindt volledig in uw browser plaats. Uw bestanden verlaten nooit uw apparaat.',
+    faq3q:'Moet ik een account aanmaken?', faq3a:'Voor File Consolidator en DocWise is geen account nodig. BudgetWise en CVwise bieden optionele accounts om voortgang op te slaan.',
+    faq4q:'Werken de apps op mobiel?', faq4a:'Ja. Alle apps zijn volledig responsief. BudgetWise en CVwise kunnen ook als PWA op uw startscherm worden geïnstalleerd.',
+    faq5q:'Wat is een Pro-plan?', faq5a:'BudgetWise Pro en CVwise Pro ontgrendelen hogere gebruikslimieten, verwijderen advertenties en voegen geavanceerde functies toe. Beide kosten minder dan €13/jaar.',
+    faq6q:'Slaat AppTechno mijn gegevens op of verkoopt het deze?', faq6a:'Nee. AppTechno verkoopt, deelt of monetariseert uw persoonlijke gegevens niet. Uw bestanden en financiële gegevens worden nooit naar onze servers verzonden.',
+    ctaTitle:'Klaar om het zelf te proberen?', ctaSub:'Alle apps zijn gratis te gebruiken — geen account, geen creditcard.', ctaBtn:'Alle apps verkennen →',
+    footerPrivacy:'Privacybeleid', footerCookie:'Cookiebeleid', footerTerms:'Gebruiksvoorwaarden', footerContact:'Contact',
+    adLabel:'Advertentie',
+  },
+  it: {
+    navHome:'Home', navTools:'App', navAbout:'Chi siamo',
+    heroBadge:'La nostra storia',
+    heroTitle:'Nato da', heroTitleAccent:'30 anni di esperienza',
+    heroSub:'AppTechno è una suite di app gratuite e orientate alla privacy, nata da decenni di lavoro professionale — strumenti di cui avevo bisogno, costruiti come li ho sempre voluti.',
+    story1:'Dopo 30 anni di lavoro in diversi settori, mi sono trovato ripetutamente nella stessa situazione: avevo bisogno di uno strumento semplice subito, e tutto ciò che era disponibile era troppo complesso, richiedeva un abbonamento o chiedeva di caricare file sensibili su server altrui.',
+    story2:'Così ho iniziato a costruire i miei strumenti. Senza grandi ambizioni all\'inizio — solo utility pratiche sempre a portata di mano. Ogni strumento è stato costruito per risolvere un problema reale nel modo più semplice possibile, con assoluto rispetto per la privacy dell\'utente.',
+    story3:'AppTechno è il risultato della condivisione di quel toolkit personale con un pubblico più ampio. La filosofia dietro ogni app è invariata: i tuoi dati rimangono sul tuo dispositivo, lo strumento fa il suo lavoro senza complicazioni, e c\'è sempre una versione gratuita genuinamente utile.',
+    appsTitle:'Le App', appsSub:'Ogni strumento risolve un problema specifico — nel modo in cui i professionisti ne hanno davvero bisogno.',
+    cvwiseDetail:'CVwise utilizza Claude AI per riscrivere le sezioni del tuo CV in modo da corrispondere esattamente al linguaggio, alle competenze e alle parole chiave dell\'offerta di lavoro — migliorando drasticamente il tuo punteggio ATS. Il piano gratuito include tre ottimizzazioni al mese.',
+    cvUse1:'Cercatori di lavoro', cvUse2:'Ottimizzazione ATS', cvUse3:'Cambio carriera', cvUse4:'Lettere di accompagnamento',
+    launchBtn:'Apri CVwise →',
+    budgetDetail:'BudgetWise mantiene le cose oneste: registra le entrate, annota le spese, scansiona le ricevute con la fotocamera OCR e emerge un quadro mensile chiaro. Nessuna connessione bancaria, nessun abbonamento richiesto per iniziare.',
+    budgetUse1:'Budget mensile', budgetUse2:'Tracciamento spese', budgetUse3:'Scan OCR ricevute', budgetUse4:'Previsione annuale',
+    launchBudget:'Apri BudgetWise →',
+    docwiseDetail:'DocWise gestisce tutto nel tuo browser — unire, dividere, comprimere, OCR, immagine in PDF e confronto documenti. Nessun file viene mai caricato su un server.',
+    docUse1:'Unire PDF', docUse2:'Scansione OCR', docUse3:'Comprimi file', docUse4:'Confronta documenti',
+    launchDoc:'Apri DocWise →',
+    fileDetail:'File Consolidator unisce i tuoi file CSV o Excel e scarica il risultato combinato. Tutto funziona localmente nel tuo browser.',
+    fileUse1:'Unire CSV/Excel', fileUse2:'Combinare PDF', fileUse3:'Analisti di dati', fileUse4:'100% locale',
+    launchFile:'Apri File Consolidator →',
+    faqTitle:'Domande frequenti', faqSub:'Tutto quello che devi sapere su AppTechno.',
+    faq1q:'Le app AppTechno sono davvero gratuite?', faq1a:'Sì. Le funzionalità principali di tutte le app sono gratuite senza carta di credito. Alcune offrono piani Pro opzionali per utenti con esigenze maggiori.',
+    faq2q:'I miei file sono al sicuro?', faq2a:'Assolutamente. Tutta l\'elaborazione avviene nel tuo browser. I tuoi file non lasciano mai il tuo dispositivo.',
+    faq3q:'Devo creare un account?', faq3a:'Nessun account necessario per File Consolidator e DocWise. BudgetWise e CVwise offrono account opzionali per salvare i progressi.',
+    faq4q:'Le app funzionano su mobile?', faq4a:'Sì. Tutte le app sono completamente responsive. BudgetWise e CVwise possono anche essere installate come PWA.',
+    faq5q:'Cos\'è un piano Pro?', faq5a:'BudgetWise Pro e CVwise Pro sbloccano limiti di utilizzo più elevati, rimuovono gli annunci e aggiungono funzionalità avanzate. Entrambi costano meno di 13 €/anno.',
+    faq6q:'AppTechno conserva o vende i miei dati?', faq6a:'No. AppTechno non vende, condivide o monetizza i tuoi dati personali. I tuoi file e dati finanziari non vengono mai trasmessi ai nostri server.',
+    ctaTitle:'Pronto a provare?', ctaSub:'Tutte le app sono gratuite — nessun account, nessuna carta di credito.', ctaBtn:'Esplora tutte le app →',
+    footerPrivacy:'Privacy Policy', footerCookie:'Cookie Policy', footerTerms:'Termini di utilizzo', footerContact:'Contatto',
+    adLabel:'Pubblicità',
+  },
+  zh: {
+    navHome:'首页', navTools:'应用', navAbout:'关于我们',
+    heroBadge:'我们的故事',
+    heroTitle:'源自', heroTitleAccent:'30年职业经验',
+    heroSub:'AppTechno是一套免费、隐私优先的应用程序，诞生于数十年的职业工作经验——我需要的工具，以我一直想要的方式构建。',
+    story1:'在不同行业工作了30多年后，我一次又一次地遇到同样的情况：我立即需要一个简单的工具，而所有可用的工具要么太复杂，要么需要付费订阅，要么要求将敏感文件上传到别人的服务器。',
+    story2:'所以我开始构建自己的工具。起初没有宏大的抱负——只是工作中随时可以使用的实用工具。每个工具都是为了以最简单的方式解决真实问题而构建的，完全尊重用户隐私。',
+    story3:'AppTechno是将这个个人工具包与更广泛受众分享的结果。每个应用背后的理念不变：您的数据留在您的设备上，工具毫无麻烦地完成工作，始终有一个真正有用的免费版本。',
+    appsTitle:'应用程序', appsSub:'每个工具解决一个特定问题——以专业人士真正需要的方式。',
+    cvwiseDetail:'CVwise使用Claude AI重写您的简历部分，以精确匹配职位描述的语言、技能和关键词——显著提高您的ATS分数。免费计划每月包含三次优化。',
+    cvUse1:'求职者', cvUse2:'ATS优化', cvUse3:'职业转换', cvUse4:'求职信',
+    launchBtn:'打开CVwise →',
+    budgetDetail:'BudgetWise保持诚实：记录收入，记录支出，用OCR相机扫描收据，清晰的月度图景就会出现。无需银行连接，无需订阅即可开始。',
+    budgetUse1:'月度预算', budgetUse2:'支出追踪', budgetUse3:'OCR收据扫描', budgetUse4:'年末预测',
+    launchBudget:'打开BudgetWise →',
+    docwiseDetail:'DocWise在您的浏览器中处理一切——合并、拆分、压缩、OCR、图像转PDF和文档比较。没有文件会上传到服务器。',
+    docUse1:'合并PDF', docUse2:'OCR扫描', docUse3:'压缩文件', docUse4:'比较文档',
+    launchDoc:'打开DocWise →',
+    fileDetail:'File Consolidator合并您的CSV或Excel文件并下载合并结果。一切都在您的浏览器中本地运行。',
+    fileUse1:'合并CSV/Excel', fileUse2:'合并PDF', fileUse3:'数据分析师', fileUse4:'100%本地',
+    launchFile:'打开File Consolidator →',
+    faqTitle:'常见问题', faqSub:'关于AppTechno您需要了解的一切。',
+    faq1q:'AppTechno的应用真的免费吗？', faq1a:'是的。所有AppTechno应用的核心功能无需信用卡即可免费使用。一些应用为有更高需求的用户提供可选的Pro计划。',
+    faq2q:'我的文件安全吗？', faq2a:'绝对安全。所有文件处理完全在您的浏览器中进行。您的文件永远不会离开您的设备。',
+    faq3q:'我需要创建账户吗？', faq3a:'使用File Consolidator和DocWise不需要账户。BudgetWise和CVwise提供可选账户以保存进度。',
+    faq4q:'这些应用在手机上可以使用吗？', faq4a:'是的。所有应用都完全自适应。BudgetWise和CVwise还可以作为PWA安装在主屏幕上。',
+    faq5q:'什么是Pro计划？', faq5a:'BudgetWise Pro和CVwise Pro解锁更高的使用限制，移除广告并添加高级功能。两者均不到13欧元/年。',
+    faq6q:'AppTechno会存储或出售我的数据吗？', faq6a:'不会。AppTechno不会出售、共享或将您的个人数据货币化。您的文件和财务记录永远不会传输到我们的服务器。',
+    ctaTitle:'准备好自己尝试了吗？', ctaSub:'所有应用均可免费使用——无需账户，无需信用卡。', ctaBtn:'探索所有应用 →',
+    footerPrivacy:'隐私政策', footerCookie:'Cookie政策', footerTerms:'使用条款', footerContact:'联系我们',
+    adLabel:'广告',
+  },
+};
+
+const langNames = { en:'English', tr:'Türkçe', de:'Deutsch', sv:'Svenska', es:'Español', fr:'Français', ru:'Русский', nl:'Nederlands', it:'Italiano', zh:'中文' };
+let currentLang = localStorage.getItem('at_lang') || 'en';
+
+function applyLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('at_lang', lang);
+  document.documentElement.lang = lang;
+  const t = i18n[lang] || i18n['en'];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  document.getElementById('langLabel').textContent = lang.toUpperCase();
+  document.querySelectorAll('#langDropdown button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+const dd = document.getElementById('langDropdown');
+Object.entries(langNames).forEach(([code, name]) => {
+  const btn = document.createElement('button');
+  btn.dataset.lang = code;
+  btn.textContent = name;
+  btn.onclick = () => { applyLang(code); dd.classList.remove('open'); };
+  dd.appendChild(btn);
+});
+document.getElementById('langBtn').addEventListener('click', e => {
+  e.stopPropagation();
+  dd.classList.toggle('open');
+});
+document.addEventListener('click', () => dd.classList.remove('open'));
+applyLang(currentLang);
+</script>
+</body>
+</html>

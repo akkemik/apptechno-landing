@@ -7,7 +7,7 @@
 ### CVwise — AI CV & Resume Optimizer
 **URL**: https://cvwise.apptechno.net
 
-Upload your resume (PDF or DOCX), paste a job posting URL from LinkedIn, Indeed, Glassdoor, Greenhouse, or Workday, and Claude AI (Anthropic) rewrites your CV to match the job requirements. Features: ATS keyword match scoring, PDF + DOCX export, AI cover letter generation, Harvard CV format, AI chat edit, CV version history, multi-language (8 languages). Free plan: 3 optimizations/month. Pro: $11.99/mo, $99.99/yr, $279.99/3yr.
+Upload your resume (PDF or DOCX) or build one from scratch using the CV Builder (beta), paste a job posting URL from LinkedIn, Indeed, Glassdoor, Greenhouse, or Workday, and Claude AI (Anthropic) rewrites your CV to match the job requirements. Features: ATS keyword match scoring, CV Builder (create from scratch), PDF + DOCX export, AI cover letter generation, Harvard CV format, AI chat edit, CV version history, multi-language (8 languages). Free plan: 3 optimizations/month. Pro: $11.99/mo, $99.99/yr, $279.99/3yr.
 
 **Who uses it**: Job seekers, HR professionals, financial analysts, software engineers, marketing managers, data scientists, product managers, consultants, career changers, recent graduates.
 

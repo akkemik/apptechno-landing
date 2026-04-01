@@ -1,3 +1,8 @@
+# favicon.ico — served as PNG (file is a PNG, override x-icon)
+/favicon.ico
+  Content-Type: image/png
+  Cache-Control: public, max-age=86400
+
 # ads.txt — cache bypass so AdSense crawler always gets fresh content
 /ads.txt
   Cache-Control: no-store, no-cache, must-revalidate

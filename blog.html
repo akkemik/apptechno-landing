@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — AppTechno | Productivity, Finance & Tech Insights</title>
+  <meta name="description" content="AppTechno Blog — practical guides on productivity, personal finance, CV optimization, document tools, and running a global business from anywhere." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://apptechno.net/blog.html" />
+  <meta name="keywords" content="AppTechno blog, productivity tips, personal finance, CV tips, ATS optimization, PDF tools, US LLC formation, e-commerce USA, budget tracking, document management" />
+  <meta name="author" content="AppTechno" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AppTechno Blog — Productivity, Finance & Tech Insights" />
+  <meta property="og:description" content="Practical guides on productivity, personal finance, CV optimization, and running a global business." />
+  <meta property="og:url" content="https://apptechno.net/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://apptechno.net/images/budgetwise-icon.png" />
+  <meta property="og:site_name" content="AppTechno" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AppTechno Blog" />
+  <meta name="twitter:description" content="Practical guides on productivity, personal finance, CV optimization, and more." />
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-5264106260111581" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5264106260111581"
+       crossorigin="anonymous"></script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "AppTechno Blog",
+    "url": "https://apptechno.net/blog.html",
+    "description": "Practical guides on productivity, personal finance, CV optimization, document tools, and running a global business.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AppTechno",
+      "url": "https://apptechno.net"
+    }
+  }
+  </script>
+
+  <style>
+    /* ── Reset & Variables ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0b0d1a;
+      --bg2:       #11142b;
+      --card:      rgba(255,255,255,0.05);
+      --card-hover:rgba(255,255,255,0.09);
+      --border:    rgba(255,255,255,0.10);
+      --text:      #e8eaf6;
+      --muted:     #8b8fa8;
+      --blue:      #4f8ef7;
+      --purple:    #9b59f5;
+      --grad:      linear-gradient(135deg, #4f8ef7 0%, #9b59f5 100%);
+      --grad-soft: linear-gradient(135deg, rgba(79,142,247,.15) 0%, rgba(155,89,245,.15) 100%);
+      --radius:    18px;
+      --sidebar-w: 160px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
+
+    /* ── Header ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 32px;
+      height: 64px;
+      background: rgba(11,13,26,.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.3rem; font-weight: 700;
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+    .logo svg { flex-shrink: 0; }
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a { color: var(--muted); text-decoration: none; font-size: .95rem; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--text); }
+
+    /* ── Top Banner Ad ── */
+    .top-banner {
+      width: 100%;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      min-height: 90px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+
+    /* ── Layout Shell ── */
+    .shell {
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr var(--sidebar-w);
+      gap: 0;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 16px;
+      align-items: start;
+    }
+
+    /* ── Sidebar Ads ── */
+    .sidebar {
+      padding: 32px 8px;
+      display: flex; flex-direction: column; align-items: center; gap: 24px;
+      position: sticky; top: 80px;
+    }
+    .ad-slot {
+      width: 150px;
+      background: var(--card);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .ad-slot.tall { min-height: 600px; }
+    .ad-slot.square { min-height: 250px; }
+
+    /* ── Main ── */
+    main { padding: 0 24px; }
+
+    /* ── Blog Hero ── */
+    .blog-hero {
+      padding: 56px 0 36px;
+      text-align: center;
+    }
+    .blog-hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .blog-hero h1 span {
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .blog-hero p { color: var(--muted); font-size: 1rem; max-width: 520px; margin: 0 auto 28px; }
+
+    /* ── Search ── */
+    .search-wrap {
+      display: flex; align-items: center; gap: 0;
+      max-width: 520px; margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      overflow: hidden;
+      transition: border-color .2s;
+    }
+    .search-wrap:focus-within { border-color: var(--blue); }
+    .search-icon {
+      padding: 0 16px;
+      color: var(--muted);
+      font-size: 1rem;
+      display: flex; align-items: center;
+    }
+    #searchInput {
+      flex: 1;
+      background: none; border: none; outline: none;
+      color: var(--text); font-size: .95rem;
+      padding: 12px 0;
+    }
+    #searchInput::placeholder { color: var(--muted); }
+    .search-clear {
+      background: none; border: none; color: var(--muted);
+      padding: 0 16px; cursor: pointer; font-size: 1rem;
+      display: none; align-items: center; transition: color .2s;
+    }
+    .search-clear:hover { color: var(--text); }
+    .search-clear.visible { display: flex; }
+
+    /* ── Category Filters ── */
+    .categories {
+      display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+      margin-top: 20px;
+    }
+    .cat-btn {
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--muted); border-radius: 100px;
+      padding: 6px 16px; font-size: .85rem; cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .cat-btn:hover { background: var(--card-hover); color: var(--text); }
+    .cat-btn.active {
+      background: var(--grad-soft); border-color: rgba(155,89,245,.4);
+      color: var(--purple);
+    }
+
+    /* ── Blog Grid ── */
+    .blog-section { padding: 32px 0 60px; }
+    .no-results {
+      text-align: center; color: var(--muted);
+      padding: 48px 0; font-size: .95rem; display: none;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    /* ── Post Card ── */
+    .post-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .post-card:hover {
+      background: var(--card-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(79,142,247,.15);
+    }
+    .post-thumb {
+      height: 160px;
+      background: var(--grad-soft);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .post-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+    .post-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .post-tag {
+      background: rgba(155,89,245,.2); color: var(--purple);
+      border-radius: 100px; padding: 2px 10px; font-size: .75rem; font-weight: 600;
+    }
+    .post-card h2 { font-size: 1.05rem; font-weight: 700; line-height: 1.35; }
+    .post-excerpt { color: var(--muted); font-size: .88rem; line-height: 1.55; flex: 1; }
+    .post-meta { font-size: .78rem; color: var(--muted); display: flex; gap: 12px; align-items: center; }
+    .post-read-more {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--blue); font-weight: 600; font-size: .88rem;
+      text-decoration: none; margin-top: 6px;
+      transition: gap .2s;
+    }
+    .post-read-more:hover { gap: 10px; }
+
+    /* ── Single Post Page ── */
+    .post-full { padding: 40px 0 60px; max-width: 800px; margin: 0 auto; }
+    .post-full-header { margin-bottom: 32px; }
+    .post-full-header .back-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--blue); font-size: .9rem; text-decoration: none;
+      margin-bottom: 20px; transition: gap .2s;
+    }
+    .post-full-header .back-link:hover { gap: 10px; }
+    .post-full-header h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800; line-height: 1.25; margin-bottom: 16px;
+    }
+    .post-full-header .post-meta { font-size: .85rem; color: var(--muted); margin-bottom: 24px; }
+    .post-full-header .post-tags { margin-bottom: 8px; }
+    .post-hero-img {
+      width: 100%; height: 240px;
+      background: var(--grad-soft);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem; margin-bottom: 36px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── Article content ── */
+    .article-body { font-size: 1rem; line-height: 1.8; color: var(--text); }
+    .article-body h2 {
+      font-size: 1.4rem; font-weight: 700; margin: 36px 0 14px;
+      background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    .article-body h3 { font-size: 1.1rem; font-weight: 700; margin: 28px 0 10px; color: var(--text); }
+    .article-body p { margin-bottom: 18px; }
+    .article-body ul, .article-body ol { margin: 0 0 18px 24px; }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong { color: #fff; }
+    .article-body a { color: var(--blue); text-decoration: none; }
+    .article-body a:hover { text-decoration: underline; }
+    .article-body blockquote {
+      border-left: 3px solid var(--purple);
+      margin: 24px 0; padding: 16px 20px;
+      background: var(--card); border-radius: 0 12px 12px 0;
+      color: var(--muted); font-style: italic;
+    }
+    .article-body .callout {
+      background: var(--grad-soft);
+      border: 1px solid rgba(155,89,245,.3);
+      border-radius: 12px; padding: 20px 24px; margin: 28px 0;
+    }
+    .article-body .callout strong { color: var(--purple); }
+    .article-body hr {
+      border: none; border-top: 1px solid var(--border);
+      margin: 36px 0;
+    }
+
+    /* ── CTA Box ── */
+    .cta-box {
+      background: var(--grad-soft);
+      border: 1px solid rgba(155,89,245,.3);
+      border-radius: var(--radius);
+      padding: 32px; text-align: center;
+      margin: 40px 0;
+    }
+    .cta-box h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .cta-box p { color: var(--muted); margin-bottom: 20px; font-size: .92rem; }
+    .cta-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--grad); color: #fff;
+      padding: 12px 28px; border-radius: 100px;
+      text-decoration: none; font-weight: 600; font-size: .95rem;
+      box-shadow: 0 4px 20px rgba(155,89,245,.35);
+      transition: opacity .2s, transform .2s;
+    }
+    .cta-btn:hover { opacity: .9; transform: translateY(-2px); }
+
+    /* ── Related Posts ── */
+    .related-section { margin-top: 56px; }
+    .related-section h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 32px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    footer a { color: var(--blue); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 1100px) {
+      .shell { grid-template-columns: 120px 1fr 120px; }
+      .ad-slot { width: 110px; }
+    }
+    @media (max-width: 860px) {
+      .shell { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      header { padding: 0 16px; }
+      nav { gap: 14px; }
+    }
+    @media (max-width: 540px) {
+      nav a { display: none; }
+      nav a.active { display: block; }
+      .blog-hero { padding: 36px 0 24px; }
+      main { padding: 0 8px; }
+    }
+
+    /* ── View toggle (list/grid) ── */
+    .view-controls {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .results-count { font-size: .85rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <a class="logo" href="/">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+      <defs>
+        <linearGradient id="lg" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#4f8ef7"/>
+          <stop offset="100%" stop-color="#9b59f5"/>
+        </linearGradient>
+      </defs>
+      <rect width="28" height="28" rx="8" fill="url(#lg)"/>
+      <text x="5" y="20" font-size="16" fill="white" font-family="Arial" font-weight="bold">A</text>
+    </svg>
+    AppTechno
+  </a>
+
+  <nav>
+    <a href="/#apps">Apps</a>
+    <a href="/#features">Features</a>
+    <a href="/about.html">About</a>
+    <a href="/blog.html" class="active">Blog</a>
+  </nav>
+
+  <div style="width:80px"></div><!-- spacer for alignment -->
+</header>
+
+<!-- ══ TOP BANNER AD (Desktop leaderboard) ══ -->
+<div class="top-banner" id="topBannerAd"></div>
+
+<!-- ══ VIEW TOGGLE: Blog listing vs Single post ══ -->
+<div id="blogListing">
+
+  <!-- ══ MAIN LAYOUT SHELL ══ -->
+  <div class="shell">
+
+    <!-- Left Sidebar Ad -->
+    <aside class="sidebar" id="leftSidebar">
+      <div class="ad-slot tall" id="adLeft"></div>
+    </aside>
+
+    <!-- ══ MAIN CONTENT ══ -->
+    <main>
+      <!-- Blog Hero + Search -->
+      <section class="blog-hero">
+        <h1>AppTechno <span>Blog</span></h1>
+        <p>Practical guides on productivity, personal finance, CV writing, document tools, and building a global business.</p>
+
+        <div class="search-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Search articles…" autocomplete="off" />
+          <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+        </div>
+
+        <div class="categories">
+          <button class="cat-btn active" data-cat="all">All</button>
+          <button class="cat-btn" data-cat="finance">Finance</button>
+          <button class="cat-btn" data-cat="career">Career</button>
+          <button class="cat-btn" data-cat="productivity">Productivity</button>
+          <button class="cat-btn" data-cat="business">Business</button>
+          <button class="cat-btn" data-cat="documents">Documents</button>
+        </div>
+      </section>
+
+      <!-- Blog Grid -->
+      <section class="blog-section">
+        <div class="view-controls">
+          <p class="results-count" id="resultsCount"></p>
+        </div>
+        <p class="no-results" id="noResults">No articles found matching your search.</p>
+        <div class="blog-grid" id="blogGrid"></div>
+      </section>
+    </main>
+
+    <!-- Right Sidebar Ad -->
+    <aside class="sidebar" id="rightSidebar">
+      <div class="ad-slot tall" id="adRight"></div>
+    </aside>
+
+  </div><!-- /shell -->
+
+</div><!-- /blogListing -->
+
+<!-- ══ SINGLE POST VIEW ══ -->
+<div id="singlePost" style="display:none;">
+  <div class="shell">
+    <aside class="sidebar" id="postLeftSidebar">
+      <div class="ad-slot tall" id="adPostLeft"></div>
+    </aside>
+    <main>
+      <article class="post-full" id="postContent"></article>
+    </main>
+    <aside class="sidebar" id="postRightSidebar">
+      <div class="ad-slot tall" id="adPostRight"></div>
+    </aside>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-links">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/cookie-policy.html">Cookie Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+    <a href="/about.html">About</a>
+    <a href="mailto:info@apptechno.net">Contact</a>
+    <a href="https://www.akkemik.net" target="_blank" rel="noopener noreferrer">Akkemik Consultancy — US LLC Formation</a>
+  </div>
+  <p>© 2026 AppTechno · Sweden</p>
+</footer>
+
+<script>
+/* ══════════════════════════════════════════
+   BLOG DATA
+══════════════════════════════════════════ */
+const POSTS = [
+  {
+    id: 'ecommerce-usa',
+    title: 'Why E-Commerce in the USA Is a Game-Changer for Global Entrepreneurs',
+    excerpt: 'The US market offers unparalleled reach, consumer spending power, and infrastructure for e-commerce. Learn why setting up a US LLC is the smartest first step — and how to do it from anywhere in the world.',
+    categories: ['business'],
+    tags: ['E-Commerce', 'US LLC', 'Business'],
+    emoji: '🇺🇸',
+    date: 'April 1, 2026',
+    readTime: '8 min read',
+    featured: true,
+  },
+  {
+    id: 'budget-basics',
+    title: '5 Budget Tracking Habits That Will Transform Your Finances in 30 Days',
+    excerpt: 'Most people know they should budget — but few actually stick with it. These five simple habits, backed by behavioural finance research, will help you build a system that lasts.',
+    categories: ['finance'],
+    tags: ['Budgeting', 'Personal Finance', 'BudgetWise'],
+    emoji: '💰',
+    date: 'March 28, 2026',
+    readTime: '6 min read',
+    featured: false,
+  },
+  {
+    id: 'ats-cv-guide',
+    title: 'ATS-Proof Your CV: What Recruiters Actually Look For in 2025',
+    excerpt: 'Over 75% of CVs are rejected by Applicant Tracking Systems before a human ever reads them. Here\'s exactly how to optimise your resume for ATS — without sacrificing readability.',
+    categories: ['career'],
+    tags: ['CV Writing', 'ATS', 'Job Search', 'CVwise'],
+    emoji: '📄',
+    date: 'March 25, 2026',
+    readTime: '7 min read',
+    featured: false,
+  },
+  {
+    id: 'pdf-tools-guide',
+    title: 'The Complete Guide to Managing PDFs Without Expensive Software',
+    excerpt: 'You don\'t need Adobe Acrobat Pro to merge, split, compress, or OCR your PDF files. Discover free browser-based tools that handle everything — with zero file uploads and complete privacy.',
+    categories: ['documents', 'productivity'],
+    tags: ['PDF', 'Document Tools', 'DocWise', 'Free Tools'],
+    emoji: '📑',
+    date: 'March 20, 2026',
+    readTime: '5 min read',
+    featured: false,
+  },
+  {
+    id: 'csv-excel-merge',
+    title: 'How to Merge Multiple CSV and Excel Files in Seconds — No Code Required',
+    excerpt: 'Combining data from multiple spreadsheets is a common headache. Learn how to merge CSV and Excel files instantly using a free browser-based tool — no formulas, no VBA, no upload required.',
+    categories: ['productivity'],
+    tags: ['CSV', 'Excel', 'Data Tools', 'File Consolidator'],
+    emoji: '📊',
+    date: 'March 15, 2026',
+    readTime: '4 min read',
+    featured: false,
+  },
+  {
+    id: 'remote-work-finance',
+    title: 'Financial Planning for Remote Workers and Digital Nomads',
+    excerpt: 'Working remotely gives you freedom — but it also comes with unique financial challenges: irregular income, multiple currencies, self-employment taxes, and no employer pension. Here\'s how to plan ahead.',
+    categories: ['finance', 'business'],
+    tags: ['Remote Work', 'Digital Nomad', 'Finance', 'Tax'],
+    emoji: '🌍',
+    date: 'March 10, 2026',
+    readTime: '9 min read',
+    featured: false,
+  },
+];
+
+/* Full article content map */
+const ARTICLE_CONTENT = {
+  'ecommerce-usa': `
+    <div class="post-full-header">
+      <a class="back-link" href="#" onclick="showListing(); return false;">← Back to Blog</a>
+      <div class="post-tags">
+        <span class="post-tag">E-Commerce</span>
+        <span class="post-tag">US LLC</span>
+        <span class="post-tag">Business</span>
+      </div>
+      <h1>Why E-Commerce in the USA Is a Game-Changer for Global Entrepreneurs</h1>
+      <div class="post-meta">
+        <span>April 1, 2026</span>
+        <span>·</span>
+        <span>8 min read</span>
+        <span>·</span>
+        <span>by AppTechno</span>
+      </div>
+    </div>
+    <div class="post-hero-img">🇺🇸</div>
+    <div class="article-body">
+      <p>If you're a global entrepreneur looking for the most powerful market to enter in 2026, the answer is almost always the same: <strong>the United States</strong>. With over 270 million digital shoppers, a payment infrastructure that supports merchants from 190+ countries, and a legal framework built for business agility, the US e-commerce landscape is unmatched anywhere on Earth.</p>
+
+      <p>But here's what most guides don't tell you: <strong>you don't have to be in the USA to operate a US e-commerce business.</strong> With the right structure in place, you can run a fully legitimate American business from Stockholm, Istanbul, or Singapore — paying US-compliant taxes, accepting USD payments, and building trust with American consumers who prefer to buy from US-registered companies.</p>
+
+      <h2>The Scale Advantage: Why the US Market Is Incomparable</h2>
+
+      <p>The US e-commerce market surpassed <strong>$1.1 trillion in annual sales</strong> in 2024, and projections for 2026 look even stronger. Compare this to the EU's fragmented regulatory landscape or Asia's steep platform localisation costs, and the case for a US-first strategy becomes compelling.</p>
+
+      <ul>
+        <li><strong>Consumer spending power:</strong> The average American spends over $5,000 per year online — nearly double the EU average.</li>
+        <li><strong>Platform access:</strong> Selling on Amazon US, Shopify, Walmart Marketplace, and eBay gives you access to the world's most active buyer base.</li>
+        <li><strong>Payment simplicity:</strong> Stripe, PayPal, and Square all work seamlessly for US-registered businesses, offering instant payouts and low fraud rates.</li>
+        <li><strong>Credibility signal:</strong> A .com domain and a US business address immediately increase conversion rates with American shoppers.</li>
+      </ul>
+
+      <h2>What You Actually Need to Start: The US LLC</h2>
+
+      <p>The most common and cost-effective legal structure for international e-commerce entrepreneurs entering the US market is the <strong>Limited Liability Company (LLC)</strong>. An LLC gives you:</p>
+
+      <ul>
+        <li>A legal US business entity that can open US bank accounts</li>
+        <li>An Employer Identification Number (EIN) required for payment processors</li>
+        <li>Pass-through taxation — meaning profits flow directly to you without corporate-level US tax (for non-US residents in most cases)</li>
+        <li>Limited personal liability: your personal assets are protected from business debts</li>
+        <li>A professional business address and registered agent in the state of formation</li>
+      </ul>
+
+      <p>Popular states for LLC formation include Wyoming (lowest fees, strongest privacy protections), Delaware (preferred for VC-backed startups), and Florida (no state income tax). For most e-commerce businesses with no physical US presence, <strong>Wyoming is the optimal choice</strong> due to its low annual fees and minimal reporting requirements.</p>
+
+      <h2>The Accounting Side: Don't Get It Wrong</h2>
+
+      <p>This is where many international entrepreneurs trip up. US accounting and tax compliance is not the same as in the EU or elsewhere. Key obligations include:</p>
+
+      <ul>
+        <li><strong>Sales Tax nexus:</strong> After <em>South Dakota v. Wayfair (2018)</em>, online sellers may owe sales tax in states where they exceed certain revenue thresholds — even without a physical presence. This varies by state.</li>
+        <li><strong>Annual reporting:</strong> Most states require LLCs to file an annual report and pay a state fee to keep the entity in good standing.</li>
+        <li><strong>EIN and ITIN:</strong> You'll need an EIN (Employer Identification Number) from the IRS for your LLC. Non-US residents may also need an ITIN for individual tax filings.</li>
+        <li><strong>Form 5472:</strong> Foreign-owned single-member LLCs must file Form 5472 with the IRS each year — failure results in a $25,000 penalty.</li>
+        <li><strong>FBAR:</strong> If you have US bank accounts with balances exceeding $10,000 at any point during the year, you may need to file an FBAR.</li>
+      </ul>
+
+      <blockquote>Getting US tax compliance right from day one is far cheaper than cleaning up a mess later. The rules are navigable — but you need the right guidance.</blockquote>
+
+      <h2>Turnkey Solutions: From Formation to First Sale</h2>
+
+      <p>The good news is that the entire process — from LLC formation through a registered agent, to obtaining your EIN, setting up a US business bank account, and configuring sales tax — can be handled remotely within a few weeks.</p>
+
+      <div class="callout">
+        <strong>Partner Spotlight: Akkemik Consultancy</strong><br><br>
+        For entrepreneurs who want a complete, end-to-end solution, <strong><a href="https://www.akkemik.net" target="_blank" rel="noopener noreferrer">Akkemik Consultancy</a></strong> provides turnkey US business setup services tailored for international clients. Their services include:<br><br>
+        <ul style="margin:10px 0 0 20px;">
+          <li>US LLC formation in Wyoming, Delaware, or Florida</li>
+          <li>Registered agent service and business address</li>
+          <li>EIN application on your behalf (no US visit required)</li>
+          <li>US business bank account setup assistance</li>
+          <li>Ongoing accounting, bookkeeping, and US tax compliance</li>
+          <li>Sales tax registration and reporting</li>
+          <li>Annual report filing and entity maintenance</li>
+        </ul>
+        <br>
+        Whether you're launching your first Shopify store or scaling an existing e-commerce operation into the US market, Akkemik provides the legal, financial, and administrative infrastructure you need — so you can focus on growing your business.
+        <br><br>
+        <a href="https://www.akkemik.net" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:700;">→ Visit Akkemik.net to learn more</a>
+      </div>
+
+      <h2>E-Commerce Platforms: Which One to Choose</h2>
+
+      <p>Once your LLC is formed and you have your EIN and business bank account, it's time to choose your selling platform. Here's a quick breakdown:</p>
+
+      <h3>Shopify</h3>
+      <p>The gold standard for direct-to-consumer (DTC) brands. Shopify gives you full control over your storefront, customer data, and branding. With a US LLC and a US bank account, you can accept Shopify Payments (the lowest-fee option) and access Shopify Capital for financing.</p>
+
+      <h3>Amazon FBA</h3>
+      <p>Fulfillment by Amazon is ideal for physical product sellers. Amazon handles storage, shipping, and customer service. Your US LLC gives you access to Amazon's North American marketplace. Note: you'll need to comply with Amazon's seller compliance requirements and may need a US-based product liability insurance policy.</p>
+
+      <h3>Etsy</h3>
+      <p>For handmade, vintage, or creative products, Etsy's US buyer base is enormous. A US LLC and US payment details increase trust and conversion rates on the platform.</p>
+
+      <h3>Your Own Website</h3>
+      <p>For scaling and margin optimization, owning your customer relationship is essential. A US LLC lets you integrate Stripe US (lower processing fees for USD transactions) and build long-term brand equity.</p>
+
+      <h2>The Tools Behind the Business: Stay Organised</h2>
+
+      <p>Running an e-commerce business — even a lean, one-person operation — generates a surprising volume of financial data. Income from multiple channels, expenses across suppliers, ad platforms, and software subscriptions, plus the need to track profitability by product line. The right tools make this manageable.</p>
+
+      <p>At AppTechno, we build free, privacy-first tools designed exactly for this kind of solo operator:</p>
+
+      <ul>
+        <li><strong><a href="https://budgetwise.apptechno.net" target="_blank">BudgetWise</a></strong> — Track your e-commerce income and expenses by category, scan receipts with OCR, and forecast your year-end financial position. Free plan available.</li>
+        <li><strong><a href="https://fileconsolidator.apptechno.net" target="_blank">File Consolidator</a></strong> — Merge order exports from multiple platforms (Amazon, Shopify, Etsy) into a single spreadsheet for bookkeeping. 100% local processing, no uploads.</li>
+        <li><strong><a href="https://docwise.apptechno.net" target="_blank">DocWise</a></strong> — Manage, compress, and organise your business PDFs — contracts, invoices, compliance documents — all in your browser.</li>
+      </ul>
+
+      <h2>A Practical Roadmap: From Idea to First US Sale</h2>
+
+      <ol>
+        <li><strong>Validate your product or niche</strong> — Research demand on Amazon, Google Trends, and Etsy before committing to formation costs.</li>
+        <li><strong>Form your US LLC</strong> — Choose your state (Wyoming for most), engage a registered agent, file Articles of Organization.</li>
+        <li><strong>Obtain your EIN</strong> — Apply directly with the IRS or use a service like Akkemik Consultancy to handle it for you.</li>
+        <li><strong>Open a US business bank account</strong> — Mercury, Relay, or Wise Business are popular choices for international LLC owners.</li>
+        <li><strong>Set up your selling platform</strong> — Shopify for DTC, Amazon Seller Central for FBA, or both.</li>
+        <li><strong>Configure sales tax</strong> — Use TaxJar or Avalara to automate multi-state compliance, or work with your accountant.</li>
+        <li><strong>Launch and track</strong> — Use BudgetWise to monitor cash flow from day one.</li>
+      </ol>
+
+      <hr>
+
+      <h2>Final Thoughts</h2>
+
+      <p>The US e-commerce opportunity has never been more accessible for international entrepreneurs. The combination of a favourable LLC structure, mature payment infrastructure, and the scale of the American consumer market creates a powerful foundation for any digital business.</p>
+
+      <p>The complexity lies not in the idea — but in the legal, financial, and administrative setup that makes it sustainable and compliant. This is exactly where the right partners and the right tools make all the difference.</p>
+
+      <p>If you're ready to take the leap, start with your LLC formation, get your financial tracking in place, and build from there. The US market rewards prepared, organised operators — and with the right setup, you can compete with anyone.</p>
+    </div>
+
+    <div class="cta-box">
+      <h3>Ready to Set Up Your US LLC?</h3>
+      <p>Akkemik Consultancy offers complete turnkey US business formation — LLC, EIN, bank account, accounting, and ongoing compliance. Fully remote, for international entrepreneurs.</p>
+      <a class="cta-btn" href="https://www.akkemik.net" target="_blank" rel="noopener noreferrer">Visit Akkemik.net →</a>
+    </div>
+
+    <div class="related-section">
+      <h2>Related Articles</h2>
+      <div class="blog-grid" id="relatedPostsGrid"></div>
+    </div>
+  `,
+
+  'budget-basics': `
+    <div class="post-full-header">
+      <a class="back-link" href="#" onclick="showListing(); return false;">← Back to Blog</a>
+      <div class="post-tags">
+        <span class="post-tag">Budgeting</span>
+        <span class="post-tag">Personal Finance</span>
+        <span class="post-tag">BudgetWise</span>
+      </div>
+      <h1>5 Budget Tracking Habits That Will Transform Your Finances in 30 Days</h1>
+      <div class="post-meta">
+        <span>March 28, 2026</span>
+        <span>·</span>
+        <span>6 min read</span>
+        <span>·</span>
+        <span>by AppTechno</span>
+      </div>
+    </div>
+    <div class="post-hero-img">💰</div>
+    <div class="article-body">
+      <p>Budgeting has a reputation problem. Most people associate it with restriction, spreadsheets, and the vague sense of guilt that comes from checking your bank statement. But the research is clear: <strong>people who track their spending consistently are not just wealthier — they report higher levels of financial confidence and lower stress</strong>, regardless of their income level.</p>
+
+      <p>The problem isn't the concept of budgeting. It's the systems people use. A system that requires 20 minutes of data entry per day will fail within a week. A system built around five simple habits can sustain itself indefinitely.</p>
+
+      <h2>Habit 1: The Weekly 10-Minute Review</h2>
+      <p>Block ten minutes every Sunday evening to review the past week's spending. Not to judge yourself — just to observe. What did you spend on food? Transport? Subscriptions you forgot about? Awareness alone changes behaviour. Apps like <a href="https://budgetwise.apptechno.net" target="_blank">BudgetWise</a> show your week-over-week spending by category with one tap, making this review genuinely fast.</p>
+
+      <h2>Habit 2: Scan Every Receipt</h2>
+      <p>The biggest budget-tracking failure mode is the cash or card purchase that never gets recorded. Build a habit of scanning receipts immediately after every transaction using OCR receipt scanning. It takes three seconds and eliminates the #1 source of budget data gaps.</p>
+
+      <h2>Habit 3: Set One Meaningful Category Limit</h2>
+      <p>Trying to set limits on every spending category at once is a recipe for abandonment. Instead, identify the <strong>one category</strong> where you consistently overspend, and set a monthly limit for that category only. When you hit 80% of the limit, you get an alert. This single change produces the most behaviour modification per unit of effort.</p>
+
+      <h2>Habit 4: Forecast Your Year-End Position Monthly</h2>
+      <p>Most budgeting tools focus on the past. The most powerful shift is to use your current income and spending trends to project where you'll finish the year. If you're on track to save €3,200 by December, that's motivating. If you're on track to overspend by €800, you have time to course-correct. Run this projection on the first of every month.</p>
+
+      <h2>Habit 5: Separate "Wants" from "Needs" — Visually</h2>
+      <p>Use colour coding or separate budget categories to make discretionary spending immediately visible. When your "restaurants and takeaway" category is clearly distinct from "groceries," you start making different decisions instinctively — without needing willpower.</p>
+
+      <div class="cta-box">
+        <h3>Try BudgetWise — Free Personal Finance Tracker</h3>
+        <p>Track income, expenses, and forecasts with OCR receipt scanning. Free plan available — no credit card required.</p>
+        <a class="cta-btn" href="https://budgetwise.apptechno.net" target="_blank">Open BudgetWise →</a>
+      </div>
+    </div>
+  `,
+
+  'ats-cv-guide': `
+    <div class="post-full-header">
+      <a class="back-link" href="#" onclick="showListing(); return false;">← Back to Blog</a>
+      <div class="post-tags">
+        <span class="post-tag">CV Writing</span>
+        <span class="post-tag">ATS</span>
+        <span class="post-tag">Job Search</span>
+      </div>
+      <h1>ATS-Proof Your CV: What Recruiters Actually Look For in 2025</h1>
+      <div class="post-meta">
+        <span>March 25, 2026</span>
+        <span>·</span>
+        <span>7 min read</span>
+        <span>·</span>
+        <span>by AppTechno</span>
+      </div>
+    </div>
+    <div class="post-hero-img">📄</div>
+    <div class="article-body">
+      <p>Over <strong>75% of CVs are rejected by Applicant Tracking Systems (ATS) before a human ever reads them.</strong> This is not hyperbole — it's the operational reality of recruiting at scale. Enterprise employers routinely receive 200–1,000 applications per role, and ATS software is the first filter applied to every single one.</p>
+
+      <p>The good news: beating ATS is not about gaming the system — it's about understanding what recruiters are actually looking for and expressing your experience in the vocabulary of the role.</p>
+
+      <h2>What ATS Systems Actually Do</h2>
+      <p>Modern ATS platforms (Workday, Greenhouse, Lever, iCIMS) parse your CV into a structured record and score it against the job description using keyword matching, section recognition, and increasingly, semantic relevance scoring powered by AI. They are not fooled by keyword stuffing — they look for contextual relevance.</p>
+
+      <h2>The Five Most Common ATS Rejection Reasons</h2>
+      <ul>
+        <li><strong>Non-standard section headers:</strong> "My Journey" instead of "Experience." ATS systems look for standard headers.</li>
+        <li><strong>Tables and columns:</strong> Many ATS parsers read left to right across columns, scrambling the text.</li>
+        <li><strong>Missing job title keywords:</strong> If the role is "Senior Product Manager" and your CV never uses those exact words, you'll score poorly.</li>
+        <li><strong>Inconsistent date formatting:</strong> "Jan 2022 – Present" vs "01/2022 – Current" confuses parsers.</li>
+        <li><strong>Skills buried in prose:</strong> ATS systems look for a dedicated Skills section — skills mentioned only in bullet points may not be extracted.</li>
+      </ul>
+
+      <h2>The Right Approach: Tailor, Don't Template</h2>
+      <p>The single most effective ATS strategy is to <strong>tailor your CV for each application</strong>. This means:</p>
+      <ol>
+        <li>Read the job description carefully and identify the 10–15 most important keywords</li>
+        <li>Ensure those keywords appear in your CV — in context, not as a list</li>
+        <li>Match the seniority language used in the job posting</li>
+        <li>Mirror the exact job title in your most recent position header</li>
+      </ol>
+
+      <p>This process, done manually, takes 30–45 minutes per application. <a href="https://cvwise.apptechno.net" target="_blank">CVwise</a> automates it: paste the job URL, and the AI rewrites your CV to match the role in under 60 seconds — improving ATS score while maintaining authenticity.</p>
+
+      <div class="cta-box">
+        <h3>Optimise Your CV with AI — Free Plan Available</h3>
+        <p>CVwise tailors your CV to any job posting using Claude AI. 3 free optimisations per month — no credit card required.</p>
+        <a class="cta-btn" href="https://cvwise.apptechno.net" target="_blank">Try CVwise Free →</a>
+      </div>
+    </div>
+  `,
+
+  'pdf-tools-guide': `
+    <div class="post-full-header">
+      <a class="back-link" href="#" onclick="showListing(); return false;">← Back to Blog</a>
+      <div class="post-tags">
+        <span class="post-tag">PDF</span>
+        <span class="post-tag">Document Tools</span>
+        <span class="post-tag">Free Tools</span>
+      </div>
+      <h1>The Complete Guide to Managing PDFs Without Expensive Software</h1>
+      <div class="post-meta">
+        <span>March 20, 2026</span>
+        <span>·</span>
+        <span>5 min read</span>
+        <span>·</span>
+        <span>by AppTechno</span>
+      </div>
+    </div>
+    <div class="post-hero-img">📑</div>
+    <div class="article-body">
+      <p>Adobe Acrobat Pro costs $239.88 per year. For most individuals and small businesses, the features they actually use — merge, split, compress, OCR — can be handled entirely for free, without uploading a single file to any server.</p>
+
+      <h2>The Privacy Problem with Online PDF Tools</h2>
+      <p>Most "free" online PDF tools (ilovepdf, smallpdf, etc.) upload your files to their servers for processing. For personal documents, contracts, financial records, or anything sensitive, this is a significant privacy and security concern. Many of these services retain uploaded files for 24–72 hours, and their data handling practices vary widely.</p>
+
+      <h2>Browser-Based PDF Processing: The Better Way</h2>
+      <p>Modern browsers have sufficient computational power to handle PDF manipulation entirely on-device using JavaScript and WebAssembly. This means your files never leave your computer — yet you get full functionality.</p>
+
+      <h2>Core PDF Operations Covered</h2>
+      <ul>
+        <li><strong>Merge PDFs:</strong> Combine multiple PDF files into one, with drag-and-drop reordering</li>
+        <li><strong>Split PDF:</strong> Extract specific pages or split into individual pages</li>
+        <li><strong>Compress PDF:</strong> Reduce file size for email or upload limits</li>
+        <li><strong>Images to PDF:</strong> Convert JPG, PNG, WebP to PDF</li>
+        <li><strong>OCR:</strong> Extract text from scanned documents and images</li>
+        <li><strong>Document comparison:</strong> Highlight differences between two document versions</li>
+      </ul>
+
+      <div class="cta-box">
+        <h3>Try DocWise — Free PDF & Document Toolbox</h3>
+        <p>All processing happens 100% in your browser. No uploads, no accounts, no size limits.</p>
+        <a class="cta-btn" href="https://docwise.apptechno.net" target="_blank">Open DocWise →</a>
+      </div>
+    </div>
+  `,
+
+  'csv-excel-merge': `
+    <div class="post-full-header">
+      <a class="back-link" href="#" onclick="showListing(); return false;">← Back to Blog</a>
+      <div class="post-tags">
+        <span class="post-tag">CSV</span>
+        <span class="post-tag">Excel</span>
+        <span class="post-tag">Data Tools</span>
+      </div>
+      <h1>How to Merge Multiple CSV and Excel Files in Seconds — No Code Required</h1>
+      <div class="post-meta">
+        <span>March 15, 2026</span>
+        <span>·</span>
+        <span>4 min read</span>
+        <span>·</span>
+        <span>by AppTechno</span>
+      </div>
+    </div>
+    <div class="post-hero-img">📊</div>
+    <div class="article-body">
+      <p>Whether you're consolidating monthly sales reports, combining survey responses, or merging order exports from multiple platforms, combining multiple spreadsheet files is one of the most common data tasks — and one of the most frustrating to do manually.</p>
+
+      <h2>The Manual Approach (And Why It Fails)</h2>
+      <p>The typical workaround is to open each file, copy the data, and paste it into a master spreadsheet. This works for two or three files. For ten or twenty files, it's an error-prone time sink. Header rows get duplicated, formatting breaks, and you inevitably miss a file or paste data in the wrong sheet.</p>
+
+      <h2>The Better Way: Browser-Based File Consolidation</h2>
+      <p>With File Consolidator, you can drag and drop any number of CSV or Excel files and merge them into a single consolidated spreadsheet in seconds. The tool handles:</p>
+      <ul>
+        <li>Automatic header deduplication (headers appear once, not repeated per file)</li>
+        <li>Mixed formats — combine .csv and .xlsx files in a single operation</li>
+        <li>Preserving data types — numbers stay as numbers, not text</li>
+        <li>Source file tracking — optional column indicating which original file each row came from</li>
+        <li>100% local processing — your data never leaves your browser</li>
+      </ul>
+
+      <div class="cta-box">
+        <h3>Try File Consolidator — Free & Instant</h3>
+        <p>Merge CSV and Excel files in seconds. No uploads, no account, no limits.</p>
+        <a class="cta-btn" href="https://fileconsolidator.apptechno.net" target="_blank">Open File Consolidator →</a>
+      </div>
+    </div>
+  `,
+
+  'remote-work-finance': `
+    <div class="post-full-header">
+      <a class="back-link" href="#" onclick="showListing(); return false;">← Back to Blog</a>
+      <div class="post-tags">
+        <span class="post-tag">Remote Work</span>
+        <span class="post-tag">Digital Nomad</span>
+        <span class="post-tag">Finance</span>
+      </div>
+      <h1>Financial Planning for Remote Workers and Digital Nomads</h1>
+      <div class="post-meta">
+        <span>March 10, 2026</span>
+        <span>·</span>
+        <span>9 min read</span>
+        <span>·</span>
+        <span>by AppTechno</span>
+      </div>
+    </div>
+    <div class="post-hero-img">🌍</div>
+    <div class="article-body">
+      <p>Remote work has changed the financial equation for millions of people. You've gained flexibility, eliminated commuting costs, and potentially moved to a lower cost-of-living area. But you've also acquired new financial complexities that traditional financial advice simply doesn't address.</p>
+
+      <h2>The Income Irregularity Problem</h2>
+      <p>Whether you're a freelancer, contractor, or remote employee paid in a foreign currency, <strong>income irregularity is the defining financial challenge</strong> of location-independent work. A budget built around a steady monthly salary fails the moment a contract ends, a client delays payment, or your exchange rate shifts 8% in a week.</p>
+
+      <p>The solution is to budget based on your <strong>worst recent month</strong>, not your average. This conservative baseline forces you to build a buffer naturally. Any income above the baseline goes directly to your financial runway fund — a 6-month operating reserve that removes the existential stress from income volatility.</p>
+
+      <h2>Multi-Currency Tracking</h2>
+      <p>If you earn in USD but spend in EUR or SEK, you need a financial tracking system that handles currency conversion gracefully. Track gross income in the currency received, record converted amounts at the time of transfer, and note the exchange rate. This makes tax reporting significantly simpler.</p>
+
+      <h2>The Self-Employment Tax Trap</h2>
+      <p>In most countries, self-employed individuals pay both the employee and employer portions of social security and health insurance contributions. This is often 25–35% of net income — a shock to anyone transitioning from salaried employment. <strong>Set aside this percentage automatically</strong> on every payment received. Treat it as if it doesn't exist in your spendable balance.</p>
+
+      <h2>Business Structure for Digital Nomads</h2>
+      <p>One of the most powerful tools available to location-independent entrepreneurs is establishing a business entity in a jurisdiction that matches their operational needs. For those with significant US client revenue or US-based operations, a <strong>US LLC</strong> provides a clean, low-cost structure with pass-through taxation.</p>
+
+      <p><a href="https://www.akkemik.net" target="_blank" rel="noopener noreferrer">Akkemik Consultancy</a> specialises in helping remote entrepreneurs and digital nomads set up US LLCs with full accounting and compliance support — entirely remotely, regardless of where you're based.</p>
+
+      <div class="cta-box">
+        <h3>Track Your Remote Income with BudgetWise</h3>
+        <p>Multi-currency support, income tracking by source, expense categorisation, and year-end forecasting. Free plan available.</p>
+        <a class="cta-btn" href="https://budgetwise.apptechno.net" target="_blank">Open BudgetWise →</a>
+      </div>
+    </div>
+  `,
+};
+
+/* ══════════════════════════════════════════
+   STATE & RENDERING
+══════════════════════════════════════════ */
+let currentCat = 'all';
+let currentQuery = '';
+
+function renderCard(post) {
+  return `
+    <article class="post-card" data-id="${post.id}" data-cats="${post.categories.join(',')}" data-text="${(post.title + ' ' + post.excerpt + ' ' + post.tags.join(' ')).toLowerCase()}">
+      <div class="post-thumb">${post.emoji}</div>
+      <div class="post-body">
+        <div class="post-tags">${post.tags.slice(0,2).map(t => `<span class="post-tag">${t}</span>`).join('')}</div>
+        <h2>${post.title}</h2>
+        <p class="post-excerpt">${post.excerpt}</p>
+        <div class="post-meta">
+          <span>${post.date}</span>
+          <span>·</span>
+          <span>${post.readTime}</span>
+        </div>
+        <a class="post-read-more" href="#${post.id}" onclick="showPost('${post.id}'); return false;">Read Article →</a>
+      </div>
+    </article>`;
+}
+
+function applyFilters() {
+  const cards = document.querySelectorAll('#blogGrid .post-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const matchesCat = currentCat === 'all' || card.dataset.cats.split(',').includes(currentCat);
+    const matchesQ = !currentQuery || card.dataset.text.includes(currentQuery.toLowerCase());
+    const show = matchesCat && matchesQ;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+  document.getElementById('resultsCount').textContent = visible + ' article' + (visible !== 1 ? 's' : '');
+  document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+}
+
+function initListing() {
+  const grid = document.getElementById('blogGrid');
+  grid.innerHTML = POSTS.map(renderCard).join('');
+  applyFilters();
+
+  // Search
+  const input = document.getElementById('searchInput');
+  const clearBtn = document.getElementById('searchClear');
+  input.addEventListener('input', function() {
+    currentQuery = this.value.trim();
+    clearBtn.classList.toggle('visible', currentQuery.length > 0);
+    applyFilters();
+  });
+  clearBtn.addEventListener('click', function() {
+    input.value = '';
+    currentQuery = '';
+    clearBtn.classList.remove('visible');
+    applyFilters();
+    input.focus();
+  });
+
+  // Categories
+  document.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      currentCat = this.dataset.cat;
+      applyFilters();
+    });
+  });
+}
+
+function showPost(id) {
+  const content = ARTICLE_CONTENT[id];
+  if (!content) return;
+  document.getElementById('blogListing').style.display = 'none';
+  document.getElementById('singlePost').style.display = 'block';
+  const postEl = document.getElementById('postContent');
+  postEl.innerHTML = content;
+
+  // Populate related posts
+  const relGrid = document.getElementById('relatedPostsGrid');
+  if (relGrid) {
+    const currentPost = POSTS.find(p => p.id === id);
+    const related = POSTS.filter(p => p.id !== id && (
+      p.categories.some(c => currentPost.categories.includes(c))
+    )).slice(0, 3);
+    relGrid.innerHTML = (related.length ? related : POSTS.filter(p => p.id !== id).slice(0, 3)).map(renderCard).join('');
+    relGrid.querySelectorAll('.post-read-more').forEach(a => {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        showPost(a.getAttribute('href').replace('#',''));
+      });
+    });
+  }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.pushState({ post: id }, '', '#' + id);
+}
+
+function showListing() {
+  document.getElementById('singlePost').style.display = 'none';
+  document.getElementById('blogListing').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.pushState({}, '', location.pathname);
+}
+
+// Handle browser back/forward
+window.addEventListener('popstate', function(e) {
+  if (e.state && e.state.post) {
+    showPost(e.state.post);
+  } else {
+    showListing();
+  }
+});
+
+// Init
+document.addEventListener('DOMContentLoaded', function() {
+  initListing();
+  // Check for hash on load
+  const hash = location.hash.replace('#', '');
+  if (hash && ARTICLE_CONTENT[hash]) {
+    showPost(hash);
+  }
+});
+</script>
+
+</body>
+</html>

@@ -424,6 +424,31 @@
       color: var(--muted); font-size: .82rem; overflow: hidden;
     }
 
+    /* ── Reviews ── */
+    .reviews-section { padding: 20px 0 60px; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .review-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .review-stars { color: #f59e0b; font-size: 1.1rem; letter-spacing: 1px; }
+    .review-comment { font-size: 0.9rem; color: var(--text); line-height: 1.5; flex: 1; }
+    .review-meta { font-size: 0.75rem; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+    .review-app-badge {
+      background: #eff6ff; color: #2563eb; border-radius: 999px;
+      padding: 2px 8px; font-size: 0.7rem; font-weight: 600;
+    }
+    .reviews-empty { text-align: center; color: var(--muted); padding: 40px 0; font-size: 0.9rem; }
+
     /* ── Features ── */
     .features-section { padding: 20px 0 60px; }
     .features-grid {
@@ -616,6 +641,17 @@
     </section>
 
 
+    <!-- User Reviews -->
+    <section class="reviews-section" id="reviews">
+      <div class="section-title">
+        <h2>What Users Say</h2>
+        <p>Real feedback from people using our apps</p>
+      </div>
+      <div class="reviews-grid" id="reviewsGrid">
+        <div class="reviews-empty" id="reviewsEmpty" style="display:none;">No reviews yet. Be the first!</div>
+      </div>
+    </section>
+
     <!-- Features -->
     <section class="features-section" id="features">
       <div class="section-title">
@@ -665,6 +701,47 @@
 
 
 <script>
+/* ══ Reviews ══ */
+(function loadReviews() {
+  const grid = document.getElementById('reviewsGrid');
+  const empty = document.getElementById('reviewsEmpty');
+  if (!grid) return;
+
+  const APP_LABELS = { cvwise: 'CVwise', docwise: 'DocWise', budgetwise: 'BudgetWise', fileconsolidator: 'File Consolidator' };
+
+  function stars(n) {
+    return '★'.repeat(n) + '☆'.repeat(5 - n);
+  }
+  function timeAgo(iso) {
+    const d = new Date(iso), now = new Date();
+    const days = Math.floor((now - d) / 86400000);
+    if (days === 0) return 'Today';
+    if (days === 1) return 'Yesterday';
+    if (days < 30) return days + ' days ago';
+    if (days < 365) return Math.floor(days / 30) + ' months ago';
+    return Math.floor(days / 365) + ' years ago';
+  }
+
+  fetch('https://cvwise.apptechno.net/api/reviews?limit=6')
+    .then(r => r.json())
+    .then(data => {
+      const reviews = data.reviews || [];
+      if (reviews.length === 0) { empty.style.display = 'block'; return; }
+      reviews.forEach(function(r) {
+        const card = document.createElement('div');
+        card.className = 'review-card';
+        card.innerHTML =
+          '<div class="review-stars">' + stars(r.rating) + '</div>' +
+          '<p class="review-comment">"' + r.comment.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '"</p>' +
+          '<div class="review-meta">' +
+            '<span class="review-app-badge">' + (APP_LABELS[r.app] || r.app) + '</span>' +
+            '<span>' + timeAgo(r.created_at) + '</span>' +
+          '</div>';
+        grid.appendChild(card);
+      });
+    })
+    .catch(function() { empty.style.display = 'block'; });
+})();
 /* ══ i18n ══ */
 const i18n = {
   en: {

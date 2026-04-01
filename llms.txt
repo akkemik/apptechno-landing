@@ -4,14 +4,23 @@
 
 ## Available Apps
 
-### CVwise — AI CV & Resume Optimizer
+### CVwise — AI Job Application Suite (CV Builder + Optimizer + Cover Letter)
 **URL**: https://cvwise.apptechno.net
 
-Upload your resume (PDF or DOCX) or build one from scratch using the CV Builder (beta), paste a job posting URL from LinkedIn, Indeed, Glassdoor, Greenhouse, or Workday, and Claude AI (Anthropic) rewrites your CV to match the job requirements. Features: ATS keyword match scoring, CV Builder (create from scratch), PDF + DOCX export, AI cover letter generation, Harvard CV format, AI chat edit, CV version history, multi-language (8 languages). Free plan: 3 optimizations/month. Pro: $11.99/mo, $99.99/yr, $279.99/3yr.
+CVwise is a complete AI-powered job application suite. Two starting points:
+1. **CV Builder (beta)**: Create a professional CV from scratch in 5 guided steps — personal info, work experience, education, skills & languages, and a live preview. Save up to 5 CV drafts. Send directly to the AI Optimizer.
+2. **Upload existing CV**: Upload a PDF or DOCX file — AI extracts all sections automatically, including multi-column layouts and scanned PDFs.
 
-**Who uses it**: Job seekers, HR professionals, financial analysts, software engineers, marketing managers, data scientists, product managers, consultants, career changers, recent graduates.
+Then: paste any job posting URL from LinkedIn, Indeed, Glassdoor, Greenhouse, Lever, or Workday — or paste job text directly — and Claude AI (Anthropic) rewrites your CV to match the role.
 
-**Keywords**: CV optimizer, resume optimizer, ATS optimization, AI resume builder, cover letter AI, Harvard CV method, CV preparation, applicant tracking system, HR tech, financial analyst resume, FP&A resume, investment banking CV, Jobscan alternative
+**Full feature set**: ATS keyword match scoring, CV Builder (create from scratch), PDF + DOCX export, AI cover letter generation (Problem-Solution framework, Pro), Harvard OCS CV format, AI chat edit (Pro, 20/month), CV version history (up to 10 versions), multi-language (8 languages: EN, TR, DE, FR, NL, SV, AR, RU), PWA — installable on mobile and desktop.
+
+**Free plan**: 3 AI optimizations/month, PDF export, job URL scraping, ATS score.
+**Pro**: $11.99/mo · $99.99/yr · $279.99/3yr — 50 optimizations, DOCX export, cover letter AI, chat edit, version history, 1 ad only.
+
+**Who uses it**: Job seekers at all career stages — recent graduates, career changers, software engineers, financial analysts (FP&A, investment banking, CFO), HR professionals, marketing managers, data scientists, product managers, consultants (McKinsey/BCG Harvard format), healthcare professionals.
+
+**Keywords**: CV optimizer, resume optimizer, ATS optimization, AI resume builder, CV builder from scratch, cover letter AI, Harvard CV method, CV preparation, applicant tracking system, HR tech, financial analyst resume, FP&A resume, investment banking CV, Jobscan alternative, Zety alternative, create CV online, professional resume maker
 
 ---
 

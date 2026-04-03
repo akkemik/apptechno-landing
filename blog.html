@@ -9,7 +9,7 @@
   <link rel="canonical" href="https://apptechno.net/blog.html" />
   <link rel="icon" href="/images/favicon-64.png" type="image/png" sizes="64x64" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180" />
-  <meta name="keywords" content="AppTechno blog, productivity tips, personal finance, CV tips, ATS optimization, PDF tools, US LLC formation, e-commerce USA, budget tracking, document management" />
+  <meta name="keywords" content="AppTechno blog, productivity tips, personal finance, CV tips, ATS optimization, PDF tools, US LLC formation, e-commerce USA, budget tracking, document management, boat maintenance, yacht management, BoatWise, boat checklist, marine maintenance" />
   <meta name="author" content="AppTechno" />
 
   <!-- Open Graph -->
@@ -491,6 +491,28 @@
 ══════════════════════════════════════════ */
 const POSTS = [
   {
+    id: 'boatwise-intro',
+    title: 'Introducing BoatWise: The Smart Boat Management App for Modern Sailors',
+    excerpt: 'Managing a yacht means juggling maintenance schedules, inventory, documents, and a dozen expiry dates — all at once. BoatWise brings everything together in one place, so you can spend less time on paperwork and more time on the water.',
+    categories: ['productivity'],
+    tags: ['BoatWise', 'Boat Maintenance', 'Yacht Management', 'Marine Apps'],
+    emoji: '⛵',
+    date: 'April 3, 2026',
+    readTime: '6 min read',
+    featured: true,
+  },
+  {
+    id: 'boat-maintenance-checklist',
+    title: 'The Complete Boat Maintenance Checklist Every Owner Needs',
+    excerpt: 'Neglected maintenance is the number one cause of unexpected breakdowns at sea. This comprehensive checklist covers engine, hull, safety, electrical, and rigging — with a smart tracking system so nothing slips through the cracks.',
+    categories: ['productivity'],
+    tags: ['Boat Maintenance', 'Checklist', 'Safety', 'BoatWise'],
+    emoji: '🔧',
+    date: 'April 3, 2026',
+    readTime: '8 min read',
+    featured: false,
+  },
+  {
     id: 'ecommerce-usa',
     title: 'Why E-Commerce in the USA Is a Game-Changer for Global Entrepreneurs',
     excerpt: 'The US market offers unparalleled reach, consumer spending power, and infrastructure for e-commerce. Learn why setting up a US LLC is the smartest first step — and how to do it from anywhere in the world.',
@@ -560,6 +582,228 @@ const POSTS = [
 
 /* Full article content map */
 const ARTICLE_CONTENT = {
+  'boatwise-intro': `
+    <div class="post-full-header">
+      <a class="back-link" href="#" onclick="showListing(); return false;">← Back to Blog</a>
+      <div class="post-tags">
+        <span class="post-tag">BoatWise</span>
+        <span class="post-tag">Boat Maintenance</span>
+        <span class="post-tag">Yacht Management</span>
+      </div>
+      <h1>Introducing BoatWise: The Smart Boat Management App for Modern Sailors</h1>
+      <div class="post-meta">
+        <span>April 3, 2026</span>
+        <span>·</span>
+        <span>6 min read</span>
+        <span>·</span>
+        <span>by AppTechno</span>
+      </div>
+    </div>
+    <div class="post-hero-img">⛵</div>
+    <div class="article-body">
+      <p>Owning a boat is one of life's great pleasures — but managing one is a job in itself. Between engine service intervals, safety equipment expiry dates, antifouling schedules, spare parts inventory, insurance renewals, and a growing stack of documents, it's easy for something critical to slip through the cracks. A missed oil change or an expired EPIRB battery could mean the difference between a smooth passage and a dangerous situation at sea.</p>
+
+      <p>That's exactly why we built <strong>BoatWise</strong>: a complete boat management app designed for serious sailors and yacht owners who want one place to track everything that matters about their vessel.</p>
+
+      <h2>What is BoatWise?</h2>
+
+      <p>BoatWise is a Progressive Web App (PWA) available at <a href="https://boatwise.apptechno.net" target="_blank">boatwise.apptechno.net</a>. It works on any device — desktop, tablet, or mobile — and can be installed on your phone's home screen for offline-friendly access. It supports <strong>5 languages</strong>: English, Swedish, German, Spanish, and Turkish.</p>
+
+      <p>Unlike a generic task manager or spreadsheet, BoatWise is purpose-built for marine vessel management. Every feature was designed with real sailors in mind.</p>
+
+      <h2>Core Features</h2>
+
+      <h3>Maintenance Tracking</h3>
+      <p>Create maintenance items for every system on your boat — engine oil changes, impeller replacements, standing rigging inspections, antifouling applications, and more. Set intervals by hours or calendar days. BoatWise tracks when each job is due and colour-codes them by urgency:</p>
+      <ul>
+        <li>🔴 <strong>Critical</strong> — overdue or due within 7 days</li>
+        <li>🟠 <strong>High</strong> — due within 30 days</li>
+        <li>🟡 <strong>Medium</strong> — due within 60 days</li>
+        <li>🟢 <strong>OK</strong> — nothing to worry about yet</li>
+      </ul>
+
+      <h3>Multi-Engine Support</h3>
+      <p>For motorboats with twin engines, BoatWise tracks each engine independently — starboard and port — with separate maintenance logs, hour counters, and service history. Sailboats with a single auxiliary engine, generators, and watermakers are all supported too.</p>
+
+      <h3>Spare Parts Inventory</h3>
+      <p>Log every spare part on board with its location ("Engine Room → Port Locker → Box A"), minimum stock level, and supplier link. When stock drops below the minimum, BoatWise flags it so you can reorder before your next passage. You can even scan barcodes with your phone camera for instant lookup.</p>
+
+      <h3>Equipment Management</h3>
+      <p>Record all onboard equipment — VHF radio, life raft, flares, navigation instruments, safety gear — with warranty expiry dates and purchase information. BoatWise alerts you before warranties expire and before safety equipment needs recertification.</p>
+
+      <h3>Document Vault</h3>
+      <p>Store all your vessel's documents — registration certificate, insurance policy, survey report, engine manuals — with expiry date tracking. You'll receive alerts before your insurance or registration lapses, with enough time to act.</p>
+
+      <h3>Logbook</h3>
+      <p>Keep a proper digital logbook with departure and arrival coordinates (captured from your device's GPS), sea conditions, crew list, fuel consumption, and engine hours per passage. Up to 3 photos per entry. Every voyage is recorded and searchable.</p>
+
+      <h2>Tier Plans — Free to Get Started</h2>
+
+      <p>BoatWise is <strong>free for the first 12 months</strong> — no credit card required. After that, plans start at just $9.99/year for the Captain tier (2 boats, 2 users) or $24.99/year for the Commodore tier (5 boats, 5 users, no top banner ads, team invites with boat-level access control).</p>
+
+      <div class="callout">
+        <strong>Try BoatWise Free</strong><br><br>
+        Get started at <a href="https://boatwise.apptechno.net" target="_blank" rel="noopener noreferrer">boatwise.apptechno.net</a> — no credit card, no commitment. The free plan gives you full access to all features for your first 12 months. After that, upgrading to Captain or Commodore keeps everything running at a fraction of what comparable apps charge.
+        <br><br>
+        <a href="https://boatwise.apptechno.net" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:700;">→ Launch BoatWise</a>
+      </div>
+
+      <h2>Built for Serious Sailors</h2>
+
+      <p>BoatWise was designed with input from real boat owners who manage everything from coastal cruisers to offshore bluewater yachts. The maintenance template library covers the most common service items out of the box — so you don't have to build your tracking system from scratch.</p>
+
+      <p>Whether you have a 28-foot sloop at the marina or a twin-screw motorboat doing summer passages in Scandinavia, BoatWise adapts to your vessel type, measurement system (metric or imperial), and preferred currency.</p>
+
+      <hr>
+
+      <h2>Ready to Bring Order to Your Boat?</h2>
+
+      <p>Stop relying on sticky notes, spreadsheets, and memory. BoatWise gives you a single, organised view of your boat's entire maintenance status — accessible from any device, in any language, at any marina in the world.</p>
+
+      <p><a href="https://boatwise.apptechno.net" target="_blank"><strong>Start your free 12-month trial at boatwise.apptechno.net →</strong></a></p>
+    </div>
+  `,
+
+  'boat-maintenance-checklist': `
+    <div class="post-full-header">
+      <a class="back-link" href="#" onclick="showListing(); return false;">← Back to Blog</a>
+      <div class="post-tags">
+        <span class="post-tag">Boat Maintenance</span>
+        <span class="post-tag">Checklist</span>
+        <span class="post-tag">Safety</span>
+      </div>
+      <h1>The Complete Boat Maintenance Checklist Every Owner Needs</h1>
+      <div class="post-meta">
+        <span>April 3, 2026</span>
+        <span>·</span>
+        <span>8 min read</span>
+        <span>·</span>
+        <span>by AppTechno</span>
+      </div>
+    </div>
+    <div class="post-hero-img">🔧</div>
+    <div class="article-body">
+      <p>The sea is unforgiving of neglect. A boat that isn't maintained doesn't just break down — it puts lives at risk. Yet most boat owners, especially those new to ownership, don't have a systematic approach to maintenance. They fix things when they fail, rather than preventing failure in the first place.</p>
+
+      <p>This checklist covers the essential maintenance items every boat owner should track, organised by system. We also explain how digital tools like <strong><a href="https://boatwise.apptechno.net" target="_blank">BoatWise</a></strong> can automate the tracking so nothing is ever missed.</p>
+
+      <h2>Engine Maintenance</h2>
+
+      <p>The engine is the heart of any motorboat and the safety net of every sailboat. Engine failure at sea is one of the most common causes of coastguard callouts — and most are entirely preventable.</p>
+
+      <ul>
+        <li><strong>Engine oil change</strong> — Every 100–150 engine hours or annually, whichever comes first. Use manufacturer-specified grade.</li>
+        <li><strong>Oil filter replacement</strong> — At every oil change.</li>
+        <li><strong>Fuel filter replacement</strong> — Every 200 hours or annually. Diesel contamination (bacterial growth) is common in boat tanks.</li>
+        <li><strong>Impeller replacement</strong> — Every 200–300 hours or 2 years. A failed impeller causes rapid overheating. Always carry a spare.</li>
+        <li><strong>Zincs / anodes</strong> — Inspect every haul-out, replace when more than 50% consumed. Protects engine internals from galvanic corrosion.</li>
+        <li><strong>Belts and hoses</strong> — Inspect annually, replace every 3–5 years or if cracking is visible.</li>
+        <li><strong>Heat exchanger service</strong> — Every 3 years or per manufacturer schedule.</li>
+        <li><strong>Engine mounts</strong> — Check for deterioration annually. Failed mounts cause vibration damage to the drivetrain.</li>
+      </ul>
+
+      <h2>Sailboat-Specific: Rigging and Sails</h2>
+
+      <p>For sailboats, the rig is arguably more critical than the engine. A rigging failure at sea can be catastrophic.</p>
+
+      <ul>
+        <li><strong>Standing rigging inspection</strong> — Annually by a qualified rigger. Look for broken strands, corrosion at swages, and cracks in turnbuckles.</li>
+        <li><strong>Standing rigging replacement</strong> — Every 8–12 years depending on usage and material. Wire rigging degrades invisibly — don't wait for a failure.</li>
+        <li><strong>Furling system service</strong> — Annually. Clean, inspect, and lubricate the foil bearings and drum.</li>
+        <li><strong>Running rigging</strong> — Replace halyards and sheets every 3–5 years, or when signs of wear appear (core damage, soft spots).</li>
+        <li><strong>Sail inspection</strong> — Inspect stitching, UV covers, batten pockets, and clew patches before each season.</li>
+        <li><strong>Chainplates</strong> — Inspect every 3 years. Chainplate failures are silent and can bring a mast down without warning.</li>
+      </ul>
+
+      <h2>Hull and Antifouling</h2>
+
+      <ul>
+        <li><strong>Antifouling application</strong> — Annually before launch, or per product specification. Apply in calm conditions above 10°C.</li>
+        <li><strong>Hull inspection</strong> — At each haul-out. Check for osmotic blisters, impact damage, and keel bolt integrity.</li>
+        <li><strong>Through-hull fittings and seacocks</strong> — Exercise every seacock at least twice a year to prevent seizure. Service with waterproof grease annually.</li>
+        <li><strong>Propeller</strong> — Inspect for dings, corrosion, and barnacles. Balance and pitch check every 2–3 years.</li>
+        <li><strong>Stern tube and cutlass bearing</strong> — Inspect annually. Replace cutlass bearing when propeller shaft shows more than 1mm of play.</li>
+      </ul>
+
+      <h2>Electrical and Safety Equipment</h2>
+
+      <ul>
+        <li><strong>EPIRB battery and hydrostatic release</strong> — Check expiry dates annually. Replace before expiry — an EPIRB with a dead battery is useless in an emergency.</li>
+        <li><strong>Life raft service</strong> — Every 1–3 years per manufacturer. Must be serviced by a certified station.</li>
+        <li><strong>Flares</strong> — Check expiry dates. Maritime flares expire after 3 years.</li>
+        <li><strong>Fire extinguishers</strong> — Annual inspection, professional service every 5 years.</li>
+        <li><strong>Bilge pump</strong> — Test manually and automatically every season start.</li>
+        <li><strong>Batteries</strong> — Load test annually. Replace house batteries every 3–5 years (gel/AGM), or monitor voltage cycles on LiFePO4 systems.</li>
+        <li><strong>VHF radio and DSC</strong> — Annual test of DSC distress function. Confirm MMSI registration is current.</li>
+      </ul>
+
+      <h2>Deck and Deck Hardware</h2>
+
+      <ul>
+        <li><strong>Winch service</strong> — Annually. Disassemble, clean, inspect pawls and springs, re-grease.</li>
+        <li><strong>Windlass service</strong> — Annually. Clean, inspect, lubricate. Check anchor chain condition and swivel.</li>
+        <li><strong>Teak deck</strong> — Inspect seam compound annually. Recaulk where compound has shrunk or cracked.</li>
+        <li><strong>Stanchions and lifelines</strong> — Check for movement, corrosion at base plates, and wire fatigue.</li>
+      </ul>
+
+      <h2>Tracking It All — Don't Rely on Memory</h2>
+
+      <p>The most common reason maintenance gets missed is not negligence — it's the sheer volume of items to track across different intervals. Engine hours, calendar dates, and usage-based triggers all interact in ways that make a simple calendar inadequate.</p>
+
+      <div class="callout">
+        <strong>BoatWise: Your Digital Maintenance Tracker</strong><br><br>
+        <a href="https://boatwise.apptechno.net" target="_blank" rel="noopener noreferrer"><strong>BoatWise</strong></a> is purpose-built for exactly this challenge. Add every maintenance item from this checklist, set the interval (hours or days), and BoatWise calculates when each job is due — colour-coded by urgency so you always know what needs attention first.<br><br>
+        <ul style="margin:10px 0 0 20px;">
+          <li>Track multiple engines independently (starboard, port, generator)</li>
+          <li>Log engine hours automatically from your logbook entries</li>
+          <li>Attach photos and documents to each maintenance record</li>
+          <li>Get email alerts before critical items are due</li>
+          <li>Export a full maintenance history as PDF or CSV</li>
+          <li>Share access with your co-owner or crew</li>
+        </ul>
+        <br>
+        <a href="https://boatwise.apptechno.net" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:700;">→ Start free at boatwise.apptechno.net</a>
+      </div>
+
+      <h2>Seasonal Checklist: Spring Launch</h2>
+
+      <ol>
+        <li>Engine oil and filter change</li>
+        <li>Impeller inspection / replacement</li>
+        <li>Fuel filter replacement</li>
+        <li>Check all seacocks — exercise and grease</li>
+        <li>Apply antifouling</li>
+        <li>Inspect standing rigging</li>
+        <li>Test all safety equipment (EPIRB, flares, life raft tag, fire extinguishers)</li>
+        <li>Service winches</li>
+        <li>Load-test batteries</li>
+        <li>Test bilge pumps</li>
+        <li>Check all running rigging for wear</li>
+        <li>Inspect propeller and shaft</li>
+      </ol>
+
+      <h2>Seasonal Checklist: Autumn Layup</h2>
+
+      <ol>
+        <li>Flush engine with fresh water (outboards and raw-water-cooled inboards)</li>
+        <li>Change engine oil before storage (acids in used oil degrade bearings)</li>
+        <li>Fog engine cylinders with storage oil if winterising</li>
+        <li>Drain and flush water system if freezing temperatures expected</li>
+        <li>Remove sails and inspect before storage</li>
+        <li>Rinse and dry all lines</li>
+        <li>Wax topsides</li>
+        <li>Cover or shrink-wrap</li>
+        <li>Update maintenance log with all work completed</li>
+      </ol>
+
+      <hr>
+
+      <h2>The Bottom Line</h2>
+
+      <p>A well-maintained boat is a safe boat — and a boat that holds its value. The cost of scheduled maintenance is always lower than the cost of emergency repairs, towing, or lost seasons. Use this checklist as your baseline, track every item in a dedicated system like <a href="https://boatwise.apptechno.net" target="_blank">BoatWise</a>, and you'll never be caught off guard by a maintenance failure at sea.</p>
+    </div>
+  `,
+
   'ecommerce-usa': `
     <div class="post-full-header">
       <a class="back-link" href="#" onclick="showListing(); return false;">← Back to Blog</a>

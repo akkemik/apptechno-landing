@@ -530,9 +530,18 @@
     }
     @media (max-width: 600px) {
       .apps-grid { grid-template-columns: 1fr; }
-      nav a { display: none; }
       .hero-apps { gap: 10px; }
       .hero-app-pill { font-size: .78rem; }
+      /* Mobile nav: hide middle links, keep Apps + Blog */
+      nav a[href="#features"],
+      nav a[href="/about.html"] { display: none; }
+      nav { gap: 18px; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 400px) {
+      nav a[href="#apps"] { display: none; }
+      .features-grid { grid-template-columns: 1fr; }
     }
 
     /* ── SCROLL REVEAL ── */

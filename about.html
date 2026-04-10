@@ -28,68 +28,73 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "name": "About AppTechno",
-    "url": "https://apptechno.net/about.html",
-    "description": "AppTechno builds free, privacy-friendly online apps that run entirely in your browser. No uploads, no accounts, no data stored.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "AppTechno",
-      "url": "https://apptechno.net"
-    },
-    "mainEntity": {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Are AppTechno apps really free?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The core features of all AppTechno apps are free, with no credit card required. Some apps offer optional Pro plans for power users who need higher usage limits."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are my files safe when I use AppTechno tools?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. All file processing happens entirely inside your browser. Your documents, spreadsheets, images, and PDFs never leave your device and are never uploaded to any server."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to create an account?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No account is needed to use the browser-based tools (File Consolidator, DocWise). BudgetWise and CVwise offer optional accounts to save your data and access it across devices."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do AppTechno apps work on mobile?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. All apps are fully responsive and work on smartphones and tablets. BudgetWise and CVwise can also be installed as Progressive Web Apps (PWA) on your home screen."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a Pro plan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "BudgetWise Pro and CVwise Pro unlock higher usage limits, remove ads, and add advanced features. Both start at under €13/year with a free trial — no credit card required."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does AppTechno store or sell my data?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. AppTechno does not sell, share, or monetize your personal data. Analytics are limited to anonymous usage counts. Your files, documents, and financial data are never transmitted to our servers."
-          }
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "name": "About AppTechno",
+        "url": "https://apptechno.net/about.html",
+        "description": "AppTechno builds free, privacy-friendly online apps that run entirely in your browser. No uploads, no accounts, no data stored.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "AppTechno",
+          "url": "https://apptechno.net"
         }
-      ]
-    }
+      },
+      {
+        "@type": "FAQPage",
+        "url": "https://apptechno.net/about.html",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are AppTechno apps really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The core features of all AppTechno apps are free, with no credit card required. Some apps offer optional Pro plans for power users who need higher usage limits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my files safe when I use AppTechno tools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. All file processing happens entirely inside your browser. Your documents, spreadsheets, images, and PDFs never leave your device and are never uploaded to any server."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to create an account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No account is needed to use the browser-based tools (File Consolidator, DocWise). BudgetWise and CVwise offer optional accounts to save your data and access it across devices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do AppTechno apps work on mobile?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All apps are fully responsive and work on smartphones and tablets. BudgetWise and CVwise can also be installed as Progressive Web Apps (PWA) on your home screen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a Pro plan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BudgetWise Pro and CVwise Pro unlock higher usage limits, remove ads, and add advanced features. Both start at under €13/year with a free trial — no credit card required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does AppTechno store or sell my data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. AppTechno does not sell, share, or monetize your personal data. Analytics are limited to anonymous usage counts. Your files, documents, and financial data are never transmitted to our servers."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
 

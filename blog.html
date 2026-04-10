@@ -1203,7 +1203,7 @@ function renderCard(post) {
           <span>·</span>
           <span>${post.readTime}</span>
         </div>
-        <a class="post-read-more" href="#${post.id}" onclick="showPost('${post.id}'); return false;">Read Article →</a>
+        <a class="post-read-more" href="/blog/${post.id}.html">Read Article →</a>
       </div>
     </article>`;
 }
@@ -1270,12 +1270,7 @@ function showPost(id) {
       p.categories.some(c => currentPost.categories.includes(c))
     )).slice(0, 3);
     relGrid.innerHTML = (related.length ? related : POSTS.filter(p => p.id !== id).slice(0, 3)).map(renderCard).join('');
-    relGrid.querySelectorAll('.post-read-more').forEach(a => {
-      a.addEventListener('click', function(e) {
-        e.preventDefault();
-        showPost(a.getAttribute('href').replace('#',''));
-      });
-    });
+    // Links now go directly to individual article pages — no override needed
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });

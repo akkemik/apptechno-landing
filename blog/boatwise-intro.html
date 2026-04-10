@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introducing BoatWise: The Smart Boat Management App for Modern Sailors — AppTechno Blog</title>
+  <meta name="description" content="Managing a yacht means juggling maintenance schedules, inventory, documents, and a dozen expiry dates — all at once. BoatWise brings everything together in one place, so you can spend less time on paperwork and more time on the water." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://apptechno.net/blog/boatwise-intro.html" />
+  <link rel="icon" href="/images/favicon-64.png" type="image/png" sizes="64x64" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180" />
+  <meta name="author" content="AppTechno" />
+  <meta name="keywords" content="BoatWise, boat management app, yacht maintenance, boat logbook, marine maintenance tracker, boat inventory, boat documents, sailing app" />
+  <meta property="og:title" content="Introducing BoatWise: The Smart Boat Management App for Modern Sailors" />
+  <meta property="og:description" content="BoatWise brings maintenance, inventory, documents, and logbook together in one place for yacht and boat owners." />
+  <meta property="og:url" content="https://apptechno.net/blog/boatwise-intro.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://apptechno.net/images/budgetwise-icon.png" />
+  <meta property="og:site_name" content="AppTechno" />
+  <meta property="article:published_time" content="2026-04-03" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Introducing BoatWise: The Smart Boat Management App for Modern Sailors" />
+  <meta name="twitter:description" content="BoatWise brings maintenance, inventory, documents, and logbook together in one place for yacht and boat owners." />
+  <meta name="google-adsense-account" content="ca-pub-5264106260111581" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5264106260111581" crossorigin="anonymous"></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Introducing BoatWise: The Smart Boat Management App for Modern Sailors","description":"Managing a yacht means juggling maintenance schedules, inventory, documents, and a dozen expiry dates — all at once. BoatWise brings everything together in one place.","datePublished":"2026-04-03","dateModified":"2026-04-03","author":{"@type":"Organization","name":"AppTechno","url":"https://apptechno.net"},"publisher":{"@type":"Organization","name":"AppTechno","url":"https://apptechno.net"},"url":"https://apptechno.net/blog/boatwise-intro.html","mainEntityOfPage":"https://apptechno.net/blog/boatwise-intro.html","keywords":["BoatWise","boat management","yacht maintenance","marine app","boat logbook"],"articleSection":"Productivity","timeRequired":"PT6M"}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0b0d1a;--bg2:#11142b;--card:rgba(255,255,255,0.05);--card-hover:rgba(255,255,255,0.09);--border:rgba(255,255,255,0.10);--text:#e8eaf6;--muted:#8b8fa8;--blue:#4f8ef7;--purple:#9b59f5;--grad:linear-gradient(135deg,#4f8ef7 0%,#9b59f5 100%);--grad-soft:linear-gradient(135deg,rgba(79,142,247,.15) 0%,rgba(155,89,245,.15) 100%);--radius:18px}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+    ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--purple);border-radius:3px}
+    header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:64px;background:rgba(11,13,26,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .logo{display:flex;align-items:center;gap:10px;font-size:1.3rem;font-weight:700;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+    nav{display:flex;align-items:center;gap:24px}
+    nav a{color:var(--muted);text-decoration:none;font-size:.95rem;transition:color .2s}
+    nav a:hover,nav a.active{color:var(--text)}
+    .top-banner{width:100%;background:var(--card);border-bottom:1px solid var(--border);min-height:90px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .shell{display:grid;grid-template-columns:160px 1fr 160px;gap:0;max-width:1400px;margin:0 auto;padding:0 16px;align-items:start}
+    .sidebar{padding:32px 8px;display:flex;flex-direction:column;align-items:center;gap:24px;position:sticky;top:80px}
+    .ad-slot{width:150px;background:var(--card);border:1px dashed var(--border);border-radius:12px;overflow:hidden}
+    .ad-slot.tall{min-height:600px}.ad-slot.square{min-height:250px}
+    main{padding:0 24px}
+    .post-full{padding:40px 0 60px;max-width:800px;margin:0 auto}
+    .post-full-header{margin-bottom:32px}
+    .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-size:.9rem;text-decoration:none;margin-bottom:20px;transition:gap .2s}
+    .back-link:hover{gap:10px}
+    .post-full-header h1{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;line-height:1.25;margin-bottom:16px}
+    .post-meta{font-size:.85rem;color:var(--muted);margin-bottom:24px;display:flex;gap:12px}
+    .post-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+    .post-tag{background:rgba(155,89,245,.2);color:var(--purple);border-radius:100px;padding:2px 10px;font-size:.75rem;font-weight:600}
+    .post-hero-img{width:100%;height:240px;background:var(--grad-soft);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:4rem;margin-bottom:36px;border:1px solid var(--border)}
+    .article-body{font-size:1rem;line-height:1.8;color:var(--text)}
+    .article-body h2{font-size:1.4rem;font-weight:700;margin:36px 0 14px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+    .article-body h3{font-size:1.1rem;font-weight:700;margin:28px 0 10px;color:var(--text)}
+    .article-body p{margin-bottom:18px}
+    .article-body ul,.article-body ol{margin:0 0 18px 24px}
+    .article-body li{margin-bottom:8px}
+    .article-body strong{color:#fff}
+    .article-body a{color:var(--blue);text-decoration:none}
+    .article-body a:hover{text-decoration:underline}
+    .article-body blockquote{border-left:3px solid var(--purple);margin:24px 0;padding:16px 20px;background:var(--card);border-radius:0 12px 12px 0;color:var(--muted);font-style:italic}
+    .article-body .callout{background:var(--grad-soft);border:1px solid rgba(155,89,245,.3);border-radius:12px;padding:20px 24px;margin:28px 0}
+    .article-body .callout strong{color:var(--purple)}
+    .article-body hr{border:none;border-top:1px solid var(--border);margin:36px 0}
+    .mid-ad{margin:32px 0;background:var(--card);border:1px dashed var(--border);border-radius:14px;min-height:90px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .cta-box{background:var(--grad-soft);border:1px solid rgba(155,89,245,.3);border-radius:var(--radius);padding:32px;text-align:center;margin:40px 0}
+    .cta-box h3{font-size:1.2rem;margin-bottom:10px}
+    .cta-box p{color:var(--muted);margin-bottom:20px;font-size:.92rem}
+    .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#fff;padding:12px 28px;border-radius:100px;text-decoration:none;font-weight:600;font-size:.95rem;box-shadow:0 4px 20px rgba(155,89,245,.35);transition:opacity .2s,transform .2s}
+    .cta-btn:hover{opacity:.9;transform:translateY(-2px)}
+    .related-section{margin-top:56px;padding-top:32px;border-top:1px solid var(--border)}
+    .related-section h2{font-size:1.2rem;font-weight:700;margin-bottom:20px}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+    .related-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:background .2s}
+    .related-card:hover{background:var(--card-hover)}
+    .related-card h3{font-size:.95rem;font-weight:700;margin-bottom:8px}
+    .related-card p{font-size:.83rem;color:var(--muted);margin-bottom:12px}
+    .related-card a{color:var(--blue);font-size:.85rem;font-weight:600;text-decoration:none}
+    footer{border-top:1px solid var(--border);padding:28px 32px;text-align:center;color:var(--muted);font-size:.9rem}
+    footer a{color:var(--blue);text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    .footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:12px}
+    @media(max-width:1100px){.shell{grid-template-columns:120px 1fr 120px}.ad-slot{width:110px}}
+    @media(max-width:860px){.shell{grid-template-columns:1fr}.sidebar{display:none}header{padding:0 16px}nav{gap:14px}}
+    @media(max-width:540px){nav a{display:none}nav a.active{display:block}main{padding:0 8px}}
+  </style>
+</head>
+<body>
+<header>
+  <a class="logo" href="/">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><defs><linearGradient id="lg" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4f8ef7"/><stop offset="100%" stop-color="#9b59f5"/></linearGradient></defs><rect width="28" height="28" rx="8" fill="url(#lg)"/><text x="5" y="20" font-size="16" fill="white" font-family="Arial" font-weight="bold">A</text></svg>
+    AppTechno
+  </a>
+  <nav>
+    <a href="/#apps">Apps</a>
+    <a href="/#features">Features</a>
+    <a href="/about.html">About</a>
+    <a href="/blog.html" class="active">Blog</a>
+  </nav>
+  <div style="width:80px"></div>
+</header>
+
+<div class="top-banner"></div>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="ad-slot tall"></div>
+  </aside>
+
+  <main>
+    <article class="post-full">
+      <div class="post-full-header">
+        <a class="back-link" href="/blog.html">← Back to Blog</a>
+        <div class="post-tags">
+          <span class="post-tag">BoatWise</span>
+          <span class="post-tag">Boat Maintenance</span>
+          <span class="post-tag">Yacht Management</span>
+        </div>
+        <h1>Introducing BoatWise: The Smart Boat Management App for Modern Sailors</h1>
+        <div class="post-meta">
+          <span>April 3, 2026</span><span>·</span><span>6 min read</span><span>·</span><span>by AppTechno</span>
+        </div>
+      </div>
+      <div class="post-hero-img">⛵</div>
+
+      <div class="article-body">
+        <p>Owning a boat is one of life's great pleasures — but managing one is a job in itself. Between engine service intervals, safety equipment expiry dates, antifouling schedules, spare parts inventory, insurance renewals, and a growing stack of documents, it's easy for something critical to slip through the cracks. A missed oil change or an expired EPIRB battery could mean the difference between a smooth passage and a dangerous situation at sea.</p>
+        <p>That's exactly why we built <strong>BoatWise</strong>: a complete boat management app designed for serious sailors and yacht owners who want one place to track everything that matters about their vessel.</p>
+
+        <h2>What is BoatWise?</h2>
+        <p>BoatWise is a Progressive Web App (PWA) available at <a href="https://boatwise.apptechno.net" target="_blank" rel="noopener noreferrer">boatwise.apptechno.net</a>. It works on any device — desktop, tablet, or mobile — and can be installed on your phone's home screen for offline-friendly access. It supports <strong>5 languages</strong>: English, Swedish, German, Spanish, and Turkish.</p>
+        <p>Unlike a generic task manager or spreadsheet, BoatWise is purpose-built for marine vessel management. Every feature was designed with real sailors in mind.</p>
+
+        <h2>Core Features</h2>
+
+        <h3>Maintenance Tracking</h3>
+        <p>Create maintenance items for every system on your boat — engine oil changes, impeller replacements, standing rigging inspections, antifouling applications, and more. Set intervals by hours or calendar days. BoatWise tracks when each job is due and colour-codes them by urgency:</p>
+        <ul>
+          <li>🔴 <strong>Critical</strong> — overdue or due within 7 days</li>
+          <li>🟠 <strong>High</strong> — due within 30 days</li>
+          <li>🟡 <strong>Medium</strong> — due within 60 days</li>
+          <li>🟢 <strong>OK</strong> — nothing to worry about yet</li>
+        </ul>
+
+        <h3>Multi-Engine Support</h3>
+        <p>For motorboats with twin engines, BoatWise tracks each engine independently — starboard and port — with separate maintenance logs, hour counters, and service history. Sailboats with a single auxiliary engine, generators, and watermakers are all supported too.</p>
+
+        <h3>Spare Parts Inventory</h3>
+        <p>Log every spare part on board with its location ("Engine Room → Port Locker → Box A"), minimum stock level, and supplier link. When stock drops below the minimum, BoatWise flags it so you can reorder before your next passage. You can even scan barcodes with your phone camera for instant lookup.</p>
+
+        <h3>Equipment Management</h3>
+        <p>Record all onboard equipment — VHF radio, life raft, flares, navigation instruments, safety gear — with warranty expiry dates and purchase information. BoatWise alerts you before warranties expire and before safety equipment needs recertification.</p>
+
+        <h3>Document Vault</h3>
+        <p>Store all your vessel's documents — registration certificate, insurance policy, survey report, engine manuals — with expiry date tracking. You'll receive alerts before your insurance or registration lapses, with enough time to act.</p>
+
+        <h3>Logbook</h3>
+        <p>Keep a proper digital logbook with departure and arrival coordinates (captured from your device's GPS), sea conditions, crew list, fuel consumption, and engine hours per passage. Up to 3 photos per entry. Every voyage is recorded and searchable.</p>
+
+        <h2>Tier Plans — Free to Get Started</h2>
+        <p>BoatWise is <strong>free for the first 12 months</strong> — no credit card required. After that, plans start at just $9.99/year for the Captain tier (2 boats, 2 users) or $24.99/year for the Commodore tier (5 boats, 5 users, no top banner ads, team invites with boat-level access control).</p>
+        <div class="callout">
+          <strong>Try BoatWise Free</strong><br><br>
+          Get started at <a href="https://boatwise.apptechno.net" target="_blank" rel="noopener noreferrer">boatwise.apptechno.net</a> — no credit card, no commitment. The free plan gives you full access to all features for your first 12 months.
+          <br><br>
+          <a href="https://boatwise.apptechno.net" target="_blank" rel="noopener noreferrer" style="color:var(--blue);font-weight:700;">→ Launch BoatWise</a>
+        </div>
+
+        <h2>Built for Serious Sailors</h2>
+        <p>BoatWise was designed with input from real boat owners who manage everything from coastal cruisers to offshore bluewater yachts. The maintenance template library covers the most common service items out of the box — so you don't have to build your tracking system from scratch.</p>
+        <p>Whether you have a 28-foot sloop at the marina or a twin-screw motorboat doing summer passages in Scandinavia, BoatWise adapts to your vessel type, measurement system (metric or imperial), and preferred currency.</p>
+
+        <hr>
+
+        <h2>Ready to Bring Order to Your Boat?</h2>
+        <p>Stop relying on sticky notes, spreadsheets, and memory. BoatWise gives you a single, organised view of your boat's entire maintenance status — accessible from any device, in any language, at any marina in the world.</p>
+        <p><a href="https://boatwise.apptechno.net" target="_blank" rel="noopener noreferrer"><strong>Start your free 12-month trial at boatwise.apptechno.net →</strong></a></p>
+      </div>
+
+      <div class="mid-ad"></div>
+
+      <div class="related-section">
+        <h2>Related Articles</h2>
+        <div class="related-grid">
+          <div class="related-card">
+            <h3>The Complete Boat Maintenance Checklist</h3>
+            <p>Engine, hull, safety, electrical — every item every owner should track.</p>
+            <a href="/blog/boat-maintenance-checklist.html">Read Article →</a>
+          </div>
+          <div class="related-card">
+            <h3>Financial Planning for Remote Workers</h3>
+            <p>Multi-currency tracking, irregular income, and self-employment tax tips.</p>
+            <a href="/blog/remote-work-finance.html">Read Article →</a>
+          </div>
+          <div class="related-card">
+            <h3>5 Budget Tracking Habits</h3>
+            <p>Simple habits that will transform your finances in 30 days.</p>
+            <a href="/blog/budget-basics.html">Read Article →</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <aside class="sidebar">
+    <div class="ad-slot square"></div>
+    <div class="ad-slot square"></div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/cookie-policy.html">Cookie Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+    <a href="/about.html">About</a>
+    <a href="/blog.html">Blog</a>
+    <a href="mailto:info@apptechno.net">Contact</a>
+  </div>
+  <p>© 2026 AppTechno · Sweden · <a href="https://apptechno.net">apptechno.net</a></p>
+</footer>
+</body>
+</html>

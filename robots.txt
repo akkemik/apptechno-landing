@@ -53,6 +53,7 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://apptechno.net/sitemap.xml
+Sitemap: https://apptechno.net/sitemap-images.xml
 
 # LLM context file
 # https://apptechno.net/llms.txt

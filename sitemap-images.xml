@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://apptechno.net/</loc>
+    <image:image>
+      <image:loc>https://apptechno.net/images/cvwise-screenshot.png</image:loc>
+      <image:title>CVwise — AI CV Optimizer powered by Claude AI</image:title>
+      <image:caption>CVwise AI CV Optimizer: upload your CV, paste a job URL, and Claude AI optimizes it for ATS systems</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apptechno.net/images/budgetwise-icon.png</image:loc>
+      <image:title>BudgetWise — Free Personal Budget Tracker with OCR Receipt Scanning</image:title>
+      <image:caption>BudgetWise: track income, expenses, and forecast your year-end finances for free</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apptechno.net/images/boatwise-screenshot.png</image:loc>
+      <image:title>BoatWise — Boat Maintenance App for Yacht and Motorboat Owners</image:title>
+      <image:caption>BoatWise: smart boat management app for sailboat and motorboat owners in 5 languages</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apptechno.net/images/docwise-screenshot.png</image:loc>
+      <image:title>DocWise — Free PDF Tools: Merge, Split, Compress, OCR</image:title>
+      <image:caption>DocWise: privacy-first PDF toolbox — merge, split, compress, image to PDF, OCR, bulk rename</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://apptechno.net/about.html</loc>
+    <image:image>
+      <image:loc>https://apptechno.net/images/cvwise-screenshot.png</image:loc>
+      <image:title>CVwise AI CV Optimizer by AppTechno</image:title>
+      <image:caption>CVwise: AI-powered CV optimization for job seekers</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apptechno.net/images/budgetwise-icon.png</image:loc>
+      <image:title>BudgetWise Budget Tracker by AppTechno</image:title>
+      <image:caption>BudgetWise: free personal finance and budget tracking app</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://apptechno.net/images/docwise-screenshot.png</image:loc>
+      <image:title>DocWise Document Tools by AppTechno</image:title>
+      <image:caption>DocWise: free online PDF and document tools</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

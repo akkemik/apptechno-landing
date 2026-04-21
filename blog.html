@@ -442,6 +442,7 @@
           <button class="cat-btn" data-cat="productivity">Productivity</button>
           <button class="cat-btn" data-cat="business">Business</button>
           <button class="cat-btn" data-cat="documents">Documents</button>
+          <button class="cat-btn" data-cat="sailing">⛵ Sailing</button>
         </div>
       </section>
 
@@ -497,6 +498,182 @@
    BLOG DATA
 ══════════════════════════════════════════ */
 const POSTS = [
+  {
+    id: 'sailboat-maintenance-tips',
+    title: '17 Essential Sailboat Maintenance Tips Every Owner Should Know',
+    excerpt: 'A practical guide covering rigging inspection, engine care, antifouling, battery maintenance, and bilge pumps — with a printable checklist and smart tracking tips for every season.',
+    categories: ['sailing', 'productivity'],
+    tags: ['Sailboat Maintenance', 'Boat Checklist', 'BoatWise'],
+    date: 'April 9, 2026',
+    readTime: '10 min read',
+    featured: true,
+    externalUrl: 'https://boatwise.apptechno.net/en/blog/sailboat-maintenance-tips',
+    thumb: `<svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <defs>
+        <linearGradient id="bm-sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0a1628"/>
+          <stop offset="100%" stop-color="#0e2a4a"/>
+        </linearGradient>
+        <linearGradient id="bm-sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0d3b6e"/>
+          <stop offset="100%" stop-color="#051d3a"/>
+        </linearGradient>
+      </defs>
+      <rect width="360" height="160" fill="url(#bm-sky)"/>
+      <rect y="105" width="360" height="55" fill="url(#bm-sea)"/>
+      <!-- hull -->
+      <path d="M100 105 L260 105 L240 125 L120 125 Z" fill="#1a4a7a"/>
+      <!-- mast -->
+      <line x1="180" y1="105" x2="180" y2="30" stroke="#4a9eff" stroke-width="3"/>
+      <!-- sail -->
+      <path d="M180 35 L225 100 L180 100 Z" fill="#e8f4ff" opacity="0.9"/>
+      <path d="M180 45 L140 100 L180 100 Z" fill="#b8d8ff" opacity="0.7"/>
+      <!-- wrench icon -->
+      <circle cx="60" cy="65" r="28" fill="#ff6b35" opacity="0.15"/>
+      <path d="M50 55 Q53 50 58 50 Q65 50 67 56 L62 61 L65 64 L75 74 L72 77 L62 67 L59 70 L54 65 Z" fill="#ff6b35" opacity="0.9"/>
+      <circle cx="58" cy="52" r="4" fill="none" stroke="#ff6b35" stroke-width="2" opacity="0.9"/>
+      <!-- wave lines -->
+      <path d="M0 112 Q30 108 60 112 Q90 116 120 112 Q150 108 180 112 Q210 116 240 112 Q270 108 300 112 Q330 116 360 112" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.5"/>
+      <!-- BoatWise label -->
+      <rect x="270" y="18" width="76" height="22" rx="11" fill="#4a9eff" opacity="0.2"/>
+      <text x="308" y="33" text-anchor="middle" font-size="10" fill="#4a9eff" font-family="Arial" font-weight="700">BoatWise</text>
+    </svg>`,
+  },
+  {
+    id: 'winterize-boat-scandinavia',
+    title: 'How to Winterize Your Boat in Scandinavia: Step-by-Step Guide',
+    excerpt: 'Complete winterization guide for Sweden, Norway, and Finland — engine flushing, water system draining, hull preparation, battery storage, mast decisions, and Swedish boat club lay-up tips.',
+    categories: ['sailing', 'productivity'],
+    tags: ['Boat Winterization', 'Scandinavia', 'BoatWise'],
+    date: 'April 8, 2026',
+    readTime: '9 min read',
+    featured: false,
+    externalUrl: 'https://boatwise.apptechno.net/en/blog/winterize-boat-scandinavia',
+    thumb: `<svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <defs>
+        <linearGradient id="wt-bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0d1b3e"/>
+          <stop offset="100%" stop-color="#1a2650"/>
+        </linearGradient>
+      </defs>
+      <rect width="360" height="160" fill="url(#wt-bg)"/>
+      <!-- storage building -->
+      <path d="M60 130 L60 75 L180 55 L300 75 L300 130 Z" fill="#1e3a6e" opacity="0.8"/>
+      <path d="M55 78 L180 54 L305 78" fill="none" stroke="#4a9eff" stroke-width="2.5"/>
+      <!-- boat under cover -->
+      <path d="M100 120 L260 120 L245 130 L115 130 Z" fill="#2a5a9e"/>
+      <line x1="180" y1="120" x2="180" y2="85" stroke="#6ab4ff" stroke-width="2.5"/>
+      <path d="M180 88 L215 115 L180 115 Z" fill="#c8e0ff" opacity="0.7"/>
+      <!-- snowflakes -->
+      <text x="42" y="42" font-size="18" fill="#a0c8ff" opacity="0.8" font-family="Arial">❄</text>
+      <text x="305" y="36" font-size="14" fill="#a0c8ff" opacity="0.6" font-family="Arial">❄</text>
+      <text x="82" y="30" font-size="10" fill="#a0c8ff" opacity="0.5" font-family="Arial">❄</text>
+      <text x="255" y="50" font-size="12" fill="#a0c8ff" opacity="0.5" font-family="Arial">❄</text>
+      <text x="330" y="65" font-size="9" fill="#a0c8ff" opacity="0.4" font-family="Arial">❄</text>
+      <!-- door lines -->
+      <line x1="165" y1="80" x2="165" y2="130" stroke="#4a9eff" stroke-width="1" opacity="0.4"/>
+      <line x1="195" y1="80" x2="195" y2="130" stroke="#4a9eff" stroke-width="1" opacity="0.4"/>
+      <!-- BoatWise label -->
+      <rect x="270" y="18" width="76" height="22" rx="11" fill="#4a9eff" opacity="0.2"/>
+      <text x="308" y="33" text-anchor="middle" font-size="10" fill="#4a9eff" font-family="Arial" font-weight="700">BoatWise</text>
+    </svg>`,
+  },
+  {
+    id: 'scandinavian-sailing-guide',
+    title: 'Sailing in Scandinavia: The Complete Guide for Boat Owners',
+    excerpt: 'Everything you need to know about sailing Sweden\'s archipelago, Norway\'s fjords, and the Baltic Sea — seasons, safety requirements, cold-climate maintenance, and the best destinations.',
+    categories: ['sailing'],
+    tags: ['Scandinavian Sailing', 'Sweden', 'Norway', 'Baltic Sea'],
+    date: 'April 10, 2026',
+    readTime: '11 min read',
+    featured: false,
+    externalUrl: 'https://boatwise.apptechno.net/en/blog/scandinavian-sailing-guide',
+    thumb: `<svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <defs>
+        <linearGradient id="ss-sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0b1e42"/>
+          <stop offset="60%" stop-color="#1a4a8a"/>
+          <stop offset="100%" stop-color="#0d6e8a"/>
+        </linearGradient>
+        <linearGradient id="ss-sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0d6e8a"/>
+          <stop offset="100%" stop-color="#073a50"/>
+        </linearGradient>
+      </defs>
+      <rect width="360" height="160" fill="url(#ss-sky)"/>
+      <rect y="100" width="360" height="60" fill="url(#ss-sea)"/>
+      <!-- islands archipelago -->
+      <ellipse cx="55" cy="102" rx="40" ry="10" fill="#1a4a2a"/>
+      <ellipse cx="300" cy="103" rx="35" ry="9" fill="#1a4a2a"/>
+      <ellipse cx="165" cy="104" rx="25" ry="7" fill="#1a3a22"/>
+      <!-- pine trees -->
+      <polygon points="55,88 48,102 62,102" fill="#2a6a3a"/>
+      <polygon points="300,86 293,103 307,103" fill="#2a6a3a"/>
+      <!-- main sailboat -->
+      <path d="M155 100 L205 100 L195 115 L165 115 Z" fill="#1a4a7a"/>
+      <line x1="180" y1="100" x2="180" y2="28" stroke="#e0f0ff" stroke-width="2.5"/>
+      <path d="M180 32 L220 96 L180 96 Z" fill="#e8f4ff" opacity="0.95"/>
+      <path d="M180 42 L148 96 L180 96 Z" fill="#c0deff" opacity="0.8"/>
+      <!-- boom -->
+      <line x1="180" y1="92" x2="215" y2="98" stroke="#e0f0ff" stroke-width="1.5"/>
+      <!-- sun/horizon glow -->
+      <circle cx="280" cy="72" r="18" fill="#ffd080" opacity="0.15"/>
+      <circle cx="280" cy="72" r="10" fill="#ffd080" opacity="0.3"/>
+      <!-- wave -->
+      <path d="M0 108 Q45 103 90 108 Q135 113 180 108 Q225 103 270 108 Q315 113 360 108" fill="none" stroke="#a0d8f0" stroke-width="1.5" opacity="0.5"/>
+      <!-- BoatWise label -->
+      <rect x="270" y="18" width="76" height="22" rx="11" fill="#4a9eff" opacity="0.2"/>
+      <text x="308" y="33" text-anchor="middle" font-size="10" fill="#a0d8ff" font-family="Arial" font-weight="700">BoatWise</text>
+    </svg>`,
+  },
+  {
+    id: 'scandinavian-mooring-guide',
+    title: 'Scandinavian Mooring Guide: Nordic Bow-to-Shore vs Med Mooring',
+    excerpt: 'Complete guide to Scandinavian-style mooring — bow to shore with stern anchor in Sweden, Norway, Finland, and Denmark. Step-by-step technique, stern anchor tips, ring bolt etiquette, and best locations.',
+    categories: ['sailing'],
+    tags: ['Scandinavian Mooring', 'Nordic Sailing', 'Stern Anchor'],
+    date: 'April 11, 2026',
+    readTime: '10 min read',
+    featured: false,
+    externalUrl: 'https://boatwise.apptechno.net/en/blog/scandinavian-mooring-guide',
+    thumb: `<svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <defs>
+        <linearGradient id="mg-bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0c1a2e"/>
+          <stop offset="100%" stop-color="#0e3050"/>
+        </linearGradient>
+        <linearGradient id="mg-water" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0d4a6e"/>
+          <stop offset="100%" stop-color="#062038"/>
+        </linearGradient>
+      </defs>
+      <rect width="360" height="160" fill="url(#mg-bg)"/>
+      <rect y="95" width="360" height="65" fill="url(#mg-water)"/>
+      <!-- rocky shore -->
+      <path d="M0 95 Q40 88 80 93 Q100 96 120 95 L120 160 L0 160 Z" fill="#2a3a28"/>
+      <ellipse cx="75" cy="93" rx="20" ry="6" fill="#3a4a38"/>
+      <ellipse cx="40" cy="91" rx="15" ry="5" fill="#3a4a38"/>
+      <!-- dock/pier -->
+      <rect x="100" y="90" width="8" height="35" fill="#5a4a30"/>
+      <rect x="95" y="88" width="18" height="5" rx="2" fill="#6a5a3a"/>
+      <!-- mooring ring bolt -->
+      <circle cx="104" cy="88" r="4" fill="none" stroke="#ffa040" stroke-width="2.5"/>
+      <!-- rope from ring to boat -->
+      <path d="M104 88 Q140 78 165 80" fill="none" stroke="#d4a060" stroke-width="2" stroke-dasharray="4,3"/>
+      <!-- boat moored bow-in -->
+      <path d="M155 80 Q180 70 200 80 L195 100 L160 100 Z" fill="#1a4a7a"/>
+      <path d="M178 70 Q180 65 182 70" fill="none" stroke="#4a9eff" stroke-width="2"/>
+      <!-- stern anchor rope -->
+      <path d="M178 100 Q200 110 230 115" fill="none" stroke="#d4a060" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <!-- anchor -->
+      <text x="228" y="128" font-size="20" text-anchor="middle" fill="#4a9eff" opacity="0.8" font-family="Arial">⚓</text>
+      <!-- wave -->
+      <path d="M130 105 Q155 101 180 105 Q205 109 230 105 Q255 101 280 105" fill="none" stroke="#4ab0d0" stroke-width="1.5" opacity="0.5"/>
+      <!-- BoatWise label -->
+      <rect x="270" y="18" width="76" height="22" rx="11" fill="#4a9eff" opacity="0.2"/>
+      <text x="308" y="33" text-anchor="middle" font-size="10" fill="#4a9eff" font-family="Arial" font-weight="700">BoatWise</text>
+    </svg>`,
+  },
   {
     id: 'boatwise-intro',
     title: 'Introducing BoatWise: The Smart Boat Management App for Modern Sailors',
@@ -1198,9 +1375,14 @@ let currentCat = 'all';
 let currentQuery = '';
 
 function renderCard(post) {
+  const href = post.externalUrl ? post.externalUrl : `/blog/${post.id}.html`;
+  const target = post.externalUrl ? ` target="_blank" rel="noopener noreferrer"` : '';
+  const cta = post.externalUrl ? 'Read on BoatWise →' : 'Read Article →';
   return `
     <article class="post-card" data-id="${post.id}" data-cats="${post.categories.join(',')}" data-text="${(post.title + ' ' + post.excerpt + ' ' + post.tags.join(' ')).toLowerCase()}">
-      <div class="post-thumb">${post.emoji}</div>
+      <a href="${href}"${target} style="display:block;text-decoration:none;">
+        <div class="post-thumb">${post.thumb || post.emoji}</div>
+      </a>
       <div class="post-body">
         <div class="post-tags">${post.tags.slice(0,2).map(t => `<span class="post-tag">${t}</span>`).join('')}</div>
         <h2>${post.title}</h2>
@@ -1210,7 +1392,7 @@ function renderCard(post) {
           <span>·</span>
           <span>${post.readTime}</span>
         </div>
-        <a class="post-read-more" href="/blog/${post.id}.html">Read Article →</a>
+        <a class="post-read-more" href="${href}"${target}>${cta}</a>
       </div>
     </article>`;
 }

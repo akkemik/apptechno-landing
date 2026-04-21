@@ -88,6 +88,20 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://apptechno.net/blog/smallpdf-alternatives.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://apptechno.net/blog/jobscan-alternatives.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- App Subdomains -->
   <url>
     <loc>https://cvwise.apptechno.net/</loc>

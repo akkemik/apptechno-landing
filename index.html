@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Ezoic Privacy Scripts — must load first -->
+  <script data-cfasync="false" src="https://cmp.gatekeeperconsent.com/min.js"></script>
+  <script data-cfasync="false" src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
+  <!-- Ezoic Header Script -->
+  <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+  <script>
+    window.ezstandalone = window.ezstandalone || {};
+    ezstandalone.cmd = ezstandalone.cmd || [];
+  </script>
+  <script src="//ezoicanalytics.com/analytics.js"></script>
   <title>AppTechno — Free Online Apps</title>
   <meta name="description" content="AppTechno offers free, privacy-friendly online apps. All processing is local — no uploads, no servers, no data stored." />
   <meta name="robots" content="index, follow" />
@@ -24,8 +34,6 @@
   <meta name="twitter:title" content="AppTechno — Free Online Apps" />
   <meta name="twitter:description" content="Free privacy-friendly browser apps. No uploads, no accounts. File consolidation, budget tracking and more." />
   <meta name="twitter:image" content="https://apptechno.net/images/budgetwise-icon.png" />
-  <meta name="google-adsense-account" content="ca-pub-5264106260111581" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5264106260111581" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -912,11 +920,15 @@
       const reviews = data.reviews || [];
       if (reviews.length === 0) { empty.style.display = 'block'; return; }
       reviews.forEach(function(r) {
+        var name = r.display_name ? r.display_name.replace(/</g,'&lt;').replace(/>/g,'&gt;') : '';
+        var location = r.country ? r.country.replace(/</g,'&lt;').replace(/>/g,'&gt;') : '';
+        var byline = name ? (name + (location ? ' &bull; ' + location : '')) : (location || '');
         const card = document.createElement('div');
         card.className = 'review-card';
         card.innerHTML =
           '<div class="review-stars">' + stars(r.rating) + '</div>' +
           '<p class="review-comment">"' + r.comment.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '"</p>' +
+          (byline ? '<p style="font-size:.8rem;font-weight:600;color:var(--text2);margin:0 0 4px;">' + byline + '</p>' : '') +
           '<div class="review-meta">' +
             '<span class="review-app-badge">' + (APP_LABELS[r.app] || r.app) + '</span>' +
             '<span>' + timeAgo(r.created_at) + '</span>' +

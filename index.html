@@ -213,6 +213,11 @@
       display: block;
     }
     @media (max-width: 1100px) { .hero-ad-right { display: none; } }
+    .ad-mobile { display: none; }
+    @media (max-width: 767px) {
+      .ad-desktop { display: none; }
+      .ad-mobile { display: block; }
+    }
     /* Mesh gradient background */
     .hero::before {
       content: '';
@@ -656,18 +661,34 @@
   </div>
 </div>
 
-<!-- ══ AD: TOP LEADERBOARD ══ -->
+<!-- ══ AD: TOP LEADERBOARD (desktop) / 300x250 (mobile) ══ -->
 <div style="text-align:center;padding:12px 0;background:var(--bg);border-top:1px solid var(--border);">
-  <script type="text/javascript">
-    atOptions = {
-      'key' : '4dca8a1193d6941d6de470d5f19b2a10',
-      'format' : 'iframe',
-      'height' : 90,
-      'width' : 728,
-      'params' : {}
-    };
-  </script>
-  <script type="text/javascript" src="//www.highperformanceformat.com/4dca8a1193d6941d6de470d5f19b2a10/invoke.js"></script>
+  <!-- Desktop: 728x90 -->
+  <div class="ad-desktop">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '4dca8a1193d6941d6de470d5f19b2a10',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/4dca8a1193d6941d6de470d5f19b2a10/invoke.js"></script>
+  </div>
+  <!-- Mobile: 300x250 -->
+  <div class="ad-mobile">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'dee4ddb3b35cc6ab965da568657ec78e',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/dee4ddb3b35cc6ab965da568657ec78e/invoke.js"></script>
+  </div>
 </div>
 
 <!-- ══ APPS ══ -->

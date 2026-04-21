@@ -1,2 +1,2 @@
-ezoic.com, 559937, DIRECT
+ezoic.com, 19390, DIRECT
 google.com, pub-5264106260111581, RESELLER, f08c47fec0942fa0
